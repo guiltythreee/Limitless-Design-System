@@ -30,7 +30,7 @@ for (const section of ["probability", "metallurgy", "home", "competition", "code
 
 const componentSelectors = [
   ".ds-button", ".ds-button--primary", ".ds-button--secondary", ".ds-button--quiet", ".ds-button--compact", ".ds-button--prominent", ".ds-button--full",
-  ".ds-sidebar", ".ds-sidebar-link",
+  ".ds-sidebar", ".ds-sidebar-link", ".ds-chip", ".ds-chip--selected", ".ds-badge--easy", ".ds-badge--medium", ".ds-badge--hard",
   ".ds-panel", ".ds-card", ".ds-navigation-card", ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab", ".ds-badge", ".ds-nav", ".ds-nav-link",
 ];
 for (const selector of componentSelectors) {
@@ -76,6 +76,13 @@ assert.match(components, /\.ds-button--compact/);
 assert.match(components, /\.ds-button--prominent/);
 assert.match(components, /\.ds-field--compact/);
 assert.match(components, /\.ds-field--monospace/);
+assert.match(components, /\.ds-chip--selected/);
+assert.match(components, /\.ds-chip--success/);
+assert.match(components, /\.ds-badge--easy/);
+assert.match(components, /\.ds-badge--medium/);
+assert.match(components, /\.ds-badge--hard/);
+assert.match(tokens, /--ds-color-difficulty-easy/);
+assert.match(tokens, /--ds-color-chip-success/);
 assert.match(tokens, /--ds-button-height-compact/);
 assert.match(tokens, /--ds-field-height/);
 assert.match(preview, /ds-sidebar sample-sidebar/);
