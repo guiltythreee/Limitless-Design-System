@@ -233,3 +233,9 @@ The charts are deliberately documented as application-owned SVGs. Do not infer a
 ### Probability test setup selection boundary
 
 The Probability test setup uses a hierarchical native-checkbox picker: a chapter checkbox selects its topic children and can represent partial selection with the native indeterminate state; chapter disclosure buttons independently collapse/expand topic lists. Bulk selection, selected-topic summary, question-pool filtering and test configuration remain in `Test.tsx`. This is documented as an application-owned interaction, not a new generic tree component. Do not infer that `.ds-chip`, `.ds-field` or `.ds-button` supplies the parent/child selection model or indeterminate behavior.
+
+## Probability in-progress player presentation
+
+The static preview composes the existing question-status rail, timer, question metadata, bookmark affordance, prompt, selectable options and action-bar slots into one player screen. This is a composition of existing visual contracts, not a new stateful component.
+
+Question content, difficulty, topic, elapsed time, current index, answer selection, bookmark state, navigation, grading, persistence and keyboard handling remain application/shared learning-player responsibilities. The fixture is shown in both Probability themes; its compact layout is a visual reference only.
