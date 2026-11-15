@@ -29,7 +29,7 @@ This specification converts the first live-component audit into a practical comp
 | Section navigation | `.ds-section-nav` | Probability `.subnav`; Home `.home-topbar nav` | Horizontal navigation links/buttons; overflow and active indicator differ |
 | Semantic tablist | `.ds-tabs` | Probability `[data-study-mode-tabs]` | Use tablist/tab/tabpanel only when the complete interaction pattern exists |
 | Segmented control | `.ds-segmented` | Probability `.probability-section-tabs` | Supports aria-pressed or current-page states; selected fill differs from underline tabs |
-| Sidebar item | `.ds-sidebar-link` | Home `.side-link`; Competition `.competition-side-link` | Vertical navigation with active indicator; do not model as a wrapping horizontal nav row |
+| Sidebar item | `.ds-sidebar-link` | Home `.side-link`; Competition `.competition-side-link` | Implemented as an anchor foundation with active/current states and section tokens; container positioning and responsive orientation remain application-owned |
 | Stage selector | `.ds-stage-option` | Codeforces `.cr-stage-tab` | Grid-based full-width selection with progress/metadata; not a tab strip |
 | Progress indicator | `.ds-progress` | Competition `.progress-track`; Codeforces `.cr-progress`, `.cr-mini-track` | Keep data semantics and accessible value text in application markup |
 
