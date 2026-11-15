@@ -150,3 +150,12 @@ assert.match(tokens, /--ds-course-toolbar-radius:14px/);
 assert.match(tokens, /--ds-course-search-background:var\(--inset\)/);
 assert.match(contracts, /Weak.*60%|weak.*60%/);
 assert.match(audit, /course-browser toolbar/i);
+
+
+const courseNavSelectors = [".ds-course-nav-item", ".ds-course-nav-number", ".ds-course-nav-title", ".ds-course-nav-meta", ".ds-course-nav-progress", ".ds-course-nav-percent"];
+for (const selector of courseNavSelectors) {
+  assert.ok(components.includes(selector), `Missing Metallurgy sidebar selector: ${selector}`);
+}
+assert.match(tokens, /--ds-course-nav-progress-fill:linear-gradient/);
+assert.match(contracts, /Metallurgy archive sidebar navigation/);
+assert.match(audit, /archive sidebar and progress/i);
