@@ -144,3 +144,16 @@ For every step, compare the actual production markup and styles against the prop
 | .cb-empty | .ds-course-empty | Empty-results message only |
 
 The live CourseChapterBrowser.tsx owns filtering and sorting. Search matches topic title or ID (case-insensitive); status options are all, not started, in progress, completed and weak; weak means at least one attempt and accuracy below 60%. Sort options are chapter order, name, least progress and question count. The visual primitives must not duplicate or implement this logic.
+
+
+## Metallurgy archive sidebar navigation — source follow-up
+
+| Live selector | Proposed contract | Source mapping |
+|---|---|---|
+| .ch-item | .ds-course-nav-item | Native button; 34px number column; 10px radius; transparent/hover/active states |
+| .ch-num | .ds-course-nav-number | 32px bordered tile; exam variant uses amber |
+| .ch-title | .ds-course-nav-title | 0.85rem title, 1.3 line height |
+| .ch-meta | .ds-course-nav-meta | Inline progress and percentage |
+| .ch-bar / .ch-pct | .ds-course-nav-progress / .ds-course-nav-percent | 4px track and application-supplied percentage |
+
+This sidebar is a different component from the chapter-browser row. Preserve the existing button semantics and aria-current page/location states; do not turn these controls into anchors or generic sidebar links.
