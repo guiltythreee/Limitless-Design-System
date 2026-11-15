@@ -46,7 +46,7 @@
 :where([data-limitless-design]) .ds-button--primary {
   border-color: var(--ds-color-accent);
   background: var(--ds-color-accent);
-  color: var(--ds-color-canvas, #fff);
+  color: var(--ds-color-on-accent, #fff);
 }
 
 :where([data-limitless-design]) .ds-button--secondary {
