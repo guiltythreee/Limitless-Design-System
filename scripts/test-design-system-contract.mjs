@@ -9,6 +9,7 @@ const audit = read("../docs/live-component-audit.md");
 const preview = read("../preview/index.html");
 const previewStyles = read("../preview/preview.css");
 const mapping = read("../docs/component-mapping-spec.md");
+const sourceMap = read("../docs/live-visual-source-map.md");
 
 const requiredTokens = [
   "--ds-space-1", "--ds-space-12",
@@ -295,3 +296,32 @@ assert.equal((preview.match(/aria-label="Probability test in-progress screen pre
 assert.match(preview, /sample-player-screen__option is-selected/);
 assert.match(contracts, /Probability in-progress player presentation/);
 assert.match(mapping, /Probability in-progress player presentation/);
+
+
+// Documentation and HTML must contain real line breaks, not escaped backslash-n text.
+for (const path of ["../docs/component-contracts.md", "../docs/component-mapping-spec.md", "../docs/live-visual-source-map.md", "../docs/live-component-audit.md", "../preview/index.html"]) {
+  const content = read(path);
+  assert.ok(!content.includes(String.raw\`\\n\`), `Literal escaped newline found in ${path}`);
+}
+
+// Follow-up source provenance must stay attached to the live visual audit.
+const followUpSources = [
+  ["metallurgy-source/app/courses/CourseChapterBrowser.tsx", "f2eecd028cf9e0a27aff4333f7f1480bbe42b0be"],
+  ["metallurgy-source/app/courses/course-chapter-browser.css", "8a59427ff308cc109802a424142e48af3407a540"],
+  ["metallurgy-source/app/mt202/page.tsx", "0045370d744a378091102e539798efbd5d9d0ef2"],
+  ["metallurgy-source/app/courses/BookmarksPanel.tsx", "3d14f6e6a2cadfe800b3e2a36b1214cfad7adcc9"],
+  ["metallurgy-source/app/courses/ActivityHistoryPanel.tsx", "3b15b0fa664c5925de39f3fefaec071cdd6658d4"],
+  ["metallurgy-source/app/courses/DailyGoalsPanel.tsx", "77ad1225bb2dd67dd714f79af95f03c4a7a7d9bf"],
+  ["shared/studies/StudyUtilityNav.ts", "0d6708a09b2f24b42e9c9cc634398de118578f72"],
+  ["shared/studies/study-utility-nav.css", "a4ff88cb24b3881ebc026a423b5839255789d915"],
+  ["probability-source/app/components/Test.tsx", "fa5f5e38616dd88eca7697ea8f5f11163a81fa94"],
+  ["probability-source/app/components/Charts.tsx", "21776cce47b9402fd663e05e09110310387f2cce"],
+  ["probability-source/app/components/Practice.tsx", "1e71e4cc2e50040662ba8f0efe8d6ab301f26168"],
+  ["probability-source/app/components/Dashboard.tsx", "daf03bae124c5af90c51d34359048f78ae83428f"],
+  ["shared/learning-player/PlayerShell.ts", "b78076956089d99c352784dd05612e19cc6a8ed9"],
+  ["shared/learning-player/player.css", "f9d7ca51ca48022db7c0a3e70a9f6304f4889e57"],
+];
+for (const [path, sha] of followUpSources) {
+  assert.ok(sourceMap.includes(path), `Missing source-map path: ${path}`);
+  assert.ok(sourceMap.includes(sha), `Missing source-map revision: ${path}`);
+}
