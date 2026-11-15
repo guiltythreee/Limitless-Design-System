@@ -30,7 +30,7 @@ for (const section of ["probability", "metallurgy", "home", "competition", "code
 
 const componentSelectors = [
   ".ds-button", ".ds-button--primary", ".ds-button--secondary", ".ds-button--quiet", ".ds-button--compact", ".ds-button--prominent", ".ds-button--full",
-  ".ds-sidebar", ".ds-sidebar-link", ".ds-segmented", ".ds-segmented-option", ".ds-stage-selector", ".ds-stage-option", ".ds-chip", ".ds-chip--selected", ".ds-badge--easy", ".ds-badge--medium", ".ds-badge--hard",
+  ".ds-sidebar", ".ds-sidebar-link", ".ds-metric-card", ".ds-metric-card__value", ".ds-progress", ".ds-progress--thin", ".ds-segmented", ".ds-segmented-option", ".ds-stage-selector", ".ds-stage-option", ".ds-chip", ".ds-chip--selected", ".ds-badge--easy", ".ds-badge--medium", ".ds-badge--hard",
   ".ds-panel", ".ds-card", ".ds-navigation-card", ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab", ".ds-badge", ".ds-nav", ".ds-nav-link",
 ];
 for (const selector of componentSelectors) {
@@ -78,6 +78,11 @@ assert.match(components, /\.ds-field--compact/);
 assert.match(components, /\.ds-field--monospace/);
 assert.match(components, /\.ds-segmented-option\[aria-pressed/);
 assert.match(components, /\.ds-stage-option\.is-active/);
+assert.match(components, /\.ds-metric-card__label/);
+assert.match(components, /\.ds-metric-card__value/);
+assert.match(components, /\.ds-progress > span/);
+assert.match(tokens, /--ds-metric-value-font/);
+assert.match(tokens, /--ds-progress-fill/);
 assert.match(tokens, /--ds-segmented-selected-background/);
 assert.match(tokens, /--ds-stage-active-background/);
 assert.match(components, /\.ds-chip--selected/);
@@ -101,6 +106,8 @@ assert.match(preview, /ds-navigation-card sample-family-link/);
 assert.match(preview, /ds-chip sample-chip/);
 assert.match(preview, /ds-segmented sample-segmented/);
 assert.match(preview, /ds-stage-selector sample-stage-selector/);
+assert.match(preview, /ds-metric-card sample-metric-card/);
+assert.match(preview, /ds-progress sample-progress/);
 assert.match(mapping, /Content panel/);
 assert.match(mapping, /Navigation card/);
 
