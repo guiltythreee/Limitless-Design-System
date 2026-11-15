@@ -29,7 +29,7 @@ for (const section of ["probability", "metallurgy", "home", "competition", "code
 }
 
 const componentSelectors = [
-  ".ds-button", ".ds-button--primary", ".ds-button--secondary", ".ds-button--quiet",
+  ".ds-button", ".ds-button--primary", ".ds-button--secondary", ".ds-button--quiet", ".ds-button--compact", ".ds-button--prominent", ".ds-button--full",
   ".ds-sidebar", ".ds-sidebar-link",
   ".ds-panel", ".ds-card", ".ds-navigation-card", ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab", ".ds-badge", ".ds-nav", ".ds-nav-link",
 ];
@@ -72,6 +72,12 @@ assert.match(components, /\.ds-card/);
 assert.match(components, /\.ds-navigation-card/);
 assert.match(components, /\.ds-sidebar-link/);
 assert.match(components, /\.ds-sidebar--horizontal/);
+assert.match(components, /\.ds-button--compact/);
+assert.match(components, /\.ds-button--prominent/);
+assert.match(components, /\.ds-field--compact/);
+assert.match(components, /\.ds-field--monospace/);
+assert.match(tokens, /--ds-button-height-compact/);
+assert.match(tokens, /--ds-field-height/);
 assert.match(preview, /ds-sidebar sample-sidebar/);
 assert.match(contracts, /Sidebar navigation/);
 assert.match(components, /--ds-panel-backdrop-filter/);
