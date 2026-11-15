@@ -202,3 +202,12 @@ assert.match(components, /\.ds-study-utility-panel :is\(button,input,select,text
 assert.match(components, /\.ds-study-utility-metrics\{grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
 assert.match(components, /prefers-reduced-motion:reduce/);
 assert.match(components, /forced-colors:active/);
+
+const studyPanelPreview = ["ds-study-utility-panel", "ds-study-utility-panel__header", "ds-study-utility-metrics", "ds-study-utility-progress", "ds-study-utility-week-grid", "ds-study-utility-row--item"];
+for (const selector of studyPanelPreview) {
+  assert.ok(preview.includes(selector), `Missing shared study utility panel preview fixture: ${selector}`);
+}
+assert.match(previewCss, /Shared study utility panel fixture/);
+assert.match(mapping, /Study utility panel family/);
+assert.match(contracts, /Shared study utility panels/);
+assert.match(audit, /shared study utility panel family/);
