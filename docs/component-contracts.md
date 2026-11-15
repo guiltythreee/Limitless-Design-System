@@ -14,16 +14,23 @@ This document defines the first portable visual primitives. It is a design contr
 
 | Primitive | Class contract | Variants / states | Required semantics |
 |---|---|---|---|
-| Button | `.ds-button` | `--primary`, `--secondary`, `--quiet`; hover, active, focus-visible, disabled | Use a native `button` for actions and an `a` for navigation. Never fake disabled state without preventing activation. |
+| Button | `.ds-button` | `--primary`, `--secondary`, `--quiet`, `--compact`, `--prominent`, `--full`; hover, active, focus-visible, disabled, busy | Use a native `button` for actions and an `a` for navigation. Never fake disabled state without preventing activation. |
 | Panel | `.ds-panel` | default, `--flush` | Use for a grouped content region; padding, radius, shadow and blur are section-adaptable tokens. |
 | Content card | `.ds-card` | default, `--flat` | Use for self-contained information; it is not interactive by default. |
 | Navigation card | `.ds-navigation-card` | hover, focus-visible | Use an anchor for navigation; preserve the complete clickable hit area and current-destination semantics. |
 | Legacy surface | `.ds-surface` | default, `--raised` | Retained for compatibility with the original primitive contract; new work should choose panel, content card or navigation card explicitly. |
-| Field | `.ds-field` | default, focus-visible, invalid | Pair with a persistent visible label; communicate errors in text, not color alone. |
+| Field | `.ds-field` | default, `--compact`, `--monospace`, focus-visible, invalid | Pair with a persistent visible label; communicate errors in text, not color alone. |
 | Tabs | `.ds-tabs`, `.ds-tab` | selected, focus-visible, horizontal overflow | Use tablist/tab/tabpanel roles only when implementing the full tab interaction pattern; otherwise use ordinary navigation links. |
 | Badge | `.ds-badge` | neutral by default | Use for concise status or metadata, not as a substitute for headings or explanatory text. |
 | Navigation | `.ds-nav`, `.ds-nav-link` | current page, focus-visible | Place inside a labelled navigation landmark; mark the current destination with `aria-current="page"`. |
 | Sidebar navigation | `.ds-sidebar`, `.ds-sidebar-link` | active/current page, horizontal layout modifier, focus-visible | Use anchors inside a labelled navigation landmark; preserve current-page semantics and section-specific active indicators. |
+
+## Buttons and fields
+
+- Button geometry is configurable through section tokens; compact, standard and prominent sizes are separate from primary/secondary/quiet visual variants.
+- `--full` is a layout modifier. `aria-busy="true"` indicates an in-progress action but does not disable it; use native `disabled` when activation must be prevented.
+- Fields support compact geometry and monospace text without changing their native input/select/textarea semantics.
+- Labels, descriptions, validation messages and application-owned values remain in the consuming markup.
 
 ## Sidebar navigation
 
