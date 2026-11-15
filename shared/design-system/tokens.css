@@ -72,6 +72,14 @@
   --ds-sidebar-link-active-background: var(--ds-color-surface-raised);
   --ds-sidebar-link-active-color: var(--ds-color-heading);
   --ds-sidebar-link-active-shadow: none;
+  --ds-chip-padding: var(--ds-space-1) var(--ds-space-2);
+  --ds-chip-radius: var(--ds-radius-pill);
+  --ds-chip-font-size: var(--ds-text-xs);
+  --ds-chip-background: var(--ds-color-surface-raised);
+  --ds-badge-padding: var(--ds-space-1) var(--ds-space-2);
+  --ds-badge-radius: var(--ds-radius-pill);
+  --ds-badge-font-size: var(--ds-text-xs);
+  --ds-badge-background: var(--ds-color-surface-raised);
 
   /* Semantic colour slots are supplied by each section adapter below. */
 }
@@ -79,6 +87,14 @@
 /* Probability retains its parchment/gold palette and existing light/dark vars. */
 [data-limitless-design="probability"] {
   --ds-color-canvas: var(--page-bg);
+  --ds-color-chip-success: var(--good);
+  --ds-color-chip-warning: var(--warn);
+  --ds-color-chip-danger: var(--bad);
+  --ds-color-difficulty-easy: var(--good);
+  --ds-color-difficulty-medium: var(--warn);
+  --ds-color-difficulty-hard: var(--bad);
+  --ds-chip-radius: 8px;
+  --ds-chip-font-size: 11px;
   --ds-button-radius: 9px;
   --ds-field-radius: 8px;
   --ds-panel-radius: var(--prob-radius-md, 12px);
@@ -104,6 +120,14 @@
 /* Metallurgy keeps its materials-science blue palette and existing theme vars. */
 [data-limitless-design="metallurgy"] {
   --ds-color-canvas: var(--page-bg);
+  --ds-color-chip-success: var(--ok);
+  --ds-color-chip-warning: #e0b06a;
+  --ds-color-chip-danger: var(--bad);
+  --ds-color-difficulty-easy: #9ec98f;
+  --ds-color-difficulty-medium: var(--gold);
+  --ds-color-difficulty-hard: #e0b06a;
+  --ds-chip-padding: 2px 10px;
+  --ds-chip-font-size: 0.74rem;
   --ds-button-radius: 10px;
   --ds-field-radius: 8px;
   --ds-panel-radius: 14px;
@@ -162,6 +186,12 @@
 /* Competition follows the active dashboard skin, including its existing overrides. */
 [data-limitless-design="competition"] {
   --ds-color-canvas: transparent;
+  --ds-color-chip-success: #55d6a6;
+  --ds-color-chip-warning: #e5b86c;
+  --ds-color-chip-danger: #e58d8d;
+  --ds-chip-radius: 20px;
+  --ds-chip-padding: 4px 8px;
+  --ds-chip-font-size: 9px;
   --ds-button-radius: 7px;
   --ds-button-height-compact: 36px;
   --ds-field-radius: 8px;
@@ -194,6 +224,13 @@
 /* Codeforces currently uses literal values; these aliases mirror its existing palette. */
 [data-limitless-design="codeforces"] {
   --ds-color-canvas: transparent;
+  --ds-color-chip-accent: #8fcaff;
+  --ds-color-chip-success: #76e0b6;
+  --ds-color-chip-warning: #e8c27b;
+  --ds-color-chip-danger: #f0a0a0;
+  --ds-chip-radius: 20px;
+  --ds-chip-padding: 4px 8px;
+  --ds-chip-font-size: 9px;
   --ds-button-radius: 9px;
   --ds-button-height-prominent: 44px;
   --ds-field-radius: 8px;
