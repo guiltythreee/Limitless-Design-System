@@ -157,3 +157,8 @@ The current `CourseChapterBrowser.tsx` renders `.cb-chapter` rows, styled in `ap
 ## Follow-up source finding — Metallurgy course-browser toolbar
 
 The live CourseChapterBrowser.tsx pairs course-chapter-browser.css with native input/select controls. .cb-toolbar is a bordered panel that stacks at 850px; .cb-search is an inset search field; .cb-filters select retains native select behavior and changes to a single-column grid at 520px. .cb-list-head hides its trailing descriptor at 520px. These are mapped as .ds-course-toolbar, .ds-course-search, .ds-course-filters, .ds-course-list-head and .ds-course-empty. Query/filter/sort state and logic remain application-owned. The source includes title-or-ID matching, optional unit selection, five progress statuses and four sort modes; weak chapters are those below 60% accuracy after at least one attempt.
+
+
+## Follow-up source finding — Metallurgy archive sidebar and progress
+
+The MT202 archive sidebar renders .ch-item native buttons, with .ch-num, .ch-title, .ch-meta, .ch-bar and .ch-pct. The current chapter receives an active chip fill and border; the exam item has an amber number tile. Chapter progress is calculated in the page from attempted questions divided by the topic question count, then rendered as a 4px track and percentage. This is separate from the course-browser row progress, which is based on the same chapter statistics but has a different layout. Proposed contracts: .ds-course-nav-item, .ds-course-nav-number, .ds-course-nav-title, .ds-course-nav-meta, .ds-course-nav-progress and .ds-course-nav-percent. All state and calculations remain in MT202.
