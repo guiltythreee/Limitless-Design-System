@@ -5,6 +5,7 @@ const read = (path) => readFileSync(new URL(path, import.meta.url), "utf8");
 const tokens = read("../shared/design-system/tokens.css");
 const components = read("../src/components.css");
 const contracts = read("../docs/component-contracts.md");
+const audit = read("../docs/live-component-audit.md");
 
 const requiredTokens = [
   "--ds-space-1", "--ds-space-12",
@@ -49,7 +50,16 @@ assert.match(tokens, /--ds-color-on-accent: var\(--ongold\)/, "Study accent fore
 assert.match(tokens, /--ds-color-surface: var\(--home-panel\)/, "Home must use its live panel token");
 assert.match(tokens, /--ds-color-surface: var\(--comp-panel\)/, "Competition must use its effective dashboard panel token");
 assert.match(tokens, /--ds-color-surface: rgba\(8, 20, 36, 0\.88\)/, "Codeforces dark surface must match its live CSS");
+
+assert.match(audit, /source-level audit complete/i);
+assert.match(audit, /no application integration authorized/i);
+for (const section of ["Probability", "Metallurgy", "Home dashboard", "Competition", "Codeforces"]) {
+  assert.ok(audit.includes(`### ${section}`), `Missing live component audit for ${section}`);
+}
+assert.match(audit, /not visually equivalent/i);
+assert.match(audit, /No live application imports this package/);
 assert.match(components, /opt-in/i);
+
 for (const [name, source] of [["tokens", tokens], ["components", components]]) {
   assert.doesNotMatch(source, /@import\s/i, `${name} must not import stylesheets`);
   assert.doesNotMatch(source, /(^|[\n}])\s*:root\b/m, `${name} must not change global root styles`);
@@ -68,4 +78,4 @@ assert.match(contracts, /Keyboard focus must remain visible/);
 assert.match(contracts, /must not own application state/);
 
 console.log("Design-system contract: PASS");
-console.log("5 section adapters; 6 component primitives; scoped CSS; accessibility contracts documented.");
+console.log("5 section adapters; 6 component primitives; scoped CSS; accessibility contracts and live component audit documented.");
