@@ -58,6 +58,14 @@
   --ds-panel-backdrop-filter: none;
   --ds-card-backdrop-filter: none;
   --ds-navigation-card-hover-transform: translateY(-2px);
+  --ds-sidebar-gap: var(--ds-space-2);
+  --ds-sidebar-link-gap: var(--ds-space-3);
+  --ds-sidebar-link-padding: var(--ds-space-3);
+  --ds-sidebar-link-radius: var(--ds-radius-sm);
+  --ds-sidebar-icon-width: 20px;
+  --ds-sidebar-link-active-background: var(--ds-color-surface-raised);
+  --ds-sidebar-link-active-color: var(--ds-color-heading);
+  --ds-sidebar-link-active-shadow: none;
 
   /* Semantic colour slots are supplied by each section adapter below. */
 }
@@ -110,6 +118,15 @@
 /* Home maps its current dashboard variables; background artwork stays untouched. */
 [data-limitless-design="home"] {
   --ds-color-canvas: transparent;
+  --ds-sidebar-gap: 7px;
+  --ds-sidebar-link-gap: 13px;
+  --ds-sidebar-link-padding: 12px 13px;
+  --ds-sidebar-link-radius: 10px;
+  --ds-sidebar-link-color: #bfd0e4;
+  --ds-sidebar-icon-color: #94bde7;
+  --ds-sidebar-link-active-background: linear-gradient(100deg, rgba(26,113,207,.32), rgba(26,113,207,.08));
+  --ds-sidebar-link-active-color: #f2f8ff;
+  --ds-sidebar-link-active-shadow: inset 2px 0 #56aaff;
   --ds-panel-radius: 15px;
   --ds-card-radius: 12px;
   --ds-navigation-card-radius: 13px;
@@ -133,6 +150,16 @@
 /* Competition follows the active dashboard skin, including its existing overrides. */
 [data-limitless-design="competition"] {
   --ds-color-canvas: transparent;
+  --ds-sidebar-gap: 7px;
+  --ds-sidebar-link-gap: 12px;
+  --ds-sidebar-link-padding: 11px 12px;
+  --ds-sidebar-link-radius: 9px;
+  --ds-sidebar-link-color: #b9cde2;
+  --ds-sidebar-icon-color: #8bc6ff;
+  --ds-sidebar-link-font: 12px Arial, sans-serif;
+  --ds-sidebar-link-active-background: linear-gradient(100deg, rgba(27,112,203,.32), rgba(27,112,203,.07));
+  --ds-sidebar-link-active-color: #f2f8ff;
+  --ds-sidebar-link-active-shadow: inset 2px 0 #64b4ff;
   --ds-panel-radius: 13px;
   --ds-card-radius: 13px;
   --ds-panel-backdrop-filter: blur(13px);
