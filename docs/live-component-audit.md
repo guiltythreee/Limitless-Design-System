@@ -186,3 +186,10 @@ The source audit of BookmarksPanel.tsx, ActivityHistoryPanel.tsx and DailyGoalsP
 ## Follow-up source finding — Probability practice-session controls
 
 The Probability `Practice.tsx` and `globals.css` reveal a separate set of player controls not covered by the shared utility-panel family: question-number markers with correct/incorrect/partial/current states, a tabular stopwatch pill, sticky submit/navigation actionbar, sticky floating analysis affordance, and goal milestone/week-status controls from `Dashboard.tsx`. The package now maps these visual patterns as `.ds-practice-*`. The player still owns answer grading, question navigation, stopwatch timing, submit/retry, and the dashboard owns goal and weekly-state calculations. Existing option-card and learning-player contracts remain unchanged.
+
+
+### Follow-up source finding — Probability charts and answer review
+
+The Probability dashboard's `DiffBars` and `DayBars` are inline SVG implementations in `probability-source/app/components/Charts.tsx`. Their dimensions, scales, gridlines, bars, axis labels, goal line and hover tooltip are local to the Probability app; the shared utility panel/visual/legend classes only provide their surrounding layout. No generic chart component was extracted.
+
+The question review in `Practice.tsx` already uses the shared learning-player review primitives (`learning-player-feedback`, `learning-player-review`, and `learning-player-solution`) styled by `shared/learning-player/player.css`. Probability continues to own result wording, correctness palette, explanation content, mistake-category selection and attempt history. Mistake classification is not a generic design-system interaction.
