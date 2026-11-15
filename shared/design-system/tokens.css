@@ -54,7 +54,7 @@
 [data-limitless-design="probability"] {
   --ds-color-canvas: var(--page-bg);
   --ds-color-surface: var(--panel-bg);
-  --ds-color-surface-raised: var(--inset);
+  --ds-color-surface-raised: var(--chip);
   --ds-color-text: var(--body);
   --ds-color-heading: var(--paper);
   --ds-color-muted: var(--dim);
@@ -74,7 +74,7 @@
   --ds-color-canvas: var(--page-bg);
   --ds-color-on-accent: var(--ongold);
   --ds-color-surface: var(--panel-bg);
-  --ds-color-surface-raised: var(--inset);
+  --ds-color-surface-raised: var(--chip);
   --ds-color-text: var(--body);
   --ds-color-heading: var(--paper);
   --ds-color-muted: var(--dim);
