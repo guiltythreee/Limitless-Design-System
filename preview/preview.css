@@ -113,3 +113,11 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -.04em; }
 .sample-metric-card { padding:12px; }
 .sample-metric-card .ds-metric-card__value { font-size:20px; }
 .sample-progress { margin-top:9px; }
+
+
+.ds-course-heading { margin:12px 0; }
+.ds-course-heading__title { font-size:17px !important; }
+.ds-course-summary__value { font-size:14px !important; }
+.ds-study-utility-nav { margin:12px 0; }
+.ds-study-utility-nav__item { font-size:11px; }
+.ds-study-utility-nav__label { font-size:11px !important; }
