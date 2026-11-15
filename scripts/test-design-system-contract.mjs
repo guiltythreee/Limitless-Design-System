@@ -169,3 +169,16 @@ assert.match(tokens, /\[data-limitless-design="metallurgy"\]\s*\{[^}]*--ds-chapt
 assert.match(tokens, /\[data-limitless-design="metallurgy"\]\s*\{[^}]*--ds-course-nav-progress-fill/s, "Metallurgy sidebar progress tokens must be scoped inside its adapter");
 assert.match(contracts, /Metallurgy course-browser toolbar/);
 assert.match(contracts, /Metallurgy archive sidebar navigation/);
+
+
+const courseHeadingSelectors = [".ds-course-heading", ".ds-course-heading__eyebrow", ".ds-course-heading__title", ".ds-course-heading__description", ".ds-course-summary", ".ds-course-summary__item", ".ds-course-summary__value", ".ds-course-summary__label"];
+for (const selector of courseHeadingSelectors) assert.ok(components.includes(selector), `Missing Metallurgy course heading selector: ${selector}`);
+const utilitySelectors = [".ds-study-utility-nav", ".ds-study-utility-nav__item", ".ds-study-utility-nav__copy", ".ds-study-utility-nav__label", ".ds-study-utility-nav__description", ".ds-study-utility-nav__count", ".ds-study-utility-nav--horizontal"];
+for (const selector of utilitySelectors) assert.ok(components.includes(selector), `Missing shared study utility selector: ${selector}`);
+assert.match(contracts, /Metallurgy course heading and summary/);
+assert.match(contracts, /Shared study utility navigation/);
+assert.match(mapping, /Course heading, summary and study utility navigation/);
+assert.match(audit, /Metallurgy course heading and summary/);
+assert.match(audit, /shared study utility navigation/);
+assert.match(tokens, /--ds-course-heading-radius:\s*16px/);
+assert.match(tokens, /--ds-utility-border:\s*var\(--panel-line\)/);
