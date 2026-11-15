@@ -21,9 +21,17 @@ This document defines the first portable visual primitives. It is a design contr
 | Legacy surface | `.ds-surface` | default, `--raised` | Retained for compatibility with the original primitive contract; new work should choose panel, content card or navigation card explicitly. |
 | Field | `.ds-field` | default, `--compact`, `--monospace`, focus-visible, invalid | Pair with a persistent visible label; communicate errors in text, not color alone. |
 | Tabs | `.ds-tabs`, `.ds-tab` | selected, focus-visible, horizontal overflow | Use tablist/tab/tabpanel roles only when implementing the full tab interaction pattern; otherwise use ordinary navigation links. |
-| Badge | `.ds-badge` | neutral by default | Use for concise status or metadata, not as a substitute for headings or explanatory text. |
+| Metadata chip | `.ds-chip` | selected, accent, success, warning, danger | Use for compact metadata or filter tags; selected state must be exposed semantically by the consuming control. |
+| Status/difficulty badge | `.ds-badge` | neutral, success, warning, danger, easy, medium, hard | Use for concise status or difficulty metadata; the text label must communicate meaning without colour. |
 | Navigation | `.ds-nav`, `.ds-nav-link` | current page, focus-visible | Place inside a labelled navigation landmark; mark the current destination with `aria-current="page"`. |
 | Sidebar navigation | `.ds-sidebar`, `.ds-sidebar-link` | active/current page, horizontal layout modifier, focus-visible | Use anchors inside a labelled navigation landmark; preserve current-page semantics and section-specific active indicators. |
+
+## Chips and badges
+
+- Chips represent compact metadata or filter tags. Use `--selected` only when the containing control also exposes its selected state semantically.
+- Badges represent status or difficulty labels; they are not controls.
+- Difficulty and status variants map through section tokens. Do not infer that the same colour carries identical meaning in every section.
+- Keep the visible label present so meaning is not conveyed by colour alone.
 
 ## Buttons and fields
 
