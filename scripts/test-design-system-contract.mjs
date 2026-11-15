@@ -147,7 +147,7 @@ for (const selector of courseBrowserSelectors) {
   assert.ok(components.includes(selector), `Missing Metallurgy course-browser selector: ${selector}`);
 }
 assert.match(tokens, /--ds-course-toolbar-radius:\\s*14px/);
-assert.match(tokens, /--ds-course-search-background:var\(--inset\)/);
+assert.match(tokens, /--ds-course-search-background:\s*var\(--inset\)/);
 assert.match(contracts, /Weak.*60%|weak.*60%/);
 assert.match(audit, /course-browser toolbar/i);
 
