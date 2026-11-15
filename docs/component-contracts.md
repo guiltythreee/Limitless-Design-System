@@ -43,3 +43,8 @@ This document defines the first portable visual primitives. It is a design contr
 2. Compare screenshots against the current live section at desktop and mobile widths.
 3. Run the consuming application's existing regression suite.
 4. Propose integration as a separate review. Do not import these files into production as part of work in this repository.
+
+
+## Live-site fidelity boundary
+
+These primitives define a portable API and baseline behavior; they are not claimed to be pixel-equivalent replacements for every existing Limitless control. The live visual source map in `docs/live-visual-source-map.md` identifies the authoritative application styles. Do not migrate or replace an existing control until its exact section-specific styling and responsive rules have been mapped. Existing markup and CSS remain the visual authority.
