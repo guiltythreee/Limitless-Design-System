@@ -224,3 +224,8 @@ These controls complement, rather than replace, the existing shared learning-pla
 | Mistake classification section | No generic behavior contract added | Category definitions, selection, persistence and revision analysis remain application/shared-study-owned |
 
 The charts are deliberately documented as application-owned SVGs. Do not infer a reusable chart API from the fact that they sit inside shared utility panels.
+
+
+### Probability test setup selection boundary
+
+The Probability test setup uses a hierarchical native-checkbox picker: a chapter checkbox selects its topic children and can represent partial selection with the native indeterminate state; chapter disclosure buttons independently collapse/expand topic lists. Bulk selection, selected-topic summary, question-pool filtering and test configuration remain in `Test.tsx`. This is documented as an application-owned interaction, not a new generic tree component. Do not infer that `.ds-chip`, `.ds-field` or `.ds-button` supplies the parent/child selection model or indeterminate behavior.
