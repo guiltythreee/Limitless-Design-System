@@ -30,6 +30,7 @@ for (const section of ["probability", "metallurgy", "home", "competition", "code
 
 const componentSelectors = [
   ".ds-button", ".ds-button--primary", ".ds-button--secondary", ".ds-button--quiet",
+  ".ds-sidebar", ".ds-sidebar-link",
   ".ds-panel", ".ds-card", ".ds-navigation-card", ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab", ".ds-badge", ".ds-nav", ".ds-nav-link",
 ];
 for (const selector of componentSelectors) {
@@ -69,6 +70,10 @@ assert.match(components, /opt-in/i);
 assert.match(components, /\.ds-panel/);
 assert.match(components, /\.ds-card/);
 assert.match(components, /\.ds-navigation-card/);
+assert.match(components, /\.ds-sidebar-link/);
+assert.match(components, /\.ds-sidebar--horizontal/);
+assert.match(preview, /ds-sidebar sample-sidebar/);
+assert.match(contracts, /Sidebar navigation/);
 assert.match(components, /--ds-panel-backdrop-filter/);
 assert.match(components, /--ds-navigation-card-hover-transform/);
 assert.match(preview, /ds-panel sample-card/);
@@ -95,4 +100,4 @@ assert.match(contracts, /Keyboard focus must remain visible/);
 assert.match(contracts, /must not own application state/);
 
 console.log("Design-system contract: PASS");
-console.log("5 section adapters; 9 component primitives; scoped CSS; accessibility contracts and live component audit documented.");
+console.log("5 section adapters; 11 component primitives; scoped CSS; accessibility contracts and live component audit documented.");
