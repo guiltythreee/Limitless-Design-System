@@ -15,11 +15,22 @@ This document defines the first portable visual primitives. It is a design contr
 | Primitive | Class contract | Variants / states | Required semantics |
 |---|---|---|---|
 | Button | `.ds-button` | `--primary`, `--secondary`, `--quiet`; hover, active, focus-visible, disabled | Use a native `button` for actions and an `a` for navigation. Never fake disabled state without preventing activation. |
-| Surface / card | `.ds-surface` | default, `--raised` | Use a meaningful section, article, or generic container according to content; do not add interactive behavior to a card by default. |
+| Panel | `.ds-panel` | default, `--flush` | Use for a grouped content region; padding, radius, shadow and blur are section-adaptable tokens. |
+| Content card | `.ds-card` | default, `--flat` | Use for self-contained information; it is not interactive by default. |
+| Navigation card | `.ds-navigation-card` | hover, focus-visible | Use an anchor for navigation; preserve the complete clickable hit area and current-destination semantics. |
+| Legacy surface | `.ds-surface` | default, `--raised` | Retained for compatibility with the original primitive contract; new work should choose panel, content card or navigation card explicitly. |
 | Field | `.ds-field` | default, focus-visible, invalid | Pair with a persistent visible label; communicate errors in text, not color alone. |
 | Tabs | `.ds-tabs`, `.ds-tab` | selected, focus-visible, horizontal overflow | Use tablist/tab/tabpanel roles only when implementing the full tab interaction pattern; otherwise use ordinary navigation links. |
 | Badge | `.ds-badge` | neutral by default | Use for concise status or metadata, not as a substitute for headings or explanatory text. |
 | Navigation | `.ds-nav`, `.ds-nav-link` | current page, focus-visible | Place inside a labelled navigation landmark; mark the current destination with `aria-current="page"`. |
+
+## Panel and card family
+
+- A panel groups related content and may carry section-specific backdrop blur and elevation. Its padding can be overridden by the consuming layout.
+- A content card presents one self-contained unit of information. It is not clickable unless its content contains a native interactive element.
+- A navigation card must be an anchor, not a clickable `div` or button used for routing. Its hover treatment is optional and must not be required to understand the destination.
+- Panel, content-card and navigation-card geometry is mapped through section adapter variables. These defaults are structural foundations, not claims of pixel-equivalence.
+- Do not use a generic card to replace special live patterns such as Probability option cards, Metallurgy topic selectors, Home shortcut cards, Competition metric cards or Codeforces milestones until each receives a dedicated source-backed variant.
 
 ## Interaction and accessibility rules
 
