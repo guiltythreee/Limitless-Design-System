@@ -146,7 +146,7 @@ const courseBrowserSelectors = [".ds-course-toolbar", ".ds-course-search", ".ds-
 for (const selector of courseBrowserSelectors) {
   assert.ok(components.includes(selector), `Missing Metallurgy course-browser selector: ${selector}`);
 }
-assert.match(tokens, /--ds-course-toolbar-radius:14px/);
+assert.match(tokens, /--ds-course-toolbar-radius:\\s*14px/);
 assert.match(tokens, /--ds-course-search-background:var\(--inset\)/);
 assert.match(contracts, /Weak.*60%|weak.*60%/);
 assert.match(audit, /course-browser toolbar/i);
@@ -156,7 +156,7 @@ const courseNavSelectors = [".ds-course-nav-item", ".ds-course-nav-number", ".ds
 for (const selector of courseNavSelectors) {
   assert.ok(components.includes(selector), `Missing Metallurgy sidebar selector: ${selector}`);
 }
-assert.match(tokens, /--ds-course-nav-progress-fill:linear-gradient/);
+assert.match(tokens, /--ds-course-nav-progress-fill:\\s*linear-gradient/);
 assert.match(contracts, /Metallurgy archive sidebar navigation/);
 assert.match(audit, /archive sidebar and progress/i);
 
