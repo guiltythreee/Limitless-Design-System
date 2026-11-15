@@ -339,3 +339,7 @@ html[data-theme="light"] [data-limitless-design="codeforces"] {
   --ds-chapter-number-color: var(--gold);
   --ds-chapter-progress-track: var(--track);
   --ds-chapter-progress-fill: linear-gradient(90deg, var(--mutedgold), var(--gold));
+
+
+/* Metallurgy course-browser control geometry, from course-chapter-browser.css. */
+[data-limitless-design="metallurgy"]{--ds-course-toolbar-radius:14px;--ds-course-search-radius:10px;--ds-course-search-background:var(--inset);--ds-course-placeholder:var(--faint);--ds-course-filter-radius:10px;--ds-course-filter-background:var(--inset)}
