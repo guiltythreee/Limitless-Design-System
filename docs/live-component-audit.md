@@ -171,3 +171,8 @@ The live `CourseChapterBrowser.tsx` renders `.cb-heading` with a title/descripti
 ## Follow-up source finding — shared study utility navigation
 
 The production `shared/studies/StudyUtilityNav.ts` factory renders a labelled `nav` containing native buttons. Its caller supplies items, optional descriptions/counts, active state, accent tone and selection callback. `study-utility-nav.css` provides vertical course-sidebar layout and a compact horizontal Probability variant. Proposed contracts are `.ds-study-utility-nav` and `.ds-study-utility-nav--horizontal`. The design-system package does not replace the production factory or own any study state.
+
+
+## Follow-up source finding — shared study utility panel family
+
+The production `shared/studies/study-utility-nav.css` defines a reusable panel system beyond the utility navigation itself: panel frame/header/title/count/content, compact controls/actions, toolbar, metric tiles, visual/legend, progress, seven-day grid, content rows, empty state and form layout. The design-system package now maps these as `.ds-study-utility-*` presentation primitives. Section variables remain authoritative; values, chart data, progress calculations, persistence and callbacks remain application-owned. Responsive behavior retained in the contract includes two-column metrics at 520px, wrapping row actions, reduced-motion progress and forced-colour focus.
