@@ -192,3 +192,10 @@ These primitives define a portable API and baseline behavior; they are not claim
 - Chapter/topic selection, bulk actions, disclosure state, selected-topic summary, question-pool construction and test configuration remain application-owned.
 - This checkpoint does not define a reusable tree/selection primitive. Existing button, chip and field contracts cover only their own visual/native-control roles; they do not imply ownership of hierarchical selection or mixed state.
 - If a future design-system contract is proposed, audit keyboard interaction, checkbox indeterminate semantics, disclosure semantics, responsive scroll behavior and mixed parent/child state before defining its visual API.
+
+## Probability in-progress player presentation
+
+- The in-progress preview composes the existing question-status rail, timer, question metadata, bookmark affordance, question prompt, selectable-option surface and action-bar slots into one learning-player screen.
+- The composition is a visual fixture, not a new stateful component or a replacement for Practice.tsx / LearningPlayerShell.
+- The consumer supplies question text, difficulty, topic, timer value, current index, answer selection, bookmark state and enabled/disabled states. Navigation, grading, timer lifecycle, answer persistence and keyboard handling remain application/shared learning-player responsibilities.
+- The static preview is shown in both Probability themes. Its compact mobile layout is only a visual contract; responsive player behaviour remains owned by the live application.

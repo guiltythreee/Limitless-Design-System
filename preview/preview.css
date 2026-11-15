@@ -149,3 +149,37 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -.04em; }
 .sample-practice-controls .ds-practice-analysis-dock__action { padding:7px 14px; font-size:10px; }
 .sample-practice-controls .ds-practice-week-status { gap:3px; font-size:9px; flex-direction:column; }
 .sample-practice-controls .ds-practice-week-status__label { font-size:9px; }
+
+
+/* Probability in-progress learning-player fixture. Static only; all session state stays in the app. */
+.sample-player-screen { display:grid; gap:14px; margin-top:14px; padding:16px; }
+.sample-player-screen__topline,.sample-player-screen__meta { display:flex; align-items:center; justify-content:space-between; gap:12px; min-width:0; }
+.sample-player-screen__eyebrow { color:var(--ds-color-muted); font-size:10px; font-weight:700; letter-spacing:.14em; text-transform:uppercase; }
+.sample-player-screen__progress { color:var(--ds-color-muted); font-size:11px; font-variant-numeric:tabular-nums; }
+.sample-player-screen__nav { align-items:center; gap:5px; }
+.sample-player-screen__nav .ds-practice-question-marker { min-width:34px; height:38px; }
+.sample-player-screen__remaining { color:var(--ds-color-muted); font-size:11px; }
+.sample-player-screen__meta { padding:12px 0; border-top:1px solid var(--ds-color-border); border-bottom:1px solid var(--ds-color-border); }
+.sample-player-screen__meta > div:first-child { display:grid; grid-template-columns:auto auto; justify-content:start; align-items:center; gap:4px 8px; }
+.sample-player-screen__question-number { color:var(--ds-color-heading); font-size:13px; font-weight:700; }
+.sample-player-screen__meta small { grid-column:1 / -1; color:var(--ds-color-muted); font-size:10px; }
+.sample-player-screen__meta .ds-practice-timer { padding:5px 10px; font-size:12px; }
+.sample-player-screen__bookmark { width:34px; height:34px; border:1px solid var(--ds-color-border); border-radius:50%; background:transparent; color:var(--ds-color-muted); font-size:18px; }
+.sample-player-screen__question { margin:0; color:var(--ds-color-heading); font-family:var(--ds-font-serif,var(--ds-font-sans)); font-size:clamp(16px,2vw,19px); font-weight:600; line-height:1.55; }
+.sample-player-screen__hint { margin:-8px 0 0; color:var(--ds-color-muted); font-size:11px; }
+.sample-player-screen__options { display:grid; gap:8px; }
+.sample-player-screen__option { min-height:48px; padding:9px 12px; font-size:12px; }
+.sample-player-screen__option.is-selected { border-color:var(--ds-color-accent); background:var(--ds-color-surface-raised); }
+.sample-player-screen__option.is-selected .ds-option__letter { border-color:var(--ds-color-accent); background:var(--ds-color-accent); color:var(--ds-color-on-accent,#fff); }
+.sample-player-screen__selected-mark { margin-left:auto; color:var(--ds-color-accent); font-weight:700; }
+.sample-player-screen__actions { position:static; bottom:auto; z-index:auto; margin-top:2px; padding:7px; gap:6px; border-radius:14px; }
+.sample-player-screen__actions .ds-practice-actionbar__primary,.sample-player-screen__actions .ds-practice-actionbar__secondary { min-height:36px; padding:7px 10px; font-size:10px; }
+.sample-player-screen__footnote { margin:0; color:var(--ds-color-muted); font-size:9px; text-align:center; }
+@media (max-width:460px) {
+  .sample-player-screen { padding:12px; gap:11px; }
+  .sample-player-screen__meta { gap:7px; }
+  .sample-player-screen__meta .ds-practice-timer { padding:5px 7px; font-size:10px; }
+  .sample-player-screen__actions { flex-wrap:wrap; }
+  .sample-player-screen__actions .ds-practice-actionbar__primary { order:-1; flex-basis:100%; }
+  .sample-player-screen__actions .ds-practice-actionbar__secondary { flex:1; }
+}

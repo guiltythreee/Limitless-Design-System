@@ -277,3 +277,20 @@ assert.match(contracts, /native indeterminate parent state/);
 assert.match(mapping, /native-checkbox picker/);
 assert.match(audit, /parent checkbox exposes an indeterminate state/);
 assert.match(contracts, /does not define a reusable tree\/selection primitive/);
+
+
+// Probability in-progress player fixture: structure and theme parity only, no session behaviour.
+const inProgressPlayerSelectors = [
+  "sample-player-screen", "sample-player-screen__topline", "sample-player-screen__nav",
+  "sample-player-screen__meta", "sample-player-screen__question", "sample-player-screen__options",
+  "sample-player-screen__actions", "sample-player-screen__footnote",
+];
+for (const selector of inProgressPlayerSelectors) {
+  assert.ok(preview.includes(selector), `Missing Probability in-progress player preview: ${selector}`);
+  assert.ok(previewStyles.includes(selector), `Missing Probability in-progress player styling: ${selector}`);
+}
+assert.equal((preview.match(/aria-label="Probability test in-progress screen preview"/g) ?? []).length, 2,
+  "Probability in-progress player must be represented in both dark and light themes");
+assert.match(preview, /sample-player-screen__option is-selected/);
+assert.match(contracts, /Probability in-progress player presentation/);
+assert.match(mapping, /Probability in-progress player presentation/);
