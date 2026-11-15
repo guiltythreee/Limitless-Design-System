@@ -161,3 +161,14 @@ These primitives define a portable API and baseline behavior; they are not claim
 - **Mistakes:** this is the same ActivityHistoryPanel in a distinct view, not a separate panel shell. It adds mistake-category controls, topic-mastery and recurring-mistake summaries, and a prioritized revision queue. Category selection, local persistence, reviewed state and revision ranking remain application-owned.
 - **Daily goals:** the goals metric variant has two wider tiles; the weekly grid includes per-day count/goal and met/today/future states. The numeric target is constrained to 1–200 and submitted through the course callback. The fill width and success colour are computed by the application.
 - Preserve .ds-study-utility-row--question as a separate source-backed divider row variant and .ds-study-utility-progress--overview as a distinct taller progress track. Do not infer that all row types or progress tracks are interchangeable.
+
+
+## Probability practice-session controls
+
+- `.ds-practice-question-nav` is a wrapping navigation rail for question markers. Each marker remains a native button; the application supplies question number, status and `aria-current="step"`.
+- `.ds-practice-question-marker` supports the source's correct, incorrect and partial states. Status styling is visual only; grading and current-question navigation remain in the learning-player/application.
+- `.ds-practice-timer` is a tabular-numeral timer pill. Stopwatch lifecycle, pause/resume and elapsed-time persistence remain application-owned.
+- `.ds-practice-actionbar` is the sticky action container; primary/secondary button classes only map geometry and disabled appearance. Submit, next, previous and retry behavior remain outside the package.
+- `.ds-practice-analysis-dock` maps the sticky floating analysis affordance. Its action and destination remain consumer-owned.
+- `.ds-practice-goal-milestones` and `.ds-practice-week-status` map the Probability dashboard goal milestones and daily streak cells. Goal fraction, reached thresholds, weekly status and counts remain data supplied by the dashboard.
+- Preserve reduced-motion handling for the milestone fill and forced-colour focus for the current question marker.
