@@ -30,3 +30,7 @@ npm test
 Development happens here first. Nothing in this repository changes the live Limitless application. Integration into `guiltythreee/Limitless` must be a separate, explicitly reviewed step after visual and regression validation.
 
 Preserve each section's established visual identity. Shared foundations should unify spacing, typography, geometry, motion, and component behavior without flattening section-specific palettes or artwork.
+
+## Component foundation
+
+The first opt-in primitives and their accessibility/variant contracts are documented in `docs/component-contracts.md` and implemented in `src/components.css`. They remain isolated from the live applications.
