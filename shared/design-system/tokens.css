@@ -60,6 +60,7 @@
   --ds-color-muted: var(--dim);
   --ds-color-accent: var(--gold);
   --ds-color-accent-strong: var(--goldhi);
+  --ds-color-on-accent: var(--ink);
   --ds-color-border: var(--panel-line);
   --ds-color-success: var(--ok);
   --ds-color-danger: var(--bad, #b45353);
@@ -94,6 +95,7 @@
   --ds-color-muted: var(--home-muted);
   --ds-color-accent: var(--home-blue);
   --ds-color-accent-strong: var(--home-blue);
+  --ds-color-on-accent: #ffffff;
   --ds-color-border: var(--home-border);
   --ds-color-focus: var(--home-blue);
   --ds-font-display: var(--ds-font-sans);
@@ -109,6 +111,7 @@
   --ds-color-muted: var(--comp-muted);
   --ds-color-accent: var(--comp-accent);
   --ds-color-accent-strong: var(--comp-accent);
+  --ds-color-on-accent: #ffffff;
   --ds-color-border: var(--comp-border);
   --ds-color-focus: var(--comp-accent);
   --ds-font-display: var(--ds-font-sans);
@@ -124,6 +127,7 @@
   --ds-color-muted: #a8bfd8;
   --ds-color-accent: #75baff;
   --ds-color-accent-strong: #83c3ff;
+  --ds-color-on-accent: #082034;
   --ds-color-border: rgba(105, 158, 213, 0.2);
   --ds-color-focus: #ffd36e;
   --ds-font-display: var(--ds-font-sans);
@@ -136,4 +140,5 @@ html[data-theme="light"] [data-limitless-design="codeforces"] {
   --ds-color-heading: #1c3d5c;
   --ds-color-muted: #526d87;
   --ds-color-border: rgba(59, 112, 159, 0.22);
+  --ds-color-on-accent: #ffffff;
 }
