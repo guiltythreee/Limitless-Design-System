@@ -34,6 +34,13 @@ for (const component of [
 }
 
 assert.match(tokens, /NOT imported by any application yet/);
+assert.match(tokens, /--ds-color-canvas: var\\(--page-bg\\)/, "Study adapters must preserve the live page background");
+assert.equal((tokens.match(/--ds-color-surface: var\\(--panel-bg\\)/g) || []).length, 2, "Probability and Metallurgy must use their live panel gradients");
+assert.equal((tokens.match(/--ds-color-surface-raised: var\\(--chip\\)/g) || []).length, 2, "Study raised surfaces must use their live chip tokens");
+assert.match(tokens, /--ds-color-on-accent: var\\(--ongold\\)/, "Study accent foreground must follow the live ongold token");
+assert.match(tokens, /--ds-color-surface: var\\(--home-panel\\)/, "Home must use its live panel token");
+assert.match(tokens, /--ds-color-surface: var\\(--comp-panel\\)/, "Competition must use its effective dashboard panel token");
+assert.match(tokens, /--ds-color-surface: rgba\\(8, 20, 36, 0\\.88\\)/, "Codeforces dark surface must match its live CSS");
 assert.match(components, /opt-in/);
 for (const [name, source] of [["tokens", tokens], ["components", components]]) {
   assert.doesNotMatch(source, /@import\s/i, `${name} must not import stylesheets`);
