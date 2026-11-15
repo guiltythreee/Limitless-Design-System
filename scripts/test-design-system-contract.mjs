@@ -109,6 +109,7 @@ assert.match(contracts, /Chapter rows/);
 assert.match(contracts, /Selectable options/);
 assert.match(components, /--ds-panel-backdrop-filter/);
 assert.match(components, /--ds-navigation-card-hover-transform/);
+assert.match(preview, /ds-checkbox/);
 assert.match(preview, /ds-panel sample-card/);
 assert.match(preview, /ds-chapter-row sample-chapter-row/);
 assert.match(preview, /ds-option sample-option/);
