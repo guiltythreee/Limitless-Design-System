@@ -210,3 +210,9 @@ for (const selector of studyPanelPreview) {
 assert.match(mapping, /Study utility panel family/);
 assert.match(contracts, /Shared study utility panels/);
 assert.match(audit, /shared study utility panel family/);
+
+assert.match(tokens, /--ds-study-panel-background:\s*var\(--panel-bg/);
+assert.match(tokens, /--ds-utility-inset:\s*var\(--inset\)/);
+assert.match(tokens, /--ds-study-progress-fill:\s*var\(--gold\)/);
+assert.match(tokens, /\[data-limitless-design="metallurgy"\]\s*\{[^}]*--ds-study-panel-background/s);
+assert.match(tokens, /\[data-limitless-design="probability"\]\s*\{[^}]*--ds-study-panel-background/s);
