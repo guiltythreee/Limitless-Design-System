@@ -96,3 +96,7 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -.04em; }
 .sample-family-link { padding:12px; }
 .sample-family-link:hover strong { color:var(--ds-color-heading); }
 @media (max-width: 460px) { .sample-card-grid { grid-template-columns:1fr; } }
+
+.sample-sidebar { margin-top:12px; padding:8px; border:1px solid var(--ds-color-border); border-radius:10px; background:var(--ds-color-surface); }
+.sample-sidebar .ds-sidebar-link { font-size:11px; }
+.sample-sidebar .ds-sidebar-link > :first-child { font-size:15px; }
