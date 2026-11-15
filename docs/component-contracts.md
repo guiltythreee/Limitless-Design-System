@@ -127,3 +127,19 @@ These primitives define a portable API and baseline behavior; they are not claim
 - .ds-course-nav-number maps the 32px bordered number tile.
 - .ds-course-nav-meta, .ds-course-nav-progress and .ds-course-nav-percent map the 4px progress track and trailing percentage. The application supplies the percentage and accessible progress text.
 - Use native buttons because the live sidebar changes the current in-page study view. The component owns no navigation state, persistence or progress calculation.
+
+
+## Metallurgy course heading and summary
+
+- `.ds-course-heading` maps the live `.cb-heading` panel: 1.25rem 1.4rem padding, 16px radius, border, panel fill and subtle shadow.
+- The heading contains an eyebrow, title and optional description; the summary is a separate flex group of compact metric tiles.
+- At 850px and below the heading stacks vertically. At 520px and below summary items flex evenly and reduce their minimum width.
+- Metric values are application-owned and must retain tabular numerals. Do not move course totals or calculation logic into the visual primitive.
+
+## Shared study utility navigation
+
+- `.ds-study-utility-nav` maps the shared `createStudyUtilityNav` output and `.study-utility-nav` CSS.
+- Items are native buttons. The application supplies item labels, descriptions, counts, active state and selection callback.
+- Preserve `aria-current="page"` for the active item, optional accent tone, count badge, visible keyboard focus, and reduced-motion behavior.
+- `.ds-study-utility-nav--horizontal` maps Probability's compact horizontal utility variant; the default layout remains a vertical course-sidebar list.
+- The primitive must not own bookmarks, history, mistakes, goals, progress, routing or persistence.
