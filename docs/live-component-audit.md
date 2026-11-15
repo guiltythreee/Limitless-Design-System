@@ -152,3 +152,8 @@ No live application imports this package. No production files are changed by thi
 ## Follow-up source finding — Metallurgy chapter browser
 
 The current `CourseChapterBrowser.tsx` renders `.cb-chapter` rows, styled in `app/courses/course-chapter-browser.css`. The older `.topic-card` selector in `globals.css` is a separate legacy pattern and is not the current chapter-browser control. The live row is transparent with a bottom divider, chip-colour hover fill, a numbered marker, title/progress stack, right-aligned metrics and trailing arrow. At 850px it collapses and places metrics beneath the title. This source mapping is implemented as `.ds-chapter-row`; no application integration is authorized.
+
+
+## Follow-up source finding — Metallurgy course-browser toolbar
+
+The live CourseChapterBrowser.tsx pairs course-chapter-browser.css with native input/select controls. .cb-toolbar is a bordered panel that stacks at 850px; .cb-search is an inset search field; .cb-filters select retains native select behavior and changes to a single-column grid at 520px. .cb-list-head hides its trailing descriptor at 520px. These are mapped as .ds-course-toolbar, .ds-course-search, .ds-course-filters, .ds-course-list-head and .ds-course-empty. Query/filter/sort state and logic remain application-owned. The source includes title-or-ID matching, optional unit selection, five progress statuses and four sort modes; weak chapters are those below 60% accuracy after at least one attempt.
