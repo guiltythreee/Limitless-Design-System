@@ -80,6 +80,15 @@
   --ds-badge-radius: var(--ds-radius-pill);
   --ds-badge-font-size: var(--ds-text-xs);
   --ds-badge-background: var(--ds-color-surface-raised);
+  --ds-segmented-gap: var(--ds-space-1);
+  --ds-segmented-padding: var(--ds-space-1);
+  --ds-segmented-radius: var(--ds-radius-md);
+  --ds-segmented-background: var(--ds-color-surface);
+  --ds-segmented-selected-background: var(--ds-color-surface-raised);
+  --ds-segmented-selected-color: var(--ds-color-heading);
+  --ds-stage-grid-columns: 27px minmax(0, 1fr) 15px;
+  --ds-stage-option-radius: var(--ds-radius-sm);
+  --ds-stage-option-padding: 9px 7px;
 
   /* Semantic colour slots are supplied by each section adapter below. */
 }
@@ -87,6 +96,14 @@
 /* Probability retains its parchment/gold palette and existing light/dark vars. */
 [data-limitless-design="probability"] {
   --ds-color-canvas: var(--page-bg);
+  --ds-segmented-background: var(--pa-surface);
+  --ds-segmented-border: var(--pa-border);
+  --ds-segmented-selected-background: linear-gradient(135deg, var(--pa-blue), var(--pa-blue-strong));
+  --ds-segmented-selected-color: #071a2d;
+  --ds-segmented-selected-shadow: 0 4px 16px var(--pa-glow);
+  --ds-segmented-option-radius: 7px;
+  --ds-segmented-option-font: 650 10px Arial, sans-serif;
+  --ds-segmented-option-padding: 0.5rem 0.7rem;
   --ds-color-chip-success: var(--good);
   --ds-color-chip-warning: var(--warn);
   --ds-color-chip-danger: var(--bad);
@@ -224,6 +241,14 @@
 /* Codeforces currently uses literal values; these aliases mirror its existing palette. */
 [data-limitless-design="codeforces"] {
   --ds-color-canvas: transparent;
+  --ds-stage-grid-columns: 27px minmax(0, 1fr) 15px;
+  --ds-stage-option-radius: 8px;
+  --ds-stage-option-padding: 9px 7px;
+  --ds-stage-option-color: #c5d7e9;
+  --ds-stage-active-background: rgba(41,113,179,.2);
+  --ds-stage-active-border: rgba(100,178,242,.48);
+  --ds-stage-hover-background: rgba(53,113,166,.15);
+  --ds-stage-muted: #8faac4;
   --ds-color-chip-accent: #8fcaff;
   --ds-color-chip-success: #76e0b6;
   --ds-color-chip-warning: #e8c27b;
@@ -253,6 +278,10 @@
 }
 
 html[data-theme="light"] [data-limitless-design="codeforces"] {
+  --ds-stage-option-color: #294967;
+  --ds-stage-active-background: #e1effc;
+  --ds-stage-active-border: #9bbfdf;
+  --ds-stage-muted: #607991;
   --ds-color-surface: rgba(249, 252, 255, 0.94);
   --ds-color-surface-raised: rgba(232, 242, 252, 0.75);
   --ds-color-text: #526d87;
