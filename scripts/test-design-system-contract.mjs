@@ -77,6 +77,8 @@ assert.match(components, /\.ds-button--prominent/);
 assert.match(components, /\.ds-field--compact/);
 assert.match(components, /\.ds-field--monospace/);
 assert.match(components, /\.ds-chip--selected/);
+assert.match(components, /\.ds-chip--accent/);
+assert.match(components, /\.ds-badge--accent/);
 assert.match(components, /\.ds-chip--success/);
 assert.match(components, /\.ds-badge--easy/);
 assert.match(components, /\.ds-badge--medium/);
@@ -92,6 +94,7 @@ assert.match(components, /--ds-navigation-card-hover-transform/);
 assert.match(preview, /ds-panel sample-card/);
 assert.match(preview, /ds-card sample-family-card/);
 assert.match(preview, /ds-navigation-card sample-family-link/);
+assert.match(preview, /ds-chip sample-chip/);
 assert.match(mapping, /Content panel/);
 assert.match(mapping, /Navigation card/);
 
