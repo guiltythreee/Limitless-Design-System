@@ -766,3 +766,51 @@
 :where([data-limitless-design]) .ds-study-utility-nav--horizontal .ds-study-utility-nav__label{font-size:.72rem;white-space:nowrap}
 :where([data-limitless-design]) .ds-study-utility-nav--horizontal .ds-study-utility-nav__count{min-width:1.3rem;padding:.08rem .3rem}
 @media(prefers-reduced-motion:reduce){:where([data-limitless-design]) .ds-study-utility-nav__item{transition:none}}
+
+
+/* Study utility panel family: source-mapped from shared/studies/study-utility-nav.css. */
+:where([data-limitless-design]) .ds-study-utility-panel{min-width:0;padding:var(--ds-study-panel-padding,clamp(1rem,2.2vw,1.5rem));border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:var(--ds-study-panel-radius,1rem);background:var(--ds-study-panel-background,var(--ds-color-surface));color:var(--ds-color-text);box-shadow:var(--ds-study-panel-shadow,none)}
+:where([data-limitless-design]) .ds-study-utility-panel__header{display:flex;align-items:flex-start;justify-content:space-between;gap:.8rem 1.2rem;flex-wrap:wrap;padding-bottom:1rem;margin-bottom:1rem;border-bottom:1px solid var(--ds-utility-border,var(--ds-color-border))}
+:where([data-limitless-design]) .ds-study-utility-panel__heading{min-width:0}
+:where([data-limitless-design]) .ds-study-utility-panel__title{margin:0;color:var(--ds-color-heading);font-family:var(--ds-font-serif,Georgia,"Times New Roman",serif);font-size:clamp(1.15rem,2vw,1.45rem);line-height:1.3;font-weight:600}
+:where([data-limitless-design]) .ds-study-utility-panel__description{margin:.35rem 0 0;color:var(--ds-color-muted);font-size:.8rem;line-height:1.55}
+:where([data-limitless-design]) .ds-study-utility-panel__count{flex:none;padding:.28rem .65rem;border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:999px;color:var(--ds-color-muted);background:var(--ds-utility-chip,var(--ds-color-surface-raised));font-size:.72rem;font-variant-numeric:tabular-nums}
+:where([data-limitless-design]) .ds-study-utility-panel__content{min-width:0}
+:where([data-limitless-design]) .ds-study-utility-control{min-width:0;max-width:100%;min-height:2.2rem;padding:.42rem .7rem;border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:.6rem;background:var(--ds-utility-inset,var(--ds-color-surface-raised));color:var(--ds-color-text);font:inherit;font-size:.8rem;line-height:1.35}
+:where([data-limitless-design]) .ds-study-utility-action{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:2.2rem;padding:.45rem .8rem;border:1px solid var(--ds-utility-action-border,transparent);border-radius:.6rem;background:var(--ds-utility-action-background,transparent);color:var(--ds-utility-action-color,inherit);font:inherit;font-size:.8rem;line-height:1.35}
+:where([data-limitless-design]) .ds-study-utility-panel :is(button,input,select,textarea):focus-visible{border-color:var(--ds-color-focus);outline:2px solid var(--ds-color-focus);outline-offset:2px}
+:where([data-limitless-design]) .ds-study-utility-toolbar{display:flex;flex-wrap:wrap;align-items:center;gap:.6rem;min-width:0;margin-bottom:1rem}
+:where([data-limitless-design]) .ds-study-utility-toolbar>*{max-width:100%}
+:where([data-limitless-design]) .ds-study-utility-metrics{display:grid;grid-template-columns:repeat(auto-fit,minmax(7rem,1fr));gap:.6rem;margin-bottom:1.2rem}
+:where([data-limitless-design]) .ds-study-utility-metric{display:flex;flex-direction:column;align-items:flex-start;gap:.2rem;min-width:0;padding:.75rem .8rem;border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:.75rem;background:var(--ds-study-metric-background,var(--ds-color-surface))}
+:where([data-limitless-design]) .ds-study-utility-metrics--goals{grid-template-columns:repeat(auto-fit,minmax(10rem,1fr));gap:.8rem;margin-bottom:1rem}
+:where([data-limitless-design]) .ds-study-utility-metric__label,:where([data-limitless-design]) .ds-study-utility-metric__detail{color:var(--ds-color-muted);font-size:.75rem;line-height:1.45}
+:where([data-limitless-design]) .ds-study-utility-metric__value{color:var(--ds-color-heading);font-family:var(--ds-font-serif,Georgia,"Times New Roman",serif);font-size:1.45rem;font-weight:700;line-height:1.25;font-variant-numeric:tabular-nums}
+:where([data-limitless-design]) .ds-study-utility-visual{min-width:0;margin-bottom:1.2rem;padding:.8rem;border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:.75rem}
+:where([data-limitless-design]) .ds-study-utility-legend{display:flex;flex-wrap:wrap;align-items:center;gap:.8rem;margin-top:.6rem;color:var(--ds-color-muted);font-size:.72rem;line-height:1.4}
+:where([data-limitless-design]) .ds-study-utility-legend__item{display:inline-flex;align-items:center;gap:.3rem}
+:where([data-limitless-design]) .ds-study-utility-legend__swatch{width:.55rem;height:.55rem;flex:none;border-radius:2px}
+:where([data-limitless-design]) .ds-study-utility-progress{width:100%;height:.45rem;overflow:hidden;border-radius:999px;background:var(--ds-utility-progress-track,var(--ds-color-surface-raised))}
+:where([data-limitless-design]) .ds-study-utility-progress--overview{height:.5rem}
+:where([data-limitless-design]) .ds-study-utility-progress__fill{width:var(--ds-study-progress-value,0%);height:100%;border-radius:inherit;background:var(--ds-study-progress-fill,var(--ds-color-accent));transition:width 160ms ease}
+:where([data-limitless-design]) .ds-study-utility-week-grid{display:grid;grid-template-columns:repeat(7,minmax(0,1fr));gap:.45rem;min-width:0}
+:where([data-limitless-design]) .ds-study-utility-week-cell{min-width:0;text-align:center}
+:where([data-limitless-design]) .ds-study-utility-week-label{font-size:.7rem;line-height:1.3;overflow-wrap:anywhere}
+:where([data-limitless-design]) .ds-study-utility-week-value{font-size:.9rem;font-weight:700;line-height:1.3;font-variant-numeric:tabular-nums}
+:where([data-limitless-design]) .ds-study-utility-week-detail{color:var(--ds-color-muted);font-size:.65rem;line-height:1.35;overflow-wrap:anywhere}
+:where([data-limitless-design]) .ds-study-utility-list,:where([data-limitless-design]) .ds-study-utility-row{min-width:0}
+:where([data-limitless-design]) .ds-study-utility-row--question,:where([data-limitless-design]) .ds-study-utility-row--history{padding:.85rem .3rem;border-bottom:1px solid var(--ds-utility-border,var(--ds-color-border))}
+:where([data-limitless-design]) .ds-study-utility-row--item{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.75rem;padding:.85rem .3rem;border-bottom:1px solid var(--ds-utility-border,var(--ds-color-border))}
+:where([data-limitless-design]) .ds-study-utility-row__copy{min-width:0;flex:1 1 16rem;overflow-wrap:anywhere}
+:where([data-limitless-design]) .ds-study-utility-row__top{display:flex;justify-content:space-between;gap:.6rem;flex-wrap:wrap;align-items:flex-start}
+:where([data-limitless-design]) .ds-study-utility-row__title{font-weight:600;line-height:1.45;overflow-wrap:anywhere}
+:where([data-limitless-design]) .ds-study-utility-row__meta{margin-top:.2rem;color:var(--ds-color-muted);font-size:.78rem;line-height:1.5}
+:where([data-limitless-design]) .ds-study-utility-row__detail{margin-top:.35rem;font-size:.85rem;line-height:1.5;overflow-wrap:anywhere}
+:where([data-limitless-design]) .ds-study-utility-row__actions{display:flex;flex-wrap:wrap;align-items:center;gap:.5rem}
+:where([data-limitless-design]) .ds-study-utility-empty{padding:1.25rem;border:1px dashed var(--ds-utility-border,var(--ds-color-border));border-radius:.75rem;color:var(--ds-color-muted);font-size:.875rem;line-height:1.55;text-align:center}
+:where([data-limitless-design]) .ds-study-utility-form{display:flex;flex-wrap:wrap;align-items:end;gap:.65rem;min-width:0}
+:where([data-limitless-design]) .ds-study-utility-form>*{min-width:0;max-width:100%}
+:where([data-limitless-design]) .ds-study-utility-form input{max-width:100%}
+@media(max-width:520px){:where([data-limitless-design]) .ds-study-utility-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}:where([data-limitless-design]) .ds-study-utility-row__actions{width:100%}}
+@media(prefers-reduced-motion:reduce){:where([data-limitless-design]) .ds-study-utility-progress__fill{transition:none}}
+@media(forced-colors:active){:where([data-limitless-design]) .ds-study-utility-panel :is(button,input,select,textarea):focus-visible{outline-color:Highlight;border-color:Highlight}}
