@@ -23,10 +23,19 @@ This document defines the first portable visual primitives. It is a design contr
 | Tabs | `.ds-tabs`, `.ds-tab` | selected, focus-visible, horizontal overflow | Use tablist/tab/tabpanel roles only when implementing the full tab interaction pattern; otherwise use ordinary navigation links. |
 | Segmented control | `.ds-segmented`, `.ds-segmented-option` | pressed/current, focus-visible | Use buttons with `aria-pressed` for mutually exclusive toggles or links with current-page semantics for navigation; do not assign tab roles by appearance alone. |
 | Stage selector | `.ds-stage-selector`, `.ds-stage-option` | active/current step, focus-visible | Use native buttons for stage selection; expose the selected stage semantically and keep stage metadata in child elements. |
+| Metric card | `.ds-metric-card` and label/value/detail elements | tabular value, responsive wrapping | Keep metric data and formatting in the application; use labels and visible units/context. |
+| Progress | `.ds-progress` | standard, thin; reduced motion | The application owns progress calculation and value; expose progressbar semantics and an accessible value description in markup. |
 | Metadata chip | `.ds-chip` | selected, accent, success, warning, danger | Use for compact metadata or filter tags; selected state must be exposed semantically by the consuming control. |
 | Status/difficulty badge | `.ds-badge` | neutral, success, warning, danger, easy, medium, hard | Use for concise status or difficulty metadata; the text label must communicate meaning without colour. |
 | Navigation | `.ds-nav`, `.ds-nav-link` | current page, focus-visible | Place inside a labelled navigation landmark; mark the current destination with `aria-current="page"`. |
 | Sidebar navigation | `.ds-sidebar`, `.ds-sidebar-link` | active/current page, horizontal layout modifier, focus-visible | Use anchors inside a labelled navigation landmark; preserve current-page semantics and section-specific active indicators. |
+
+## Metrics and progress
+
+- Metric cards provide label, primary value and optional supporting detail slots. The application owns the value, units, formatting and data source.
+- Progress is a visual track/fill only. The consuming application must supply the current value and accessible progress semantics (for example `role="progressbar"` with minimum, maximum and current values).
+- Never calculate, persist or infer completion inside the visual component.
+- Reduced-motion preferences must disable non-essential fill transitions.
 
 ## Tabs, segmented controls and stage selectors
 
