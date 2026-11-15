@@ -136,6 +136,8 @@
   --ds-option-letter-color: var(--mutedgold);
   --ds-option-letter-font-size: 12px;
   --ds-field-radius: 8px;
+  --ds-checkbox-size: 1rem;
+  --ds-checkbox-accent: var(--gold);
   --ds-panel-radius: var(--prob-radius-md, 12px);
   --ds-card-radius: 18px;
   --ds-panel-shadow: var(--panel-shadow);
