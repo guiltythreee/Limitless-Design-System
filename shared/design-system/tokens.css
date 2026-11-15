@@ -47,12 +47,27 @@
   --ds-motion-slow: 320ms;
   --ds-ease-standard: cubic-bezier(0.2, 0, 0, 1);
 
+  /* Surface family defaults; section adapters may map live geometry/elevation. */
+  --ds-panel-radius: var(--ds-radius-lg);
+  --ds-card-radius: var(--ds-radius-md);
+  --ds-navigation-card-radius: var(--ds-radius-md);
+  --ds-panel-shadow: none;
+  --ds-card-shadow: none;
+  --ds-navigation-card-shadow: none;
+  --ds-panel-backdrop-filter: none;
+  --ds-card-backdrop-filter: none;
+  --ds-navigation-card-hover-transform: translateY(-2px);
+
   /* Semantic colour slots are supplied by each section adapter below. */
 }
 
 /* Probability retains its parchment/gold palette and existing light/dark vars. */
 [data-limitless-design="probability"] {
   --ds-color-canvas: var(--page-bg);
+  --ds-panel-radius: var(--prob-radius-md, 12px);
+  --ds-card-radius: 18px;
+  --ds-panel-shadow: var(--panel-shadow);
+  --ds-panel-backdrop-filter: blur(12px);
   --ds-color-surface: var(--panel-bg);
   --ds-color-surface-raised: var(--chip);
   --ds-color-text: var(--body);
@@ -72,6 +87,9 @@
 /* Metallurgy keeps its materials-science blue palette and existing theme vars. */
 [data-limitless-design="metallurgy"] {
   --ds-color-canvas: var(--page-bg);
+  --ds-panel-radius: 14px;
+  --ds-card-radius: 14px;
+  --ds-panel-shadow: var(--panel-shadow);
   --ds-color-on-accent: var(--ongold);
   --ds-color-surface: var(--panel-bg);
   --ds-color-surface-raised: var(--chip);
@@ -91,6 +109,13 @@
 /* Home maps its current dashboard variables; background artwork stays untouched. */
 [data-limitless-design="home"] {
   --ds-color-canvas: transparent;
+  --ds-panel-radius: 15px;
+  --ds-card-radius: 12px;
+  --ds-navigation-card-radius: 13px;
+  --ds-panel-backdrop-filter: blur(14px);
+  --ds-navigation-card-backdrop-filter: blur(13px);
+  --ds-navigation-card-hover-transform: translateY(-3px);
+  --ds-navigation-card-hover-background: var(--home-panel-strong);
   --ds-color-surface: var(--home-panel);
   --ds-color-surface-raised: var(--home-panel-strong);
   --ds-color-text: var(--home-ink);
@@ -107,6 +132,9 @@
 /* Competition follows the active dashboard skin, including its existing overrides. */
 [data-limitless-design="competition"] {
   --ds-color-canvas: transparent;
+  --ds-panel-radius: 13px;
+  --ds-card-radius: 13px;
+  --ds-panel-backdrop-filter: blur(13px);
   --ds-color-surface: var(--comp-panel);
   --ds-color-surface-raised: var(--comp-panel);
   --ds-color-text: var(--comp-ink);
@@ -123,6 +151,10 @@
 /* Codeforces currently uses literal values; these aliases mirror its existing palette. */
 [data-limitless-design="codeforces"] {
   --ds-color-canvas: transparent;
+  --ds-panel-radius: 17px;
+  --ds-card-radius: 13px;
+  --ds-panel-shadow: 0 18px 50px rgba(0, 0, 0, 0.16);
+  --ds-panel-backdrop-filter: blur(14px);
   --ds-color-surface: rgba(8, 20, 36, 0.88);
   --ds-color-surface-raised: rgba(17, 39, 64, 0.55);
   --ds-color-text: #e8f1fc;
