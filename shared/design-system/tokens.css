@@ -402,3 +402,16 @@ html[data-theme="light"] [data-limitless-design="codeforces"] {
   --ds-utility-progress-track: var(--panel-line, var(--track));
   --ds-study-progress-fill: var(--gold);
 }
+
+/* Probability practice-session state colours and sticky action surfaces. */
+[data-limitless-design="probability"] {
+  --ds-practice-marker-border: color-mix(in srgb, var(--gold) 22%, transparent);
+  --ds-practice-correct-background: color-mix(in srgb, var(--good) 18%, transparent);
+  --ds-practice-incorrect-background: color-mix(in srgb, var(--bad) 15%, transparent);
+  --ds-practice-partial-background: color-mix(in srgb, var(--warn) 16%, transparent);
+  --ds-practice-warning: var(--warn);
+  --ds-practice-actionbar-background: color-mix(in srgb, var(--ink) 88%, transparent);
+  --ds-practice-analysis-background: var(--panel);
+  --ds-practice-milestone-track: var(--track);
+  --ds-practice-week-met-background: color-mix(in srgb, var(--good) 18%, transparent);
+}
