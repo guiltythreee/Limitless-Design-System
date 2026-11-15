@@ -54,6 +54,7 @@
   --ds-panel-shadow: none;
   --ds-card-shadow: none;
   --ds-navigation-card-shadow: none;
+  --ds-navigation-card-backdrop-filter: none;
   --ds-panel-backdrop-filter: none;
   --ds-card-backdrop-filter: none;
   --ds-navigation-card-hover-transform: translateY(-2px);
