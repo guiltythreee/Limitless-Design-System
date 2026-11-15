@@ -182,3 +182,23 @@ assert.match(audit, /Metallurgy course heading and summary/);
 assert.match(audit, /shared study utility navigation/);
 assert.match(tokens, /--ds-course-heading-radius:\s*16px/);
 assert.match(tokens, /--ds-utility-border:\s*var\(--panel-line\)/);
+
+
+const studyPanelSelectors = [
+  ".ds-study-utility-panel", ".ds-study-utility-panel__header", ".ds-study-utility-panel__heading",
+  ".ds-study-utility-panel__title", ".ds-study-utility-panel__description", ".ds-study-utility-panel__count",
+  ".ds-study-utility-panel__content", ".ds-study-utility-control", ".ds-study-utility-action",
+  ".ds-study-utility-toolbar", ".ds-study-utility-metrics", ".ds-study-utility-metric",
+  ".ds-study-utility-metric__label", ".ds-study-utility-metric__value", ".ds-study-utility-metric__detail",
+  ".ds-study-utility-visual", ".ds-study-utility-legend", ".ds-study-utility-progress",
+  ".ds-study-utility-progress__fill", ".ds-study-utility-week-grid", ".ds-study-utility-week-cell",
+  ".ds-study-utility-row", ".ds-study-utility-row__copy", ".ds-study-utility-row__actions",
+  ".ds-study-utility-empty", ".ds-study-utility-form",
+];
+for (const selector of studyPanelSelectors) {
+  assert.ok(components.includes(selector), `Missing shared study utility panel selector: ${selector}`);
+}
+assert.match(components, /\.ds-study-utility-panel :is\(button,input,select,textarea\):focus-visible/);
+assert.match(components, /\.ds-study-utility-metrics\{grid-template-columns:repeat\(2,minmax\(0,1fr\)\)/);
+assert.match(components, /prefers-reduced-motion:reduce/);
+assert.match(components, /forced-colors:active/);
