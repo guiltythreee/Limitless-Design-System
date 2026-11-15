@@ -86,3 +86,13 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -.04em; }
 .theme-preview .ds-tab.is-selected { border-bottom-color: var(--ds-color-accent); color: var(--ds-color-heading); }
 
 .codeforces.light { --ds-color-canvas:#f0f5fa; --ds-color-surface:rgba(249,252,255,.94); --ds-color-surface-raised:rgba(232,242,252,.75); --ds-color-text:#526d87; --ds-color-heading:#1c3d5c; --ds-color-muted:#526d87; --ds-color-border:rgba(59,112,159,.22); --ds-color-on-accent:#fff; }
+
+
+/* Panel/card family fixture */
+.sample-card-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:10px; margin-top:12px; }
+.sample-family-card { padding:12px; }
+.sample-family-card strong,.sample-family-link strong { display:block; color:var(--ds-color-heading); font-size:12px; }
+.sample-family-card p,.sample-family-link span { display:block; margin:5px 0 0; color:var(--ds-color-muted); font-size:11px; line-height:1.45; }
+.sample-family-link { padding:12px; }
+.sample-family-link:hover strong { color:var(--ds-color-heading); }
+@media (max-width: 460px) { .sample-card-grid { grid-template-columns:1fr; } }
