@@ -185,3 +185,15 @@ The utility navigation is already shared production infrastructure. The design-s
 | Rows, empty state and form | `.study-utility-row`, `.study-utility-empty`, `.study-utility-form` | Content, empty-state decisions, validation and callbacks remain application-owned |
 
 The live source stylesheet is `shared/studies/study-utility-nav.css`. These are presentation contracts; they do not replace the production stylesheet or the course-owned Bookmarks, Activity History, Mistakes or Daily Goals panels.
+
+
+### Panel variant source mapping
+
+| Panel | Source structure / exceptions | State boundary |
+|---|---|---|
+| Bookmarks | Header count is in the description, no count badge; item rows may expose Open and Remove; unavailable saved IDs remain visible; instructional empty state | Bookmark collection, topic resolution and callbacks stay in course |
+| Activity History | Period + mode native-select toolbar; four summary metrics; seven-day stacked correct/incorrect chart; detailed attempt rows; filtered empty state | Filtering, aggregation, chart heights and attempt data stay in course |
+| Mistakes | Activity History's alternate view; category count tiles, mastery and recurring-error summaries, ranked revision queue, per-attempt category and reviewed actions | Classification storage, analysis, ranking and review timestamps stay in course/shared study logic |
+| Daily Goals | Two wider goal metrics; weekly seven-day goal grid; numeric 1–200 target form; goal-dependent progress colour | Goal limits, daily totals, streaks, week states and form callback stay in course |
+
+The family shares its shell and primitives, not identical panel composition. Retain the question-row divider and overview-progress variants where the live source uses them.
