@@ -112,6 +112,8 @@
   border-radius: var(--ds-navigation-card-radius, var(--ds-radius-md));
   background: var(--ds-navigation-card-background, var(--ds-color-surface));
   box-shadow: var(--ds-navigation-card-shadow, none);
+  backdrop-filter: var(--ds-navigation-card-backdrop-filter, none);
+  -webkit-backdrop-filter: var(--ds-navigation-card-backdrop-filter, none);
   color: inherit;
   text-decoration: none;
   transition:
