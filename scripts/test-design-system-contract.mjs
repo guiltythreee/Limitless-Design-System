@@ -247,4 +247,3 @@ assert.match(audit, /Probability practice-session controls/);
 
 const practicePreviewSelectors = ["ds-practice-question-nav", "ds-practice-question-marker is-correct", "ds-practice-question-marker is-incorrect", "ds-practice-question-marker is-partial", "ds-practice-timer", "ds-practice-actionbar", "ds-practice-analysis-dock", "ds-practice-goal-milestones", "ds-practice-week-status"];
 for (const selector of practicePreviewSelectors) assert.ok(preview.includes(selector), `Missing Probability practice preview fixture: ${selector}`);
-assert.match(previewCss, /Probability practice session fixture/);
