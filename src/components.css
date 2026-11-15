@@ -814,3 +814,11 @@
 @media(max-width:520px){:where([data-limitless-design]) .ds-study-utility-metrics{grid-template-columns:repeat(2,minmax(0,1fr))}:where([data-limitless-design]) .ds-study-utility-row__actions{width:100%}}
 @media(prefers-reduced-motion:reduce){:where([data-limitless-design]) .ds-study-utility-progress__fill{transition:none}}
 @media(forced-colors:active){:where([data-limitless-design]) .ds-study-utility-panel :is(button,input,select,textarea):focus-visible{outline-color:Highlight;border-color:Highlight}}
+
+
+/* Source-specific utility-panel details: history/question rows and overview track. */
+:where([data-limitless-design]) .ds-study-utility-panel .ds-study-utility-control{min-width:0;max-width:100%;min-height:2.2rem;padding:.42rem .7rem;border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:.6rem;background:var(--ds-utility-inset,var(--ds-color-surface-raised));color:var(--ds-color-text);font:inherit;font-size:.8rem;line-height:1.35}
+:where([data-limitless-design]) .ds-study-utility-panel .ds-study-utility-action{display:inline-flex;align-items:center;justify-content:center;gap:.45rem;min-height:2.2rem;padding:.45rem .8rem;border-radius:.6rem;font:inherit;font-size:.8rem;line-height:1.35}
+:where([data-limitless-design]) .ds-study-utility-row--question{padding:.85rem .3rem;border-top:0;border-bottom:1px solid var(--ds-utility-border,var(--ds-color-border))}
+:where([data-limitless-design]) .ds-study-utility-progress--overview{height:.5rem;background:var(--ds-utility-progress-track,var(--ds-color-surface-raised))}
+:where([data-limitless-design]) .ds-study-utility-panel .ds-study-utility-metric{text-align:left}
