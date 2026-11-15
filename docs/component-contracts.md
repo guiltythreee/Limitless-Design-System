@@ -21,6 +21,7 @@ This document defines the first portable visual primitives. It is a design contr
 | Navigation card | `.ds-navigation-card` | hover, focus-visible | Use an anchor for navigation; preserve the complete clickable hit area and current-destination semantics. |
 | Legacy surface | `.ds-surface` | default, `--raised` | Retained for compatibility with the original primitive contract; new work should choose panel, content card or navigation card explicitly. |
 | Field | `.ds-field` | default, `--compact`, `--monospace`, focus-visible, invalid | Pair with a persistent visible label; communicate errors in text, not color alone. |
+| Checkbox | `.ds-checkbox` | native checked/indeterminate appearance, focus-visible, disabled | Retain the native checkbox element; this contract styles its dimensions, accent and focus only. |
 | Tabs | `.ds-tabs`, `.ds-tab` | selected, focus-visible, horizontal overflow | Use tablist/tab/tabpanel roles only when implementing the full tab interaction pattern; otherwise use ordinary navigation links. |
 | Segmented control | `.ds-segmented`, `.ds-segmented-option` | pressed/current, focus-visible | Use buttons with `aria-pressed` for mutually exclusive toggles or links with current-page semantics for navigation; do not assign tab roles by appearance alone. |
 | Stage selector | `.ds-stage-selector`, `.ds-stage-option` | active/current step, focus-visible | Use native buttons for stage selection; expose the selected stage semantically and keep stage metadata in child elements. |
