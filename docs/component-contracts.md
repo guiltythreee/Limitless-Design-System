@@ -143,3 +143,12 @@ These primitives define a portable API and baseline behavior; they are not claim
 - Preserve `aria-current="page"` for the active item, optional accent tone, count badge, visible keyboard focus, and reduced-motion behavior.
 - `.ds-study-utility-nav--horizontal` maps Probability's compact horizontal utility variant; the default layout remains a vertical course-sidebar list.
 - The primitive must not own bookmarks, history, mistakes, goals, progress, routing or persistence.
+
+
+## Shared study utility panels
+
+- `.ds-study-utility-panel` maps the live `.study-utility-panel` frame; header, heading, title, description, count and content remain separate slots.
+- `.ds-study-utility-control` and `.ds-study-utility-action` map the shared compact control/action geometry. The consuming panel and application supply control semantics, labels, values and behavior.
+- Toolbar, metric, visual, legend, progress, week-grid, row, empty-state and form classes are layout/presentation primitives only. They do not own data, chart calculations, persistence, filtering or action callbacks.
+- The live utility CSS uses section variables such as `--panel-line`, `--panel-bg`, `--body`, `--paper`, `--dim`, `--chip`, `--inset` and `--gold`. The design-system adapter must alias the relevant live values; generic defaults are structural fallbacks, not a parity claim.
+- Preserve the two-column metric layout at 520px and below, the seven-column weekly grid, wrapping row actions, visible focus, forced-colour focus and reduced-motion progress behavior.
