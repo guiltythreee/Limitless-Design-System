@@ -28,9 +28,9 @@ This specification converts the first live-component audit into a practical comp
 | Status/difficulty badge | `.ds-badge` | Probability `.dbadge` and difficulty variants; Metallurgy MT203 difficulty chips; Competition status markers | Implemented with neutral/status/difficulty variants; do not conflate status, difficulty, selected state and ordinary metadata |
 | Section navigation | `.ds-section-nav` | Probability `.subnav`; Home `.home-topbar nav` | Horizontal navigation links/buttons; overflow and active indicator differ |
 | Semantic tablist | `.ds-tabs` | Probability `[data-study-mode-tabs]` | Use tablist/tab/tabpanel only when the complete interaction pattern exists |
-| Segmented control | `.ds-segmented` | Probability `.probability-section-tabs` | Supports aria-pressed or current-page states; selected fill differs from underline tabs |
+| Segmented control | `.ds-segmented`, `.ds-segmented-option` | Probability `.probability-section-tabs` | Implemented as a separate family with selected fill, section token mapping and pressed/current states; not a tablist |
 | Sidebar item | `.ds-sidebar-link` | Home `.side-link`; Competition `.competition-side-link` | Implemented as an anchor foundation with active/current states and section tokens; container positioning and responsive orientation remain application-owned |
-| Stage selector | `.ds-stage-option` | Codeforces `.cr-stage-tab` | Grid-based full-width selection with progress/metadata; not a tab strip |
+| Stage selector | `.ds-stage-selector`, `.ds-stage-option` | Codeforces `.cr-stage-tab` | Implemented as a grid-based full-width selection with structured metadata and Codeforces theme mapping; not a tab strip |
 | Progress indicator | `.ds-progress` | Competition `.progress-track`; Codeforces `.cr-progress`, `.cr-mini-track` | Keep data semantics and accessible value text in application markup |
 
 ## Contract requirements by pattern
