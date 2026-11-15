@@ -6,6 +6,8 @@ const tokens = read("../shared/design-system/tokens.css");
 const components = read("../src/components.css");
 const contracts = read("../docs/component-contracts.md");
 const audit = read("../docs/live-component-audit.md");
+const preview = read("../preview/index.html");
+const mappingSpec = read("../docs/component-mapping-spec.md");
 const mapping = read("../docs/component-mapping-spec.md");
 
 const requiredTokens = [
@@ -29,14 +31,14 @@ for (const section of ["probability", "metallurgy", "home", "competition", "code
 
 const componentSelectors = [
   ".ds-button", ".ds-button--primary", ".ds-button--secondary", ".ds-button--quiet",
-  ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab", ".ds-badge", ".ds-nav", ".ds-nav-link",
+  ".ds-panel", ".ds-card", ".ds-navigation-card", ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab", ".ds-badge", ".ds-nav", ".ds-nav-link",
 ];
 for (const selector of componentSelectors) {
   assert.ok(components.includes(selector), `Missing component selector: ${selector}`);
 }
 
 const documentedPrimitives = [
-  ".ds-button", ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab",
+  ".ds-button", ".ds-panel", ".ds-card", ".ds-navigation-card", ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab",
   ".ds-badge", ".ds-nav", ".ds-nav-link",
 ];
 for (const primitive of documentedPrimitives) {
@@ -65,6 +67,16 @@ for (const pattern of ["Navigation card", "Metric card", "Selectable option", "S
 assert.match(mapping, /Explicit non-goals/);
 assert.match(mapping, /No new application imports of this package/);
 assert.match(components, /opt-in/i);
+assert.match(components, /\.ds-panel/);
+assert.match(components, /\.ds-card/);
+assert.match(components, /\.ds-navigation-card/);
+assert.match(components, /--ds-panel-backdrop-filter/);
+assert.match(components, /--ds-navigation-card-hover-transform/);
+assert.match(preview, /ds-panel sample-card/);
+assert.match(preview, /ds-card sample-family-card/);
+assert.match(preview, /ds-navigation-card sample-family-link/);
+assert.match(mappingSpec, /Content panel/);
+assert.match(mappingSpec, /Navigation card/);
 
 for (const [name, source] of [["tokens", tokens], ["components", components]]) {
   assert.doesNotMatch(source, /@import\s/i, `${name} must not import stylesheets`);
