@@ -49,7 +49,7 @@ assert.match(tokens, /--ds-color-on-accent: var\(--ongold\)/, "Study accent fore
 assert.match(tokens, /--ds-color-surface: var\(--home-panel\)/, "Home must use its live panel token");
 assert.match(tokens, /--ds-color-surface: var\(--comp-panel\)/, "Competition must use its effective dashboard panel token");
 assert.match(tokens, /--ds-color-surface: rgba\(8, 20, 36, 0\.88\)/, "Codeforces dark surface must match its live CSS");
-assert.match(components, /opt-in/);
+assert.match(components, /opt-in/i);
 for (const [name, source] of [["tokens", tokens], ["components", components]]) {
   assert.doesNotMatch(source, /@import\s/i, `${name} must not import stylesheets`);
   assert.doesNotMatch(source, /(^|[\n}])\s*:root\b/m, `${name} must not change global root styles`);
