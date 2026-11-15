@@ -15,7 +15,8 @@ This document defines the first portable visual primitives. It is a design contr
 | Primitive | Class contract | Variants / states | Required semantics |
 |---|---|---|---|
 | Button | `.ds-button` | `--primary`, `--secondary`, `--quiet`, `--compact`, `--prominent`, `--full`; hover, active, focus-visible, disabled, busy | Use a native `button` for actions and an `a` for navigation. Never fake disabled state without preventing activation. |
-| Chapter row | `.ds-chapter-row` and child slots | Responsive chapter navigation with number, title, progress, metrics and arrow | Use a native button for selection; keep progress values and labels application-owned. At narrow widths metrics move below the title. |\n| Selectable option | `.ds-option`, `.ds-option__letter` | hover, focus-visible, disabled; section-adaptable geometry | Use a native `button` for an answer or choice; expose selected/correctness state with the consuming application's established semantics. |
+| Chapter row | `.ds-chapter-row` and child slots | Responsive chapter navigation with number, title, progress, metrics and arrow | Use a native button for selection; keep progress values and labels application-owned. At narrow widths metrics move below the title. |
+| Selectable option | `.ds-option`, `.ds-option__letter` | hover, focus-visible, disabled; section-adaptable geometry | Use a native `button` for an answer or choice; expose selected/correctness state with the consuming application's established semantics. |
 | Panel | `.ds-panel` | default, `--flush` | Use for a grouped content region; padding, radius, shadow and blur are section-adaptable tokens. |
 | Content card | `.ds-card` | default, `--flat` | Use for self-contained information; it is not interactive by default. |
 | Navigation card | `.ds-navigation-card` | hover, focus-visible | Use an anchor for navigation; preserve the complete clickable hit area and current-destination semantics. |
@@ -69,7 +70,14 @@ This document defines the first portable visual primitives. It is a design contr
 - Icon and label are separate child elements; the first child receives the configured icon width and accent colour.
 - Active backgrounds, inset indicators, spacing and typography are section-adaptable tokens. The component does not position or size the sidebar container; fixed/sticky layout remains owned by the application.
 
-## Selectable options\n\n- `.ds-option` is a large choice surface, not a compact action button. It supports a leading letter/marker slot and section-specific dimensions, border, fill and hover treatment.\n- Probability maps the option to its live 62px minimum target, 14px radius, inset fill and gold-tinted border. Keep its selection/correctness behavior in application markup and state.\n- The `.ds-option__letter` slot carries the answer marker; its dimensions and shape are tokenized because the live Probability style changes from a circular marker to a rounded square in the later practice layer.\n- Use `.ds-button--pill` only for actions whose live control is pill-shaped; button sizing and shape remain independent.\n\n## Panel and card family
+## Selectable options
+
+- `.ds-option` is a large choice surface, not a compact action button. It supports a leading letter/marker slot and section-specific dimensions, border, fill and hover treatment.
+- Probability maps the option to its live 62px minimum target, 14px radius, inset fill and gold-tinted border. Keep its selection/correctness behavior in application markup and state.
+- The `.ds-option__letter` slot carries the answer marker; its dimensions and shape are tokenized because the live Probability style changes from a circular marker to a rounded square in the later practice layer.
+- Use `.ds-button--pill` only for actions whose live control is pill-shaped; button sizing and shape remain independent.
+
+## Panel and card family
 
 - A panel groups related content and may carry section-specific backdrop blur and elevation. Its padding can be overridden by the consuming layout.
 - A content card presents one self-contained unit of information. It is not clickable unless its content contains a native interactive element.
