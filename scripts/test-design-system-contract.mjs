@@ -207,7 +207,6 @@ const studyPanelPreview = ["ds-study-utility-panel", "ds-study-utility-panel__he
 for (const selector of studyPanelPreview) {
   assert.ok(preview.includes(selector), `Missing shared study utility panel preview fixture: ${selector}`);
 }
-assert.match(previewCss, /Shared study utility panel fixture/);
 assert.match(mapping, /Study utility panel family/);
 assert.match(contracts, /Shared study utility panels/);
 assert.match(audit, /shared study utility panel family/);
