@@ -6,6 +6,7 @@ const tokens = read("../shared/design-system/tokens.css");
 const components = read("../src/components.css");
 const contracts = read("../docs/component-contracts.md");
 const audit = read("../docs/live-component-audit.md");
+const mapping = read("../docs/component-mapping-spec.md");
 
 const requiredTokens = [
   "--ds-space-1", "--ds-space-12",
@@ -58,6 +59,11 @@ for (const heading of ["### 1. Probability", "### 2. Metallurgy", "### 3. Home d
 }
 assert.match(audit, /not visually equivalent/i);
 assert.match(audit, /No live application imports this package/);
+for (const pattern of ["Navigation card", "Metric card", "Selectable option", "Segmented control", "Sidebar item", "Stage selector"]) {
+  assert.ok(mapping.includes(`### ${pattern}`) || mapping.includes(`| ${pattern} |`), `Missing component mapping pattern: ${pattern}`);
+}
+assert.match(mapping, /Explicit non-goals/);
+assert.match(mapping, /No new application imports of this package/);
 assert.match(components, /opt-in/i);
 
 for (const [name, source] of [["tokens", tokens], ["components", components]]) {
