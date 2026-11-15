@@ -52,28 +52,29 @@
 
 /* Probability retains its parchment/gold palette and existing light/dark vars. */
 [data-limitless-design="probability"] {
-  --ds-color-canvas: var(--ink);
-  --ds-color-surface: var(--panel);
-  --ds-color-surface-raised: var(--chip);
+  --ds-color-canvas: var(--page-bg);
+  --ds-color-surface: var(--panel-bg);
+  --ds-color-surface-raised: var(--inset);
   --ds-color-text: var(--body);
   --ds-color-heading: var(--paper);
   --ds-color-muted: var(--dim);
   --ds-color-accent: var(--gold);
   --ds-color-accent-strong: var(--goldhi);
-  --ds-color-on-accent: var(--ink);
+  --ds-color-on-accent: var(--ongold);
   --ds-color-border: var(--panel-line);
   --ds-color-success: var(--ok);
   --ds-color-danger: var(--bad, #b45353);
-  --ds-color-focus: var(--goldhi);
-  --ds-font-display: var(--ds-font-serif);
+  --ds-color-focus: var(--gold);
+  --ds-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif;
+  --ds-font-display: Georgia, "Times New Roman", serif;
 }
 
 /* Metallurgy keeps its materials-science blue palette and existing theme vars. */
 [data-limitless-design="metallurgy"] {
-  --ds-color-canvas: var(--ink);
-  --ds-color-on-accent: var(--ink);
-  --ds-color-surface: var(--panel);
-  --ds-color-surface-raised: var(--chip);
+  --ds-color-canvas: var(--page-bg);
+  --ds-color-on-accent: var(--ongold);
+  --ds-color-surface: var(--panel-bg);
+  --ds-color-surface-raised: var(--inset);
   --ds-color-text: var(--body);
   --ds-color-heading: var(--paper);
   --ds-color-muted: var(--dim);
@@ -81,9 +82,10 @@
   --ds-color-accent-strong: var(--goldhi);
   --ds-color-border: var(--panel-line);
   --ds-color-success: var(--ok);
-  --ds-color-danger: var(--bad, #b45353);
-  --ds-color-focus: var(--goldhi);
-  --ds-font-display: var(--ds-font-sans);
+  --ds-color-danger: var(--bad);
+  --ds-color-focus: var(--gold);
+  --ds-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif;
+  --ds-font-display: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif;
 }
 
 /* Home maps its current dashboard variables; background artwork stays untouched. */
