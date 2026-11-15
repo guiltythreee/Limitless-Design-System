@@ -108,3 +108,13 @@ These primitives define a portable API and baseline behavior; they are not claim
 - The wide layout uses a four-column grid; at 850px and below it collapses to three columns and moves metrics beneath the title.
 - Progress width is supplied by the consuming application through `--ds-chapter-progress-value`; expose progress text or semantics in markup when it communicates meaningful completion.
 - The live chapter browser uses a transparent row with a bottom divider and chip-colour hover fill. Do not add card radius, panel shadow or a lift transform.
+
+
+## Metallurgy course-browser toolbar
+
+- .ds-course-toolbar maps the live .cb-toolbar flex row, panel border/fill, 14px radius and 850px stacked layout.
+- .ds-course-search maps .cb-search; its input remains a native search/text input with application-owned query state and a persistent accessible label.
+- .ds-course-filters and its native select controls map .cb-filters; preserve the live 175px maximum width, 10px radius, inset fill and 850px/520px responsive behavior.
+- .ds-course-list-head and .ds-course-empty map the live result-count header and empty state.
+- Filtering and sorting logic are not part of these visual classes. Preserve the source behavior: title/ID search; optional unit filter; all/not-started/in-progress/completed/weak status; chapter-order/name/least-progress/question-count sort. Weak means accuracy below 60% after at least one attempt.
+- Do not replace native selects with custom popovers or segmented controls. The source uses native select elements.
