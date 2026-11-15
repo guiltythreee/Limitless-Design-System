@@ -23,6 +23,14 @@ This document defines the first portable visual primitives. It is a design contr
 | Tabs | `.ds-tabs`, `.ds-tab` | selected, focus-visible, horizontal overflow | Use tablist/tab/tabpanel roles only when implementing the full tab interaction pattern; otherwise use ordinary navigation links. |
 | Badge | `.ds-badge` | neutral by default | Use for concise status or metadata, not as a substitute for headings or explanatory text. |
 | Navigation | `.ds-nav`, `.ds-nav-link` | current page, focus-visible | Place inside a labelled navigation landmark; mark the current destination with `aria-current="page"`. |
+| Sidebar navigation | `.ds-sidebar`, `.ds-sidebar-link` | active/current page, horizontal layout modifier, focus-visible | Use anchors inside a labelled navigation landmark; preserve current-page semantics and section-specific active indicators. |
+
+## Sidebar navigation
+
+- `.ds-sidebar` provides a vertical navigation list by default. The `--horizontal` modifier supports a horizontally scrolling list when the consuming layout chooses that orientation.
+- `.ds-sidebar-link` is an anchor for navigation, not a button. Use `aria-current="page"` for the current destination; the legacy `.active` class is supported for gradual migration.
+- Icon and label are separate child elements; the first child receives the configured icon width and accent colour.
+- Active backgrounds, inset indicators, spacing and typography are section-adaptable tokens. The component does not position or size the sidebar container; fixed/sticky layout remains owned by the application.
 
 ## Panel and card family
 
