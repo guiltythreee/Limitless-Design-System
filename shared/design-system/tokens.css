@@ -378,3 +378,27 @@ html[data-theme="light"] [data-limitless-design="codeforces"] {
   --ds-utility-radius: var(--lp-radius-md, .75rem);
   --ds-utility-surface: var(--lp-color-surface, var(--panel-bg));
 }
+
+/* Shared study utility panels alias the live course utility surface vocabulary. */
+[data-limitless-design="metallurgy"] {
+  --ds-study-panel-padding: clamp(1rem, 2.2vw, 1.5rem);
+  --ds-study-panel-radius: 1rem;
+  --ds-study-panel-background: var(--panel-bg, var(--panel));
+  --ds-study-panel-shadow: var(--panel-shadow, 0 12px 35px rgba(0,0,0,.12));
+  --ds-utility-chip: var(--chip);
+  --ds-utility-inset: var(--inset);
+  --ds-study-metric-background: var(--panel-bg, transparent);
+  --ds-utility-progress-track: var(--panel-line, var(--track));
+  --ds-study-progress-fill: var(--gold);
+}
+[data-limitless-design="probability"] {
+  --ds-study-panel-padding: clamp(1rem, 2.2vw, 1.5rem);
+  --ds-study-panel-radius: 1rem;
+  --ds-study-panel-background: var(--panel-bg, var(--panel));
+  --ds-study-panel-shadow: var(--panel-shadow, 0 12px 35px rgba(0,0,0,.12));
+  --ds-utility-chip: var(--chip);
+  --ds-utility-inset: var(--inset);
+  --ds-study-metric-background: var(--panel-bg, transparent);
+  --ds-utility-progress-track: var(--panel-line, var(--track));
+  --ds-study-progress-fill: var(--gold);
+}
