@@ -216,3 +216,12 @@ assert.match(tokens, /--ds-utility-inset:\s*var\(--inset\)/);
 assert.match(tokens, /--ds-study-progress-fill:\s*var\(--gold\)/);
 assert.match(tokens, /\[data-limitless-design="metallurgy"\]\s*\{[^}]*--ds-study-panel-background/s);
 assert.match(tokens, /\[data-limitless-design="probability"\]\s*\{[^}]*--ds-study-panel-background/s);
+
+const studyPanelSourceVariants = [".ds-study-utility-row--question", ".ds-study-utility-progress--overview"];
+for (const selector of studyPanelSourceVariants) assert.ok(components.includes(selector), `Missing source-specific study utility variant: ${selector}`);
+assert.match(contracts, /Bookmarks/);
+assert.match(contracts, /Activity history/);
+assert.match(contracts, /Mistakes/);
+assert.match(contracts, /Daily goals/);
+assert.match(mapping, /Panel variant source mapping/);
+assert.match(audit, /utility panel variants/);
