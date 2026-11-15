@@ -159,3 +159,13 @@ for (const selector of courseNavSelectors) {
 assert.match(tokens, /--ds-course-nav-progress-fill:linear-gradient/);
 assert.match(contracts, /Metallurgy archive sidebar navigation/);
 assert.match(audit, /archive sidebar and progress/i);
+
+
+const courseNavPreview = [".ds-course-toolbar", ".ds-course-search", ".ds-course-filters", ".ds-course-list-head", ".ds-course-nav-item", ".ds-course-nav-progress"];
+for (const selector of courseNavPreview) {
+  assert.ok(preview.includes(selector), `Missing Metallurgy preview fixture: ${selector}`);
+}
+assert.match(tokens, /\[data-limitless-design="metallurgy"\]\s*\{[^}]*--ds-chapter-grid-columns/s, "Metallurgy chapter tokens must be scoped inside its adapter");
+assert.match(tokens, /\[data-limitless-design="metallurgy"\]\s*\{[^}]*--ds-course-nav-progress-fill/s, "Metallurgy sidebar progress tokens must be scoped inside its adapter");
+assert.match(contracts, /Metallurgy course-browser toolbar/);
+assert.match(contracts, /Metallurgy archive sidebar navigation/);
