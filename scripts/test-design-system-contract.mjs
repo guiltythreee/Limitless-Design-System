@@ -140,3 +140,13 @@ assert.match(contracts, /must not own application state/);
 
 console.log("Design-system contract: PASS");
 console.log("5 section adapters; component families and variants covered; scoped CSS; accessibility contracts and live component audit documented.");
+
+
+const courseBrowserSelectors = [".ds-course-toolbar", ".ds-course-search", ".ds-course-filters", ".ds-course-list-head", ".ds-course-empty"];
+for (const selector of courseBrowserSelectors) {
+  assert.ok(components.includes(selector), `Missing Metallurgy course-browser selector: ${selector}`);
+}
+assert.match(tokens, /--ds-course-toolbar-radius:14px/);
+assert.match(tokens, /--ds-course-search-background:var\(--inset\)/);
+assert.match(contracts, /Weak.*60%|weak.*60%/);
+assert.match(audit, /course-browser toolbar/i);
