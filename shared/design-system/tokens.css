@@ -361,3 +361,20 @@ html[data-theme="light"] [data-limitless-design="codeforces"] {
   --ds-course-nav-progress-fill: linear-gradient(90deg, var(--mutedgold), var(--gold));
   --ds-course-exam-color: #e0b06a;
 }
+
+
+/* Metallurgy course heading/summary and shared utility navigation adapters. */
+[data-limitless-design="metallurgy"] {
+  --ds-course-heading-radius: 16px;
+  --ds-course-heading-background: var(--panel);
+  --ds-course-heading-shadow: 0 8px 30px #0000000a;
+  --ds-course-summary-background: var(--inset);
+  --ds-utility-border: var(--panel-line);
+  --ds-utility-radius: var(--lp-radius-md, .55rem);
+  --ds-utility-surface: var(--panel-bg);
+}
+[data-limitless-design="probability"] {
+  --ds-utility-border: var(--lp-color-border, var(--panel-line));
+  --ds-utility-radius: var(--lp-radius-md, .55rem);
+  --ds-utility-surface: var(--lp-color-surface, var(--panel-bg));
+}
