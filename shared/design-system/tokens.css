@@ -89,6 +89,12 @@
   --ds-stage-grid-columns: 27px minmax(0, 1fr) 15px;
   --ds-stage-option-radius: var(--ds-radius-sm);
   --ds-stage-option-padding: 9px 7px;
+  --ds-metric-card-radius: var(--ds-radius-md);
+  --ds-metric-card-padding: var(--ds-space-4);
+  --ds-metric-value-font: 600 var(--ds-text-xl) var(--ds-font-sans);
+  --ds-progress-height: 6px;
+  --ds-progress-track: var(--ds-color-surface-raised);
+  --ds-progress-fill: var(--ds-color-accent);
 
   /* Semantic colour slots are supplied by each section adapter below. */
 }
@@ -203,6 +209,15 @@
 /* Competition follows the active dashboard skin, including its existing overrides. */
 [data-limitless-design="competition"] {
   --ds-color-canvas: transparent;
+  --ds-metric-card-radius: 13px;
+  --ds-metric-card-padding: 17px;
+  --ds-metric-card-min-height: 132px;
+  --ds-metric-value-color: var(--comp-accent);
+  --ds-metric-value-font: 600 30px Arial, sans-serif;
+  --ds-metric-label-font: 700 10px Arial, sans-serif;
+  --ds-progress-height: 6px;
+  --ds-progress-track: rgba(106,164,220,.16);
+  --ds-progress-fill: linear-gradient(90deg,#2c89df,#80c7ff);
   --ds-color-chip-success: #55d6a6;
   --ds-color-chip-warning: #e5b86c;
   --ds-color-chip-danger: #e58d8d;
@@ -241,6 +256,17 @@
 /* Codeforces currently uses literal values; these aliases mirror its existing palette. */
 [data-limitless-design="codeforces"] {
   --ds-color-canvas: transparent;
+  --ds-metric-card-radius: 10px;
+  --ds-metric-card-padding: 14px;
+  --ds-metric-card-background: rgba(17,39,64,.55);
+  --ds-metric-value-color: #f1f7ff;
+  --ds-metric-value-font: 600 24px Arial, sans-serif;
+  --ds-metric-label-font: 400 9px Arial, sans-serif;
+  --ds-metric-label-color: #91abc6;
+  --ds-metric-label-spacing: 1px;
+  --ds-progress-height: 8px;
+  --ds-progress-track: rgba(129,164,198,.17);
+  --ds-progress-fill: linear-gradient(90deg,#358fe0,#65c6f4);
   --ds-stage-grid-columns: 27px minmax(0, 1fr) 15px;
   --ds-stage-option-radius: 8px;
   --ds-stage-option-padding: 9px 7px;
