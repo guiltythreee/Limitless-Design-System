@@ -129,4 +129,4 @@ assert.match(contracts, /Keyboard focus must remain visible/);
 assert.match(contracts, /must not own application state/);
 
 console.log("Design-system contract: PASS");
-console.log("5 section adapters; 11 component primitives; scoped CSS; accessibility contracts and live component audit documented.");
+console.log("5 section adapters; component families and variants covered; scoped CSS; accessibility contracts and live component audit documented.");
