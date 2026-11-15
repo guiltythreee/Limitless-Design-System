@@ -260,6 +260,12 @@
   color: var(--ds-color-chip-accent, var(--ds-color-accent));
 }
 
+:where([data-limitless-design]) .ds-chip--accent,
+:where([data-limitless-design]) .ds-badge--accent {
+  border-color: var(--ds-color-chip-accent, var(--ds-color-accent));
+  color: var(--ds-color-chip-accent, var(--ds-color-accent));
+}
+
 :where([data-limitless-design]) .ds-chip--success,
 :where([data-limitless-design]) .ds-badge--success {
   border-color: var(--ds-color-chip-success, var(--ds-color-success));
