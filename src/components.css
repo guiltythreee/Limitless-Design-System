@@ -1,0 +1,160 @@
+/*
+ * Opt-in component primitives for Limitless.
+ * Import only in a separately reviewed visual migration. No application imports
+ * this file today. Every selector is scoped to a data-limitless-design root.
+ */
+
+:where([data-limitless-design]) .ds-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: var(--ds-space-2);
+  min-height: var(--ds-control-height-md);
+  padding: 0 var(--ds-space-4);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-md);
+  background: var(--ds-color-surface-raised);
+  color: var(--ds-color-text);
+  font: inherit;
+  font-weight: 600;
+  line-height: 1.2;
+  text-decoration: none;
+  cursor: pointer;
+  transition:
+    background-color var(--ds-motion-fast) var(--ds-ease-standard),
+    border-color var(--ds-motion-fast) var(--ds-ease-standard),
+    color var(--ds-motion-fast) var(--ds-ease-standard),
+    transform var(--ds-motion-fast) var(--ds-ease-standard);
+}
+
+:where([data-limitless-design]) .ds-button:hover:not(:disabled, [aria-disabled="true"]) {
+  border-color: var(--ds-color-accent);
+}
+
+:where([data-limitless-design]) .ds-button:active:not(:disabled, [aria-disabled="true"]) {
+  transform: translateY(1px);
+}
+
+:where([data-limitless-design]) .ds-button:focus-visible,
+:where([data-limitless-design]) .ds-field:focus-visible,
+:where([data-limitless-design]) .ds-tab:focus-visible,
+:where([data-limitless-design]) .ds-nav-link:focus-visible {
+  outline: 2px solid var(--ds-color-focus);
+  outline-offset: 2px;
+}
+
+:where([data-limitless-design]) .ds-button--primary {
+  border-color: var(--ds-color-accent);
+  background: var(--ds-color-accent);
+  color: var(--ds-color-canvas, #fff);
+}
+
+:where([data-limitless-design]) .ds-button--secondary {
+  background: transparent;
+  color: var(--ds-color-accent);
+}
+
+:where([data-limitless-design]) .ds-button--quiet {
+  border-color: transparent;
+  background: transparent;
+}
+
+:where([data-limitless-design]) .ds-button:disabled,
+:where([data-limitless-design]) .ds-button[aria-disabled="true"] {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+:where([data-limitless-design]) .ds-surface {
+  min-width: 0;
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-lg);
+  background: var(--ds-color-surface);
+  color: var(--ds-color-text);
+}
+
+:where([data-limitless-design]) .ds-surface--raised {
+  background: var(--ds-color-surface-raised);
+}
+
+:where([data-limitless-design]) .ds-field {
+  box-sizing: border-box;
+  width: 100%;
+  min-height: var(--ds-control-height-md);
+  padding: var(--ds-space-2) var(--ds-space-3);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-sm);
+  background: var(--ds-color-surface);
+  color: var(--ds-color-text);
+  font: inherit;
+}
+
+:where([data-limitless-design]) .ds-field::placeholder {
+  color: var(--ds-color-muted);
+  opacity: 1;
+}
+
+:where([data-limitless-design]) .ds-field[aria-invalid="true"] {
+  border-color: var(--ds-color-danger, #b45353);
+}
+
+:where([data-limitless-design]) .ds-tabs {
+  display: flex;
+  gap: var(--ds-space-2);
+  min-width: 0;
+  overflow-x: auto;
+  border-bottom: 1px solid var(--ds-color-border);
+}
+
+:where([data-limitless-design]) .ds-tab {
+  flex: 0 0 auto;
+  min-height: var(--ds-control-height-md);
+  padding: var(--ds-space-2) var(--ds-space-3);
+  border: 0;
+  border-bottom: 2px solid transparent;
+  background: transparent;
+  color: var(--ds-color-muted);
+  font: inherit;
+  cursor: pointer;
+}
+
+:where([data-limitless-design]) .ds-tab[aria-selected="true"] {
+  border-bottom-color: var(--ds-color-accent);
+  color: var(--ds-color-heading);
+}
+
+:where([data-limitless-design]) .ds-badge {
+  display: inline-flex;
+  align-items: center;
+  max-width: 100%;
+  padding: var(--ds-space-1) var(--ds-space-2);
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-radius-pill);
+  background: var(--ds-color-surface-raised);
+  color: var(--ds-color-muted);
+  font-size: var(--ds-text-xs);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+:where([data-limitless-design]) .ds-nav {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: var(--ds-space-2);
+}
+
+:where([data-limitless-design]) .ds-nav-link {
+  display: inline-flex;
+  align-items: center;
+  min-height: var(--ds-control-height-sm);
+  padding: 0 var(--ds-space-2);
+  border-radius: var(--ds-radius-sm);
+  color: var(--ds-color-muted);
+  text-decoration: none;
+}
+
+:where([data-limitless-design]) .ds-nav-link[aria-current="page"] {
+  background: var(--ds-color-surface-raised);
+  color: var(--ds-color-heading);
+}
