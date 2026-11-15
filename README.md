@@ -34,3 +34,7 @@ Preserve each section's established visual identity. Shared foundations should u
 ## Component foundation
 
 The first opt-in primitives and their accessibility/variant contracts are documented in `docs/component-contracts.md` and implemented in `src/components.css`. They remain isolated from the live applications.
+
+## Visual fixture
+
+Open `preview/index.html` on the development branch to inspect the shared primitives across the five section adapters in dark and light samples. The fixture is static and isolated; it does not load production application code.
