@@ -162,3 +162,12 @@ The live CourseChapterBrowser.tsx pairs course-chapter-browser.css with native i
 ## Follow-up source finding — Metallurgy archive sidebar and progress
 
 The MT202 archive sidebar renders .ch-item native buttons, with .ch-num, .ch-title, .ch-meta, .ch-bar and .ch-pct. The current chapter receives an active chip fill and border; the exam item has an amber number tile. Chapter progress is calculated in the page from attempted questions divided by the topic question count, then rendered as a 4px track and percentage. This is separate from the course-browser row progress, which is based on the same chapter statistics but has a different layout. Proposed contracts: .ds-course-nav-item, .ds-course-nav-number, .ds-course-nav-title, .ds-course-nav-meta, .ds-course-nav-progress and .ds-course-nav-percent. All state and calculations remain in MT202.
+
+
+## Follow-up source finding — Metallurgy course heading and summary
+
+The live `CourseChapterBrowser.tsx` renders `.cb-heading` with a title/description column and a four-item `.cb-summary` group. `course-chapter-browser.css` gives the panel a 16px radius, panel fill, border and subtle shadow; it stacks at 850px, while the summary tiles flex evenly at 520px. Proposed contracts are `.ds-course-heading`, its eyebrow/title/description slots, and `.ds-course-summary` item/value/label slots. The course page owns all displayed values and totals.
+
+## Follow-up source finding — shared study utility navigation
+
+The production `shared/studies/StudyUtilityNav.ts` factory renders a labelled `nav` containing native buttons. Its caller supplies items, optional descriptions/counts, active state, accent tone and selection callback. `study-utility-nav.css` provides vertical course-sidebar layout and a compact horizontal Probability variant. Proposed contracts are `.ds-study-utility-nav` and `.ds-study-utility-nav--horizontal`. The design-system package does not replace the production factory or own any study state.
