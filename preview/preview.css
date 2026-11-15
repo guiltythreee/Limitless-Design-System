@@ -45,7 +45,7 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -.04em; }
 .competition { --comp-panel: #1c2c42; --comp-ink: #eaf2fc; --comp-muted: #a5b7cc; --comp-accent: #5c9fe5; --comp-border: #354b66; --ds-color-canvas: #101d30; }
 .competition.light { --comp-panel: #ffffff; --comp-ink: #1b3a5a; --comp-muted: #5b7590; --comp-accent: #286fae; --comp-border: #c9d9e8; --ds-color-canvas: #eef4fa; }
 .codeforces { --ds-color-canvas: #081424; }
-.codeforces.light { --ds-color-canvas: #f0f5fa; }
+.codeforces.light { --ds-color-canvas: #f0f5fa; --ds-color-surface: rgba(249, 252, 255, .94); --ds-color-surface-raised: rgba(232, 242, 252, .75); --ds-color-text: #526d87; --ds-color-heading: #1c3d5c; --ds-color-muted: #526d87; --ds-color-border: rgba(59, 112, 159, .22); --ds-color-on-accent: #ffffff; }
 .preview-footer { padding: 28px 0 12px; border-top: 1px solid #27364a; color: #8296b0; font-size: 12px; }
 @media (max-width: 760px) {
   body { padding: 18px; }
