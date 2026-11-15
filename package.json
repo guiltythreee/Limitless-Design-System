@@ -1,0 +1,12 @@
+{
+  "name": "limitless-design-system",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Isolated visual design foundations for Limitless",
+  "scripts": {
+    "test": "node scripts/test-design-system-contract.mjs"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
