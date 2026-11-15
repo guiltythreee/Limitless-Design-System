@@ -7,7 +7,6 @@ const components = read("../src/components.css");
 const contracts = read("../docs/component-contracts.md");
 const audit = read("../docs/live-component-audit.md");
 const preview = read("../preview/index.html");
-const mappingSpec = read("../docs/component-mapping-spec.md");
 const mapping = read("../docs/component-mapping-spec.md");
 
 const requiredTokens = [
@@ -96,4 +95,4 @@ assert.match(contracts, /Keyboard focus must remain visible/);
 assert.match(contracts, /must not own application state/);
 
 console.log("Design-system contract: PASS");
-console.log("5 section adapters; 6 component primitives; scoped CSS; accessibility contracts and live component audit documented.");
+console.log("5 section adapters; 9 component primitives; scoped CSS; accessibility contracts and live component audit documented.");
