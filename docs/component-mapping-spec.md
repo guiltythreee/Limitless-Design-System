@@ -131,3 +131,16 @@ For every step, compare the actual production markup and styles against the prop
 - No redesign of any section.
 - No changes to application state, persistence, routing, scheduling, analytics or question behavior.
 - No assertion of visual parity based only on token aliases or a static fixture.
+
+
+## Metallurgy course-browser controls — source follow-up
+
+| Live selector | Proposed visual contract | Source-backed behavior boundary |
+|---|---|---|
+| .cb-toolbar | .ds-course-toolbar | Flex toolbar; stacks vertically at 850px |
+| .cb-search | .ds-course-search | Search input; label and query state stay in application markup |
+| .cb-filters | .ds-course-filters | Native selects; unit filter is conditional on available units |
+| .cb-list-head | .ds-course-list-head | Shows filtered row count against total; secondary descriptor hides at 520px |
+| .cb-empty | .ds-course-empty | Empty-results message only |
+
+The live CourseChapterBrowser.tsx owns filtering and sorting. Search matches topic title or ID (case-insensitive); status options are all, not started, in progress, completed and weak; weak means at least one attempt and accuracy below 60%. Sort options are chapter order, name, least progress and question count. The visual primitives must not duplicate or implement this logic.
