@@ -30,7 +30,7 @@ for (const section of ["probability", "metallurgy", "home", "competition", "code
 
 const componentSelectors = [
   ".ds-button", ".ds-button--primary", ".ds-button--secondary", ".ds-button--quiet", ".ds-button--compact", ".ds-button--prominent", ".ds-button--full",
-  ".ds-sidebar", ".ds-sidebar-link", ".ds-chip", ".ds-chip--selected", ".ds-badge--easy", ".ds-badge--medium", ".ds-badge--hard",
+  ".ds-sidebar", ".ds-sidebar-link", ".ds-segmented", ".ds-segmented-option", ".ds-stage-selector", ".ds-stage-option", ".ds-chip", ".ds-chip--selected", ".ds-badge--easy", ".ds-badge--medium", ".ds-badge--hard",
   ".ds-panel", ".ds-card", ".ds-navigation-card", ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab", ".ds-badge", ".ds-nav", ".ds-nav-link",
 ];
 for (const selector of componentSelectors) {
@@ -76,6 +76,10 @@ assert.match(components, /\.ds-button--compact/);
 assert.match(components, /\.ds-button--prominent/);
 assert.match(components, /\.ds-field--compact/);
 assert.match(components, /\.ds-field--monospace/);
+assert.match(components, /\.ds-segmented-option\[aria-pressed/);
+assert.match(components, /\.ds-stage-option\.is-active/);
+assert.match(tokens, /--ds-segmented-selected-background/);
+assert.match(tokens, /--ds-stage-active-background/);
 assert.match(components, /\.ds-chip--selected/);
 assert.match(components, /\.ds-chip--accent/);
 assert.match(components, /\.ds-badge--accent/);
@@ -95,6 +99,8 @@ assert.match(preview, /ds-panel sample-card/);
 assert.match(preview, /ds-card sample-family-card/);
 assert.match(preview, /ds-navigation-card sample-family-link/);
 assert.match(preview, /ds-chip sample-chip/);
+assert.match(preview, /ds-segmented sample-segmented/);
+assert.match(preview, /ds-stage-selector sample-stage-selector/);
 assert.match(mapping, /Content panel/);
 assert.match(mapping, /Navigation card/);
 
