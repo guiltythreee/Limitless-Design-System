@@ -71,6 +71,7 @@
 /* Metallurgy keeps its materials-science blue palette and existing theme vars. */
 [data-limitless-design="metallurgy"] {
   --ds-color-canvas: var(--ink);
+  --ds-color-on-accent: var(--ink);
   --ds-color-surface: var(--panel);
   --ds-color-surface-raised: var(--chip);
   --ds-color-text: var(--body);
