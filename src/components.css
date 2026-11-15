@@ -870,3 +870,102 @@
 :where([data-limitless-design]) .ds-practice-week-status.is-today{outline:1px solid var(--ds-color-focus)}
 @media(prefers-reduced-motion:reduce){:where([data-limitless-design]) .ds-practice-goal-milestones__fill{transition:none}}
 @media(forced-colors:active){:where([data-limitless-design]) .ds-practice-question-marker[aria-current="step"]{outline-color:Highlight}}
+
+
+/* Probability test history and completion presentation. Data and status remain app-owned. */
+:where([data-limitless-design]) .ds-test-result-summary {
+  padding: var(--ds-test-result-summary-padding, var(--ds-space-5));
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-test-result-radius, var(--ds-radius-lg));
+  background: var(--ds-test-result-background, var(--ds-color-surface));
+  text-align: center;
+}
+:where([data-limitless-design]) .ds-test-result-summary__eyebrow {
+  color: var(--ds-color-muted);
+  font-size: var(--ds-text-xs);
+  letter-spacing: .14em;
+  text-transform: uppercase;
+}
+:where([data-limitless-design]) .ds-test-result-summary__score {
+  display: block;
+  margin-top: var(--ds-space-2);
+  color: var(--ds-test-result-score-color, var(--ds-color-accent));
+  font-family: var(--ds-font-serif, var(--ds-font-sans));
+  font-size: clamp(2rem, 5vw, 2.5rem);
+  line-height: 1.1;
+  font-variant-numeric: tabular-nums;
+}
+:where([data-limitless-design]) .ds-test-result-summary__meta {
+  margin-top: var(--ds-space-2);
+  color: var(--ds-color-muted);
+  font-size: var(--ds-text-sm);
+}
+:where([data-limitless-design]) .ds-test-result-list {
+  overflow: hidden;
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-test-result-radius, var(--ds-radius-lg));
+  background: var(--ds-color-surface);
+}
+:where([data-limitless-design]) .ds-test-result-row {
+  display: flex;
+  align-items: center;
+  gap: var(--ds-space-3);
+  min-width: 0;
+  padding: var(--ds-space-2) var(--ds-space-4);
+  border-top: 1px solid var(--ds-test-result-divider, var(--ds-color-border));
+  color: var(--ds-color-text);
+  font-size: var(--ds-text-sm);
+}
+:where([data-limitless-design]) .ds-test-result-row:first-child { border-top: 0; }
+:where([data-limitless-design]) .ds-test-result-row__index,
+:where([data-limitless-design]) .ds-test-result-row__time {
+  flex: 0 0 auto;
+  color: var(--ds-color-muted);
+  font-size: var(--ds-text-xs);
+  font-variant-numeric: tabular-nums;
+}
+:where([data-limitless-design]) .ds-test-result-row__index { width: 1.5rem; }
+:where([data-limitless-design]) .ds-test-result-row__status {
+  flex: 0 0 auto;
+  width: 1.25rem;
+  text-align: center;
+  font-weight: 700;
+}
+:where([data-limitless-design]) .ds-test-result-row__status--correct { color: var(--ds-color-success); }
+:where([data-limitless-design]) .ds-test-result-row__status--incorrect { color: var(--ds-color-danger); }
+:where([data-limitless-design]) .ds-test-result-row__status--partial { color: var(--ds-color-warning); }
+:where([data-limitless-design]) .ds-test-result-row__question {
+  flex: 1 1 auto;
+  min-width: 0;
+  color: var(--ds-color-text);
+}
+:where([data-limitless-design]) .ds-test-history {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  font-size: var(--ds-text-sm);
+}
+:where([data-limitless-design]) .ds-test-history th {
+  padding: var(--ds-space-2) var(--ds-space-3);
+  color: var(--ds-color-muted);
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: .12em;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+:where([data-limitless-design]) .ds-test-history td {
+  padding: var(--ds-space-2) var(--ds-space-3);
+  border-top: 1px solid var(--ds-test-result-divider, var(--ds-color-border));
+  color: var(--ds-color-text);
+  vertical-align: top;
+}
+:where([data-limitless-design]) .ds-test-history td:first-child,
+:where([data-limitless-design]) .ds-test-history td:last-child {
+  font-variant-numeric: tabular-nums;
+}
+@media (max-width: 520px) {
+  :where([data-limitless-design]) .ds-test-result-row { gap: var(--ds-space-2); padding-inline: var(--ds-space-3); }
+  :where([data-limitless-design]) .ds-test-history th,
+  :where([data-limitless-design]) .ds-test-history td { padding-inline: var(--ds-space-2); }
+}
