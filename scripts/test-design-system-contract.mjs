@@ -53,8 +53,8 @@ assert.match(tokens, /--ds-color-surface: rgba\(8, 20, 36, 0\.88\)/, "Codeforces
 
 assert.match(audit, /source-level audit complete/i);
 assert.match(audit, /no application integration authorized/i);
-for (const section of ["Probability", "Metallurgy", "Home dashboard", "Competition", "Codeforces"]) {
-  assert.ok(audit.includes(`### ${section}`), `Missing live component audit for ${section}`);
+for (const heading of ["### 1. Probability", "### 2. Metallurgy", "### 3. Home dashboard", "### 4. Competition", "### 5. Codeforces"]) {
+  assert.ok(audit.includes(heading), `Missing live component audit section: ${heading}`);
 }
 assert.match(audit, /not visually equivalent/i);
 assert.match(audit, /No live application imports this package/);
