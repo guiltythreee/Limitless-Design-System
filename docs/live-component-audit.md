@@ -147,3 +147,8 @@ No live application imports this package. No production files are changed by thi
 | `index.html` | `1d4f9ff1a3921b9775c00db1b45c3ddbc24c98a3` |
 | `competition/index.html` | `a09dbd51fc92d3d07df1c635e199a7603c162586` |
 | `codeforces-red/index.html` | `87d43672ffe0f38e1252dc89650a966bd77695bd` |
+
+
+## Follow-up source finding — Metallurgy chapter browser
+
+The current `CourseChapterBrowser.tsx` renders `.cb-chapter` rows, styled in `app/courses/course-chapter-browser.css`. The older `.topic-card` selector in `globals.css` is a separate legacy pattern and is not the current chapter-browser control. The live row is transparent with a bottom divider, chip-colour hover fill, a numbered marker, title/progress stack, right-aligned metrics and trailing arrow. At 850px it collapses and places metrics beneath the title. This source mapping is implemented as `.ds-chapter-row`; no application integration is authorized.

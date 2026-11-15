@@ -15,7 +15,7 @@ This document defines the first portable visual primitives. It is a design contr
 | Primitive | Class contract | Variants / states | Required semantics |
 |---|---|---|---|
 | Button | `.ds-button` | `--primary`, `--secondary`, `--quiet`, `--compact`, `--prominent`, `--full`; hover, active, focus-visible, disabled, busy | Use a native `button` for actions and an `a` for navigation. Never fake disabled state without preventing activation. |
-| Selectable option | `.ds-option`, `.ds-option__letter` | hover, focus-visible, disabled; section-adaptable geometry | Use a native `button` for an answer or choice; expose selected/correctness state with the consuming application's established semantics. |
+| Chapter row | `.ds-chapter-row` and child slots | Responsive chapter navigation with number, title, progress, metrics and arrow | Use a native button for selection; keep progress values and labels application-owned. At narrow widths metrics move below the title. |\n| Selectable option | `.ds-option`, `.ds-option__letter` | hover, focus-visible, disabled; section-adaptable geometry | Use a native `button` for an answer or choice; expose selected/correctness state with the consuming application's established semantics. |
 | Panel | `.ds-panel` | default, `--flush` | Use for a grouped content region; padding, radius, shadow and blur are section-adaptable tokens. |
 | Content card | `.ds-card` | default, `--flat` | Use for self-contained information; it is not interactive by default. |
 | Navigation card | `.ds-navigation-card` | hover, focus-visible | Use an anchor for navigation; preserve the complete clickable hit area and current-destination semantics. |
@@ -100,3 +100,11 @@ This document defines the first portable visual primitives. It is a design contr
 ## Live-site fidelity boundary
 
 These primitives define a portable API and baseline behavior; they are not claimed to be pixel-equivalent replacements for every existing Limitless control. The live visual source map in `docs/live-visual-source-map.md` identifies the authoritative application styles. Do not migrate or replace an existing control until its exact section-specific styling and responsive rules have been mapped. Existing markup and CSS remain the visual authority.
+
+
+## Chapter rows
+
+- `.ds-chapter-row` is a structured navigation/selection row, not a generic card. It maps the Metallurgy `CourseChapterBrowser` layout: leading chapter number, flexible title/progress region, trailing metrics and arrow.
+- The wide layout uses a four-column grid; at 850px and below it collapses to three columns and moves metrics beneath the title.
+- Progress width is supplied by the consuming application through `--ds-chapter-progress-value`; expose progress text or semantics in markup when it communicates meaningful completion.
+- The live chapter browser uses a transparent row with a bottom divider and chip-colour hover fill. Do not add card radius, panel shadow or a lift transform.

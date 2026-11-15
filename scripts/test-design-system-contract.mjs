@@ -29,7 +29,7 @@ for (const section of ["probability", "metallurgy", "home", "competition", "code
 }
 
 const componentSelectors = [
-  ".ds-button", ".ds-button--primary", ".ds-button--secondary", ".ds-button--quiet", ".ds-button--compact", ".ds-button--prominent", ".ds-button--full", ".ds-button--pill", ".ds-option", ".ds-option__letter",
+  ".ds-chapter-row", ".ds-chapter-row__number", ".ds-chapter-row__content", ".ds-chapter-row__metrics", ".ds-button", ".ds-button--primary", ".ds-button--secondary", ".ds-button--quiet", ".ds-button--compact", ".ds-button--prominent", ".ds-button--full", ".ds-button--pill", ".ds-option", ".ds-option__letter",
   ".ds-sidebar", ".ds-sidebar-link", ".ds-metric-card", ".ds-metric-card__value", ".ds-progress", ".ds-progress--thin", ".ds-segmented", ".ds-segmented-option", ".ds-stage-selector", ".ds-stage-option", ".ds-chip", ".ds-chip--selected", ".ds-badge--easy", ".ds-badge--medium", ".ds-badge--hard",
   ".ds-panel", ".ds-card", ".ds-navigation-card", ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab", ".ds-badge", ".ds-nav", ".ds-nav-link",
 ];
@@ -102,10 +102,12 @@ assert.match(tokens, /--ds-button-height-compact/);
 assert.match(tokens, /--ds-field-height/);
 assert.match(preview, /ds-sidebar sample-sidebar/);
 assert.match(contracts, /Sidebar navigation/);
+assert.match(contracts, /Chapter rows/);
 assert.match(contracts, /Selectable options/);
 assert.match(components, /--ds-panel-backdrop-filter/);
 assert.match(components, /--ds-navigation-card-hover-transform/);
 assert.match(preview, /ds-panel sample-card/);
+assert.match(preview, /ds-chapter-row sample-chapter-row/);
 assert.match(preview, /ds-option sample-option/);
 assert.match(preview, /ds-button--pill/);
 assert.match(preview, /ds-card sample-family-card/);
@@ -115,6 +117,7 @@ assert.match(preview, /ds-segmented sample-segmented/);
 assert.match(preview, /ds-stage-selector sample-stage-selector/);
 assert.match(preview, /ds-metric-card sample-metric-card/);
 assert.match(preview, /ds-progress sample-progress/);
+assert.match(mapping, /Chapter row/);
 assert.match(mapping, /Content panel/);
 assert.match(mapping, /Navigation card/);
 

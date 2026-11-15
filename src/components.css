@@ -590,3 +590,119 @@
     transform: none;
   }
 }
+
+
+/* Structured chapter rows: mapped from Metallurgy's CourseChapterBrowser. */
+:where([data-limitless-design]) .ds-chapter-row {
+  display: grid;
+  grid-template-columns: var(--ds-chapter-grid-columns, 38px minmax(0, 1fr) minmax(190px, auto) 20px);
+  align-items: center;
+  gap: var(--ds-chapter-gap, 0.8rem);
+  box-sizing: border-box;
+  width: 100%;
+  min-width: 0;
+  padding: var(--ds-chapter-padding, 0.9rem 0.55rem);
+  border: 0;
+  border-bottom: 1px solid var(--ds-color-border);
+  border-radius: 0;
+  background: transparent;
+  color: var(--ds-color-text);
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: background-color var(--ds-motion-fast) var(--ds-ease-standard);
+}
+
+:where([data-limitless-design]) .ds-chapter-row:hover,
+:where([data-limitless-design]) .ds-chapter-row:focus-visible {
+  background: var(--ds-chapter-hover-background, var(--ds-color-surface-raised));
+}
+
+:where([data-limitless-design]) .ds-chapter-row:focus-visible {
+  outline: 2px solid var(--ds-color-focus);
+  outline-offset: -2px;
+}
+
+:where([data-limitless-design]) .ds-chapter-row__number {
+  display: grid;
+  place-items: center;
+  width: var(--ds-chapter-number-size, 32px);
+  height: var(--ds-chapter-number-size, 32px);
+  border-radius: var(--ds-chapter-number-radius, 8px);
+  background: var(--ds-chapter-number-background, var(--ds-color-surface-raised));
+  color: var(--ds-chapter-number-color, var(--ds-color-accent));
+  font-size: var(--ds-chapter-number-font-size, 0.8rem);
+  font-weight: 750;
+}
+
+:where([data-limitless-design]) .ds-chapter-row__content {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  gap: var(--ds-chapter-content-gap, 0.24rem);
+}
+
+:where([data-limitless-design]) .ds-chapter-row__content strong {
+  color: var(--ds-chapter-title-color, var(--ds-color-text));
+  font-size: var(--ds-chapter-title-size, 0.9rem);
+  font-weight: 650;
+}
+
+:where([data-limitless-design]) .ds-chapter-row__content small {
+  color: var(--ds-color-muted);
+  font-size: var(--ds-chapter-meta-size, 0.7rem);
+}
+
+:where([data-limitless-design]) .ds-chapter-row__progress {
+  display: block;
+  width: min(100%, var(--ds-chapter-progress-width, 250px));
+  height: var(--ds-chapter-progress-height, 4px);
+  overflow: hidden;
+  border-radius: var(--ds-radius-sm);
+  background: var(--ds-chapter-progress-track, var(--ds-color-surface-raised));
+}
+
+:where([data-limitless-design]) .ds-chapter-row__progress > span {
+  display: block;
+  width: var(--ds-chapter-progress-value, 0%);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--ds-chapter-progress-fill, var(--ds-color-accent));
+}
+
+:where([data-limitless-design]) .ds-chapter-row__metrics {
+  display: flex;
+  justify-content: flex-end;
+  flex-wrap: wrap;
+  gap: var(--ds-chapter-metrics-gap, 0.8rem);
+  color: var(--ds-color-text);
+  font-size: var(--ds-chapter-metrics-size, 0.78rem);
+  font-variant-numeric: tabular-nums;
+}
+
+:where([data-limitless-design]) .ds-chapter-row__metrics small {
+  color: var(--ds-color-muted);
+  font-size: var(--ds-chapter-metrics-label-size, 0.68rem);
+}
+
+:where([data-limitless-design]) .ds-chapter-row__arrow {
+  color: var(--ds-color-accent);
+  font-size: 1rem;
+}
+
+@media (max-width: 850px) {
+  :where([data-limitless-design]) .ds-chapter-row {
+    grid-template-columns: 34px minmax(0, 1fr) 20px;
+  }
+
+  :where([data-limitless-design]) .ds-chapter-row__metrics {
+    grid-column: 2;
+    justify-content: flex-start;
+    gap: 0.7rem;
+  }
+
+  :where([data-limitless-design]) .ds-chapter-row__arrow {
+    grid-column: 3;
+    grid-row: 1;
+  }
+}
