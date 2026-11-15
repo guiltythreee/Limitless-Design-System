@@ -37,6 +37,7 @@
   --ds-field-height: var(--ds-control-height-md);
   --ds-field-height-compact: 2.25rem;
   --ds-button-radius: var(--ds-radius-md);
+  --ds-button-pill-radius: var(--ds-radius-pill);
   --ds-field-radius: var(--ds-radius-sm);
 
   /* Typography and motion */
@@ -119,6 +120,21 @@
   --ds-chip-radius: 8px;
   --ds-chip-font-size: 11px;
   --ds-button-radius: 9px;
+  --ds-option-min-height: 62px;
+  --ds-option-gap: 0.9rem;
+  --ds-option-padding: 1rem 1.1rem;
+  --ds-option-radius: var(--prob-radius-md, 14px);
+  --ds-option-border: color-mix(in srgb, var(--gold) 22%, transparent);
+  --ds-option-background: color-mix(in srgb, var(--panel) 78%, transparent);
+  --ds-option-hover-border: color-mix(in srgb, var(--gold) 60%, transparent);
+  --ds-option-hover-background: color-mix(in srgb, var(--gold) 8%, var(--panel));
+  --ds-option-hover-transform: translateY(-1px);
+  --ds-option-letter-size: 2.15rem;
+  --ds-option-letter-radius: 9px;
+  --ds-option-letter-border: color-mix(in srgb, var(--gold) 25%, transparent);
+  --ds-option-letter-background: color-mix(in srgb, var(--gold) 14%, transparent);
+  --ds-option-letter-color: var(--mutedgold);
+  --ds-option-letter-font-size: 12px;
   --ds-field-radius: 8px;
   --ds-panel-radius: var(--prob-radius-md, 12px);
   --ds-card-radius: 18px;

@@ -29,7 +29,7 @@ for (const section of ["probability", "metallurgy", "home", "competition", "code
 }
 
 const componentSelectors = [
-  ".ds-button", ".ds-button--primary", ".ds-button--secondary", ".ds-button--quiet", ".ds-button--compact", ".ds-button--prominent", ".ds-button--full",
+  ".ds-button", ".ds-button--primary", ".ds-button--secondary", ".ds-button--quiet", ".ds-button--compact", ".ds-button--prominent", ".ds-button--full", ".ds-button--pill", ".ds-option", ".ds-option__letter",
   ".ds-sidebar", ".ds-sidebar-link", ".ds-metric-card", ".ds-metric-card__value", ".ds-progress", ".ds-progress--thin", ".ds-segmented", ".ds-segmented-option", ".ds-stage-selector", ".ds-stage-option", ".ds-chip", ".ds-chip--selected", ".ds-badge--easy", ".ds-badge--medium", ".ds-badge--hard",
   ".ds-panel", ".ds-card", ".ds-navigation-card", ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab", ".ds-badge", ".ds-nav", ".ds-nav-link",
 ];
@@ -73,7 +73,7 @@ assert.match(components, /\.ds-navigation-card/);
 assert.match(components, /\.ds-sidebar-link/);
 assert.match(components, /\.ds-sidebar--horizontal/);
 assert.match(components, /\.ds-button--compact/);
-assert.match(components, /\.ds-button--prominent/);
+assert.match(components, /\.ds-button--prominent/);\nassert.match(components, /\.ds-button--pill/);\nassert.match(components, /\.ds-option__letter/);\nassert.match(tokens, /--ds-option-min-height: 62px/);\nassert.match(tokens, /--ds-option-hover-transform: translateY\(-1px\)/);
 assert.match(components, /\.ds-field--compact/);
 assert.match(components, /\.ds-field--monospace/);
 assert.match(components, /\.ds-segmented-option\[aria-pressed/);
@@ -97,10 +97,10 @@ assert.match(tokens, /--ds-color-chip-success/);
 assert.match(tokens, /--ds-button-height-compact/);
 assert.match(tokens, /--ds-field-height/);
 assert.match(preview, /ds-sidebar sample-sidebar/);
-assert.match(contracts, /Sidebar navigation/);
+assert.match(contracts, /Sidebar navigation/);\nassert.match(contracts, /Selectable options/);
 assert.match(components, /--ds-panel-backdrop-filter/);
 assert.match(components, /--ds-navigation-card-hover-transform/);
-assert.match(preview, /ds-panel sample-card/);
+assert.match(preview, /ds-panel sample-card/);\nassert.match(preview, /ds-option sample-option/);\nassert.match(preview, /ds-button--pill/);
 assert.match(preview, /ds-card sample-family-card/);
 assert.match(preview, /ds-navigation-card sample-family-link/);
 assert.match(preview, /ds-chip sample-chip/);
