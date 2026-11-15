@@ -74,8 +74,8 @@ assert.match(components, /--ds-navigation-card-hover-transform/);
 assert.match(preview, /ds-panel sample-card/);
 assert.match(preview, /ds-card sample-family-card/);
 assert.match(preview, /ds-navigation-card sample-family-link/);
-assert.match(mappingSpec, /Content panel/);
-assert.match(mappingSpec, /Navigation card/);
+assert.match(mapping, /Content panel/);
+assert.match(mapping, /Navigation card/);
 
 for (const [name, source] of [["tokens", tokens], ["components", components]]) {
   assert.doesNotMatch(source, /@import\s/i, `${name} must not import stylesheets`);
