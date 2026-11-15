@@ -42,3 +42,20 @@ Open `preview/index.html` on the development branch to inspect the shared primit
 ## Live-site visual fidelity
 
 The current Limitless CSS is authoritative. See `docs/live-visual-source-map.md` for the exact source files and theme variables used by each adapter. See `docs/live-component-audit.md` for the first source-level comparison of live controls against the proposed primitives, including the known non-equivalences and migration blockers. See `docs/component-mapping-spec.md` for the proposed reusable pattern inventory and its semantic/adoption boundaries. The preview is a component-contract fixture, not a pixel-perfect screenshot claim. Existing app styles and artwork must remain unchanged until a separate, source-backed integration review.
+
+
+## Implemented visual inventory
+
+The current branch contains more than the initial shared primitives. The implemented, documented and source-mapped families include:
+
+- **Foundations:** scoped design tokens; Probability, Metallurgy, Home, Competition and Codeforces adapters; panels, cards, navigation cards, buttons, options, fields, chips, badges, tabs, segmented controls, stage selectors, sidebar links, metric cards and progress indicators.
+- **Metallurgy:** chapter rows; course-browser toolbar, search, filters and empty state; archive sidebar navigation and progress; course heading and summary metrics.
+- **Shared study utilities:** vertical and horizontal utility navigation; panel shell, controls/actions, toolbar, metrics, visual/legend slots, progress, weekly grid, history/question/item rows, empty state and goal form variants.
+- **Probability:** practice-session question markers, timer, action bar, analysis dock, goal milestones and weekly status; native checkbox visual; test completion summary, result rows and test-history table; in-progress player composition.
+- **Audit boundaries:** Probability chart SVGs, hierarchical test-scope selection, mistake classification, answer grading, timers, navigation, persistence, dashboard calculations and all application state remain owned by the live application.
+
+## Verification status and remaining fidelity work
+
+The contract suite checks token/adapter coverage, component selectors, preview fixtures, source mappings, accessibility-related CSS constraints and documentation provenance. GitHub Actions is the authoritative recorded test result for each branch commit.
+
+The preview is a static visual fixture across five section adapters in dark and light themes. It is not the live application and does not establish pixel parity. The remaining visual-validation milestone is a side-by-side browser comparison against the live application using matching content, state, theme and viewport. Production integration remains a separate review and is not part of this repository's current scope.
