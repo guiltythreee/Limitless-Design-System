@@ -325,3 +325,18 @@ for (const [path, sha] of followUpSources) {
   assert.ok(sourceMap.includes(path), `Missing source-map path: ${path}`);
   assert.ok(sourceMap.includes(sha), `Missing source-map revision: ${path}`);
 }
+
+
+// Previously implemented Probability utility and test-history variants now have visible fixtures.
+const additionalProbabilityPreview = [
+  "ds-study-utility-nav--horizontal", "ds-study-utility-control", "ds-study-utility-toolbar",
+  "ds-study-utility-metrics--goals", "ds-study-utility-visual", "ds-study-utility-legend",
+  "ds-study-utility-progress--overview", "ds-study-utility-row--history",
+  "ds-study-utility-row--question", "ds-study-utility-empty", "ds-study-utility-form",
+  "ds-test-history", "sample-utility-plot", "sample-history-scroll",
+];
+for (const selector of additionalProbabilityPreview) {
+  assert.ok(preview.includes(selector), `Missing Probability utility/history preview: ${selector}`);
+}
+assert.equal((preview.match(/class="ds-test-history"/g) ?? []).length, 2,
+  "Test history table must be previewed in both Probability themes");
