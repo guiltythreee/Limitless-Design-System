@@ -152,3 +152,12 @@ These primitives define a portable API and baseline behavior; they are not claim
 - Toolbar, metric, visual, legend, progress, week-grid, row, empty-state and form classes are layout/presentation primitives only. They do not own data, chart calculations, persistence, filtering or action callbacks.
 - The live utility CSS uses section variables such as `--panel-line`, `--panel-bg`, `--body`, `--paper`, `--dim`, `--chip`, `--inset` and `--gold`. The design-system adapter must alias the relevant live values; generic defaults are structural fallbacks, not a parity claim.
 - Preserve the two-column metric layout at 520px and below, the seven-column weekly grid, wrapping row actions, visible focus, forced-colour focus and reduced-motion progress behavior.
+
+
+### Source-backed panel variants and exceptions
+
+- **Bookmarks:** the header has no count badge; the description carries the saved-question count. Rows use the item layout with optional open and remove actions. Missing topic IDs remain visible with an explanatory unavailable-item message. Preserve the empty-state instruction.
+- **Activity history:** the toolbar contains native period and attempt-mode selects. Summary metrics and the seven-day correct/incorrect chart precede the history list. History rows include timestamp, mode, elapsed time, legacy-source metadata, selected answer and correctness; do not compress these into a generic metadata line.
+- **Mistakes:** this is the same ActivityHistoryPanel in a distinct view, not a separate panel shell. It adds mistake-category controls, topic-mastery and recurring-mistake summaries, and a prioritized revision queue. Category selection, local persistence, reviewed state and revision ranking remain application-owned.
+- **Daily goals:** the goals metric variant has two wider tiles; the weekly grid includes per-day count/goal and met/today/future states. The numeric target is constrained to 1–200 and submitted through the course callback. The fill width and success colour are computed by the application.
+- Preserve .ds-study-utility-row--question as a separate source-backed divider row variant and .ds-study-utility-progress--overview as a distinct taller progress track. Do not infer that all row types or progress tracks are interchangeable.
