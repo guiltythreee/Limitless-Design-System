@@ -161,7 +161,7 @@ assert.match(contracts, /Metallurgy archive sidebar navigation/);
 assert.match(audit, /archive sidebar and progress/i);
 
 
-const courseNavPreview = [".ds-course-toolbar", ".ds-course-search", ".ds-course-filters", ".ds-course-list-head", ".ds-course-nav-item", ".ds-course-nav-progress"];
+const courseNavPreview = ["ds-course-toolbar", "ds-course-search", "ds-course-filters", "ds-course-list-head", "ds-course-nav-item", "ds-course-nav-progress"];
 for (const selector of courseNavPreview) {
   assert.ok(preview.includes(selector), `Missing Metallurgy preview fixture: ${selector}`);
 }
