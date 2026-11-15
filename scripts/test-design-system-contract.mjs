@@ -225,3 +225,22 @@ assert.match(contracts, /Mistakes/);
 assert.match(contracts, /Daily goals/);
 assert.match(mapping, /Panel variant source mapping/);
 assert.match(audit, /utility panel variants/);
+
+const practiceControlSelectors = [
+  ".ds-practice-question-nav", ".ds-practice-question-marker", ".ds-practice-question-marker__status",
+  ".ds-practice-timer", ".ds-practice-actionbar", ".ds-practice-actionbar__primary",
+  ".ds-practice-actionbar__secondary", ".ds-practice-analysis-dock", ".ds-practice-analysis-dock__action",
+  ".ds-practice-goal-milestones", ".ds-practice-goal-milestones__fill", ".ds-practice-goal-milestones__node",
+  ".ds-practice-week-status", ".ds-practice-week-status__label",
+];
+for (const selector of practiceControlSelectors) assert.ok(components.includes(selector), `Missing Probability practice control: ${selector}`);
+assert.match(components, /\.ds-practice-question-marker\[aria-current="step"\]/);
+assert.match(components, /\.ds-practice-question-marker\.is-correct/);
+assert.match(components, /\.ds-practice-question-marker\.is-incorrect/);
+assert.match(components, /\.ds-practice-question-marker\.is-partial/);
+assert.match(components, /prefers-reduced-motion:reduce/);
+assert.match(tokens, /--ds-practice-correct-background:/);
+assert.match(tokens, /--ds-practice-week-met-background:/);
+assert.match(contracts, /Probability practice-session controls/);
+assert.match(mapping, /Probability practice-session controls/);
+assert.match(audit, /Probability practice-session controls/);
