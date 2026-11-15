@@ -30,7 +30,7 @@ for (const section of ["probability", "metallurgy", "home", "competition", "code
 
 const componentSelectors = [
   ".ds-chapter-row", ".ds-chapter-row__number", ".ds-chapter-row__content", ".ds-chapter-row__metrics", ".ds-button", ".ds-button--primary", ".ds-button--secondary", ".ds-button--quiet", ".ds-button--compact", ".ds-button--prominent", ".ds-button--full", ".ds-button--pill", ".ds-option", ".ds-option__letter",
-  ".ds-checkbox", ".ds-sidebar", ".ds-sidebar-link", ".ds-metric-card", ".ds-metric-card__value", ".ds-progress", ".ds-progress--thin", ".ds-segmented", ".ds-segmented-option", ".ds-stage-selector", ".ds-stage-option", ".ds-chip", ".ds-chip--selected", ".ds-badge--easy", ".ds-badge--medium", ".ds-badge--hard",
+  ".ds-checkbox", ".ds-test-result-summary", ".ds-test-result-summary__score", ".ds-test-result-list", ".ds-test-result-row", ".ds-test-result-row__status--correct", ".ds-test-result-row__status--incorrect", ".ds-test-result-row__status--partial", ".ds-test-history", ".ds-sidebar", ".ds-sidebar-link", ".ds-metric-card", ".ds-metric-card__value", ".ds-progress", ".ds-progress--thin", ".ds-segmented", ".ds-segmented-option", ".ds-stage-selector", ".ds-stage-option", ".ds-chip", ".ds-chip--selected", ".ds-badge--easy", ".ds-badge--medium", ".ds-badge--hard",
   ".ds-panel", ".ds-card", ".ds-navigation-card", ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab", ".ds-badge", ".ds-nav", ".ds-nav-link",
 ];
 for (const selector of componentSelectors) {
