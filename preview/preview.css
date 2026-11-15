@@ -54,3 +54,5 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -.04em; }
   .group-heading { align-items: start; flex-direction: column; }
   .theme-note { text-align: left; }
 }
+
+.theme-preview .ds-tab.is-selected { border-bottom-color: var(--ds-color-accent); color: var(--ds-color-heading); }
