@@ -39,7 +39,7 @@ for (const selector of componentSelectors) {
 
 const documentedPrimitives = [
   ".ds-button", ".ds-panel", ".ds-card", ".ds-navigation-card", ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab",
-  ".ds-badge", ".ds-nav", ".ds-nav-link",
+  ".ds-badge", ".ds-test-result-summary", ".ds-test-result-row", ".ds-test-history", ".ds-nav", ".ds-nav-link",
 ];
 for (const primitive of documentedPrimitives) {
   assert.ok(contracts.includes(primitive), `Missing documentation for primitive: ${primitive}`);
