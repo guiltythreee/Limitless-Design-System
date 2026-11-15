@@ -35,6 +35,25 @@
   transform: translateY(1px);
 }
 
+:where([data-limitless-design]) .ds-checkbox {
+  width: var(--ds-checkbox-size, 1rem);
+  height: var(--ds-checkbox-size, 1rem);
+  flex: 0 0 auto;
+  margin: 0;
+  accent-color: var(--ds-checkbox-accent, var(--ds-color-accent));
+  cursor: pointer;
+}
+
+:where([data-limitless-design]) .ds-checkbox:focus-visible {
+  outline: 2px solid var(--ds-color-focus);
+  outline-offset: 3px;
+}
+
+:where([data-limitless-design]) .ds-checkbox:disabled {
+  cursor: not-allowed;
+  opacity: .55;
+}
+
 :where([data-limitless-design]) .ds-button:focus-visible,
 :where([data-limitless-design]) .ds-field:focus-visible,
 :where([data-limitless-design]) .ds-tab:focus-visible,
