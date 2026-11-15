@@ -14,7 +14,7 @@ const requiredTokens = [
   "--ds-motion-fast", "--ds-ease-standard",
   "--ds-color-canvas", "--ds-color-surface", "--ds-color-text",
   "--ds-color-heading", "--ds-color-muted", "--ds-color-accent",
-  "--ds-color-border", "--ds-color-focus",
+  "--ds-color-border", "--ds-color-focus", "--ds-color-on-accent",
 ];
 
 for (const token of requiredTokens) {
