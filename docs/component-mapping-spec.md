@@ -171,3 +171,17 @@ This sidebar is a different component from the chapter-browser row. Preserve the
 | `.probability-utility-nav` | `.ds-study-utility-nav--horizontal` | Probability compact horizontal variant |
 
 The utility navigation is already shared production infrastructure. The design-system mapping documents its visual contract only; it does not replace the production component or its callback/state boundary.
+
+
+## Study utility panel family
+
+| Proposed pattern | Live source | Reuse boundary |
+|---|---|---|
+| Utility panel frame/header | `.study-utility-panel`, `__header`, `__heading`, `__title`, `__description`, `__count`, `__content` | Structure and geometry only; theme values remain supplied by the section adapter |
+| Compact utility controls/actions | `.study-utility-control`, `.study-utility-action` | Native input/button semantics and all application behavior remain with the consumer |
+| Toolbar and metric group | `.study-utility-toolbar`, `.study-utility-metrics`, `.study-utility-metric` | Layout only; metric values and calculations remain application-owned |
+| Visual, legend and progress | `.study-utility-visual`, `.study-utility-legend`, `.study-utility-progress` | Chart data, colour meaning and progress values remain application-owned |
+| Weekly grid | `.study-utility-week-grid`, `.study-utility-week-cell` | Seven-column layout only; day-state rendering and data remain with the course |
+| Rows, empty state and form | `.study-utility-row`, `.study-utility-empty`, `.study-utility-form` | Content, empty-state decisions, validation and callbacks remain application-owned |
+
+The live source stylesheet is `shared/studies/study-utility-nav.css`. These are presentation contracts; they do not replace the production stylesheet or the course-owned Bookmarks, Activity History, Mistakes or Daily Goals panels.
