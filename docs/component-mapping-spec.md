@@ -17,9 +17,9 @@ This specification converts the first live-component audit into a practical comp
 
 | Proposed pattern | Suggested contract | Existing source patterns | Reuse boundary |
 |---|---|---|---|
-| Content panel | `.ds-panel` | Probability `.panel`; Metallurgy `.panel`; Codeforces `.cr-hero`, `.cr-ladder-section` | Shared border/surface language only; retain section-specific depth, blur, radius and padding |
-| Content card | `.ds-card` | Probability `.card`; Metallurgy `.course-card`; Home `.learning-card`; Competition `.subject-card` | Do not collapse navigational cards, metric cards and content panels into one card contract |
-| Navigation card | `.ds-navigation-card` | Home `.shortcut-card`; Metallurgy `.course-card`; Competition `.subject-card-link` | Must remain an anchor when it navigates; preserve icon/title/description/action layout |
+| Content panel | `.ds-panel` | Probability `.panel`; Metallurgy `.panel`; Home `.dashboard-panel`; Competition shared panel family; Codeforces `.cr-hero`, `.cr-ladder-section` | Implemented as a structural foundation; retain section-specific depth, blur, radius and padding |
+| Content card | `.ds-card` | Probability `.card`; Metallurgy course-card content; Home `.learning-card`; Competition `.subject-card`; Codeforces `.cr-focus-card` | Implemented as a structural foundation; do not collapse navigational cards, metric cards and content panels into one card contract |
+| Navigation card | `.ds-navigation-card` | Home `.shortcut-card`; Metallurgy course links; Competition `.subject-card-link` | Implemented as an anchor-only foundation; preserve icon/title/description/action layout and section-specific hover treatment |
 | Metric card | `.ds-metric-card` | Competition `.overview-card`; Codeforces `.cr-stats article`, `.cr-focus-card`, `.cr-week-card` | Metric typography, number alignment and density differ by section |
 | Action button | `.ds-button` | Probability `.btn-main`, `.btn-side`; Metallurgy `.btn`; Competition `.action-button`; Codeforces `.cr-refresh-button` | Use variants only where size, fill, focus and disabled states align; refresh action remains high-visibility |
 | Selectable option | `.ds-option` | Probability `.optcard`; Metallurgy `.topic-card` | Distinct from action buttons; preserve selected/expanded state and option hit-area geometry |
