@@ -21,10 +21,18 @@ This document defines the first portable visual primitives. It is a design contr
 | Legacy surface | `.ds-surface` | default, `--raised` | Retained for compatibility with the original primitive contract; new work should choose panel, content card or navigation card explicitly. |
 | Field | `.ds-field` | default, `--compact`, `--monospace`, focus-visible, invalid | Pair with a persistent visible label; communicate errors in text, not color alone. |
 | Tabs | `.ds-tabs`, `.ds-tab` | selected, focus-visible, horizontal overflow | Use tablist/tab/tabpanel roles only when implementing the full tab interaction pattern; otherwise use ordinary navigation links. |
+| Segmented control | `.ds-segmented`, `.ds-segmented-option` | pressed/current, focus-visible | Use buttons with `aria-pressed` for mutually exclusive toggles or links with current-page semantics for navigation; do not assign tab roles by appearance alone. |
+| Stage selector | `.ds-stage-selector`, `.ds-stage-option` | active/current step, focus-visible | Use native buttons for stage selection; expose the selected stage semantically and keep stage metadata in child elements. |
 | Metadata chip | `.ds-chip` | selected, accent, success, warning, danger | Use for compact metadata or filter tags; selected state must be exposed semantically by the consuming control. |
 | Status/difficulty badge | `.ds-badge` | neutral, success, warning, danger, easy, medium, hard | Use for concise status or difficulty metadata; the text label must communicate meaning without colour. |
 | Navigation | `.ds-nav`, `.ds-nav-link` | current page, focus-visible | Place inside a labelled navigation landmark; mark the current destination with `aria-current="page"`. |
 | Sidebar navigation | `.ds-sidebar`, `.ds-sidebar-link` | active/current page, horizontal layout modifier, focus-visible | Use anchors inside a labelled navigation landmark; preserve current-page semantics and section-specific active indicators. |
+
+## Tabs, segmented controls and stage selectors
+
+- `.ds-tabs` and `.ds-tab` are reserved for a real tablist with the associated keyboard and tabpanel behavior. CSS only styles the visual state; the consuming application implements roving focus and activation.
+- `.ds-segmented` is a separate visual family. Its options are buttons or links with the correct pressed/current semantics; it is not automatically a tablist.
+- `.ds-stage-selector` is a structured list of stage buttons. Each option can contain an index/icon, a title/description block and trailing status metadata. It is not a tab strip.
 
 ## Chips and badges
 
