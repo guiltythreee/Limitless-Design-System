@@ -118,3 +118,12 @@ These primitives define a portable API and baseline behavior; they are not claim
 - .ds-course-list-head and .ds-course-empty map the live result-count header and empty state.
 - Filtering and sorting logic are not part of these visual classes. Preserve the source behavior: title/ID search; optional unit filter; all/not-started/in-progress/completed/weak status; chapter-order/name/least-progress/question-count sort. Weak means accuracy below 60% after at least one attempt.
 - Do not replace native selects with custom popovers or segmented controls. The source uses native select elements.
+
+
+## Metallurgy archive sidebar navigation
+
+- .ds-course-nav-item maps the live .ch-item button: 34px number column, 0.55rem gap, 0.5rem 0.55rem padding and 10px radius.
+- .ds-course-nav-item.is-active and aria-current states map the live chip fill and blue-line border; the exam modifier preserves its amber number marker.
+- .ds-course-nav-number maps the 32px bordered number tile.
+- .ds-course-nav-meta, .ds-course-nav-progress and .ds-course-nav-percent map the 4px progress track and trailing percentage. The application supplies the percentage and accessible progress text.
+- Use native buttons because the live sidebar changes the current in-page study view. The component owns no navigation state, persistence or progress calculation.
