@@ -84,3 +84,5 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -.04em; }
 }
 
 .theme-preview .ds-tab.is-selected { border-bottom-color: var(--ds-color-accent); color: var(--ds-color-heading); }
+
+.codeforces.light { --ds-color-canvas:#f0f5fa; --ds-color-surface:rgba(249,252,255,.94); --ds-color-surface-raised:rgba(232,242,252,.75); --ds-color-text:#526d87; --ds-color-heading:#1c3d5c; --ds-color-muted:#526d87; --ds-color-border:rgba(59,112,159,.22); --ds-color-on-accent:#fff; }
