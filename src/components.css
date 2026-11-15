@@ -706,3 +706,16 @@
     grid-row: 1;
   }
 }
+
+
+/* Metallurgy course-browser controls: source-mapped from course-chapter-browser.css. */
+:where([data-limitless-design]) .ds-course-toolbar{display:flex;justify-content:space-between;align-items:center;gap:.8rem;padding:.8rem .9rem;border:1px solid var(--ds-color-border);border-radius:var(--ds-course-toolbar-radius,14px);background:var(--ds-color-surface)}
+:where([data-limitless-design]) .ds-course-search{display:flex;align-items:center;gap:.55rem;flex:1;min-width:150px;padding:.55rem .75rem;border:1px solid var(--ds-color-border);border-radius:var(--ds-course-search-radius,10px);background:var(--ds-course-search-background,var(--ds-color-surface-raised));color:var(--ds-color-muted)}
+:where([data-limitless-design]) .ds-course-search input{width:100%;min-width:0;border:0;outline:0;background:transparent;color:var(--ds-color-text);font:inherit;font-size:.82rem}
+:where([data-limitless-design]) .ds-course-search input::placeholder{color:var(--ds-course-placeholder,var(--ds-color-muted))}
+:where([data-limitless-design]) .ds-course-filters{display:flex;flex-wrap:wrap;gap:.45rem}
+:where([data-limitless-design]) .ds-course-filters select{max-width:175px;padding:.55rem .65rem;border:1px solid var(--ds-color-border);border-radius:var(--ds-course-filter-radius,10px);background:var(--ds-course-filter-background,var(--ds-color-surface-raised));color:var(--ds-color-text);font:inherit;font-size:.77rem}
+:where([data-limitless-design]) .ds-course-list-head{display:flex;justify-content:space-between;gap:.6rem;padding:.9rem .45rem .65rem;margin:0 .1rem .25rem;border-bottom:1px solid var(--ds-color-border);color:var(--ds-color-muted);font-size:.74rem}
+:where([data-limitless-design]) .ds-course-empty{padding:2rem;color:var(--ds-color-muted);text-align:center}
+@media(max-width:850px){:where([data-limitless-design]) .ds-course-toolbar{align-items:stretch;flex-direction:column}:where([data-limitless-design]) .ds-course-filters select{flex:1}}
+@media(max-width:520px){:where([data-limitless-design]) .ds-course-filters{display:grid;grid-template-columns:1fr}:where([data-limitless-design]) .ds-course-filters select{max-width:none}:where([data-limitless-design]) .ds-course-list-head span:last-child{display:none}}
