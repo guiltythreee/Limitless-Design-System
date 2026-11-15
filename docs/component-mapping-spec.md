@@ -211,3 +211,16 @@ The family shares its shell and primitives, not identical panel composition. Ret
 | `.weekcol`, `.weekcol-met`, `.weekcol-today` | `.ds-practice-week-status` | Daily counts and state remain with dashboard |
 
 These controls complement, rather than replace, the existing shared learning-player shell and selectable-option primitives.
+
+
+### Probability chart and review mapping
+
+| Live source | Existing contract / boundary | Ownership |
+|---|---|---|
+| `Charts.tsx: DiffBars` | Existing utility panel shell and visual content slot; SVG plot is not extracted as a generic chart component | SVG geometry, scaling, difficulty data, hover tooltip and labels remain Probability-owned |
+| `Charts.tsx: DayBars` | Existing utility visual and legend layout only | Daily series, correct/incorrect stacking, goal reference line, axes and date labels remain Probability-owned |
+| `Practice.tsx: learning-player-feedback` | Shared learning-player feedback primitive | Result text, correctness state and Probability colour treatment remain consumer-owned |
+| `Practice.tsx: learning-player-review / learning-player-solution` | Shared learning-player review and solution layout | Explanation rendering/content and review visibility remain consumer-owned |
+| Mistake classification section | No generic behavior contract added | Category definitions, selection, persistence and revision analysis remain application/shared-study-owned |
+
+The charts are deliberately documented as application-owned SVGs. Do not infer a reusable chart API from the fact that they sit inside shared utility panels.
