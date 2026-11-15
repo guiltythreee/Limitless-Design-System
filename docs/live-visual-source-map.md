@@ -2,7 +2,7 @@
 
 The live Limitless application is the visual source of truth. The design-system repository must mirror its existing values and preserve its existing section-specific rendering. Do not infer a new palette or replace section-specific controls with a generic appearance.
 
-This map was checked against the current `main` branch of `guiltythreee/Limitless`.
+This map was checked against `guiltythreee/Limitless` main. The exact source blobs inspected are recorded below so the audit can be repeated against a later production revision.
 
 ## Theme adapter sources
 
@@ -27,3 +27,18 @@ This map was checked against the current `main` branch of `guiltythreee/Limitles
 ## Current verification boundary
 
 Source-level token aliases can be checked against the live CSS declarations. That proves the aliases point to the correct variables; it does not prove pixel-level equivalence of every component. The latter requires comparing the actual component rules or rendering the same markup with the same styles. Do not describe the generic component fixture as an exact screenshot of the live website.
+
+
+## Audited source revisions
+
+| Source file | Blob SHA inspected on `main` |
+|---|---|
+| `probability-source/app/globals.css` | `0aa9402b923679cb62c5139e86f83152716da12f` |
+| `metallurgy-source/app/globals.css` | `a04e345f7e366c3efbdf234f8ed2b1e37d80d5e5` |
+| `home-dashboard.css` | `f12a90f404a831677760109303325d11dce81663` |
+| `hub-theme.css` | `c2bc5221992545a386a00adc7fb07865683fe290` |
+| `competition/competition.css` | `24c4670d02284e212cd5858863b875e9af4e8163` |
+| `competition/competition-dashboard.css` | `20f249b68d4e2f912820e63bb51f926a9a191f5d` |
+| `codeforces-red/codeforces-red.css` | `38269749f98415773759e6dbfa2f5ca298a02beb` |
+
+If any of these source files changes, re-audit the corresponding adapter before describing it as live-source-aligned.
