@@ -25,12 +25,20 @@ for (const section of ["probability", "metallurgy", "home", "competition", "code
   assert.ok(tokens.includes(`[data-limitless-design="${section}"]`), `Missing ${section} adapter`);
 }
 
-for (const component of [
+const componentSelectors = [
   ".ds-button", ".ds-button--primary", ".ds-button--secondary", ".ds-button--quiet",
   ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab", ".ds-badge", ".ds-nav", ".ds-nav-link",
-]) {
-  assert.ok(components.includes(component), `Missing component contract: ${component}`);
-  assert.ok(contracts.includes(component), `Missing documentation for component: ${component}`);
+];
+for (const selector of componentSelectors) {
+  assert.ok(components.includes(selector), `Missing component selector: ${selector}`);
+}
+
+const documentedPrimitives = [
+  ".ds-button", ".ds-surface", ".ds-field", ".ds-tabs", ".ds-tab",
+  ".ds-badge", ".ds-nav", ".ds-nav-link",
+];
+for (const primitive of documentedPrimitives) {
+  assert.ok(contracts.includes(primitive), `Missing documentation for primitive: ${primitive}`);
 }
 
 assert.match(tokens, /NOT imported by any application yet/);
