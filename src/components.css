@@ -822,3 +822,32 @@
 :where([data-limitless-design]) .ds-study-utility-row--question{padding:.85rem .3rem;border-top:0;border-bottom:1px solid var(--ds-utility-border,var(--ds-color-border))}
 :where([data-limitless-design]) .ds-study-utility-progress--overview{height:.5rem;background:var(--ds-utility-progress-track,var(--ds-color-surface-raised))}
 :where([data-limitless-design]) .ds-study-utility-panel .ds-study-utility-metric{text-align:left}
+
+
+/* Probability practice-session controls, mapped from the live qnum/timerpill/actionbar/mile family. */
+:where([data-limitless-design]) .ds-practice-question-nav{display:flex;flex-wrap:wrap;gap:.375rem;min-width:0}
+:where([data-limitless-design]) .ds-practice-question-marker{position:relative;display:inline-flex;flex-direction:column;align-items:center;justify-content:center;min-width:2.4rem;height:2.9rem;padding:.15rem;border:1px solid var(--ds-practice-marker-border,var(--ds-utility-border,var(--ds-color-border)));background:transparent;color:var(--ds-color-muted);font:inherit;font-size:.75rem}
+:where([data-limitless-design]) .ds-practice-question-marker__status{margin-top:2px;font-size:11px;line-height:1}
+:where([data-limitless-design]) .ds-practice-question-marker.is-correct{border-color:var(--ds-color-success);background:var(--ds-practice-correct-background)}
+:where([data-limitless-design]) .ds-practice-question-marker.is-incorrect{border-color:var(--ds-color-danger);background:var(--ds-practice-incorrect-background)}
+:where([data-limitless-design]) .ds-practice-question-marker.is-partial{border-color:var(--ds-practice-warning,var(--ds-color-accent));background:var(--ds-practice-partial-background)}
+:where([data-limitless-design]) .ds-practice-question-marker[aria-current="step"]{outline:2px solid var(--ds-color-focus);outline-offset:1px;color:var(--ds-color-heading)}
+:where([data-limitless-design]) .ds-practice-timer{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .9rem;border:1px dashed var(--ds-color-accent);border-radius:999px;color:var(--ds-color-accent);font-size:14px;font-variant-numeric:tabular-nums}
+:where([data-limitless-design]) .ds-practice-actionbar{position:sticky;bottom:12px;z-index:20;display:flex;align-items:center;gap:.7rem;margin-top:1.5rem;padding:.7rem;border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:18px;background:var(--ds-practice-actionbar-background,var(--ds-color-surface));backdrop-filter:blur(10px)}
+:where([data-limitless-design]) .ds-practice-actionbar__primary{flex:1;min-width:0;border-radius:999px;padding:.85rem 1rem;background:var(--ds-color-accent);color:var(--ds-color-on-accent);font-weight:700;letter-spacing:.06em}
+:where([data-limitless-design]) .ds-practice-actionbar__primary:disabled{opacity:.4;cursor:not-allowed}
+:where([data-limitless-design]) .ds-practice-actionbar__secondary{border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:999px;padding:.85rem 1.3rem;color:var(--ds-color-text)}
+:where([data-limitless-design]) .ds-practice-actionbar__secondary:disabled{opacity:.35;cursor:not-allowed}
+:where([data-limitless-design]) .ds-practice-analysis-dock{position:sticky;bottom:14px;display:flex;justify-content:center;margin-top:1rem;pointer-events:none}
+:where([data-limitless-design]) .ds-practice-analysis-dock__action{pointer-events:auto;border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:999px;padding:.75rem 1.5rem;background:var(--ds-practice-analysis-background,var(--ds-color-surface));color:var(--ds-color-accent);box-shadow:0 8px 30px rgba(0,0,0,.35)}
+:where([data-limitless-design]) .ds-practice-goal-milestones{position:relative;display:flex;align-items:center;justify-content:space-between;margin-top:1rem}
+:where([data-limitless-design]) .ds-practice-goal-milestones::before{content:"";position:absolute;left:14px;right:14px;top:50%;height:8px;margin-top:-4px;border-radius:4px;background:var(--ds-practice-milestone-track,var(--ds-color-surface-raised))}
+:where([data-limitless-design]) .ds-practice-goal-milestones__fill{position:absolute;left:14px;top:50%;height:8px;margin-top:-4px;max-width:calc(100% - 28px);border-radius:4px;background:var(--ds-color-accent);transition:width 300ms ease}
+:where([data-limitless-design]) .ds-practice-goal-milestones__node{position:relative;display:flex;align-items:center;justify-content:center;width:30px;height:30px;border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:50%;background:var(--ds-color-surface-raised);font-size:14px}
+:where([data-limitless-design]) .ds-practice-goal-milestones__node.is-reached{border-color:var(--ds-color-accent);background:var(--ds-color-accent);color:var(--ds-color-on-accent)}
+:where([data-limitless-design]) .ds-practice-week-status{display:flex;flex:1;align-items:center;justify-content:center;padding:.6rem .2rem;border-radius:30px;color:var(--ds-color-muted);font-size:12px;text-align:center}
+:where([data-limitless-design]) .ds-practice-week-status__label{display:block;font-size:13px;color:var(--ds-color-text)}
+:where([data-limitless-design]) .ds-practice-week-status.is-met{background:var(--ds-practice-week-met-background)}
+:where([data-limitless-design]) .ds-practice-week-status.is-today{outline:1px solid var(--ds-color-focus)}
+@media(prefers-reduced-motion:reduce){:where([data-limitless-design]) .ds-practice-goal-milestones__fill{transition:none}}
+@media(forced-colors:active){:where([data-limitless-design]) .ds-practice-question-marker[aria-current="step"]{outline-color:Highlight}}
