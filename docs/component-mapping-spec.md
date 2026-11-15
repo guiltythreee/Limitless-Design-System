@@ -157,3 +157,17 @@ The live CourseChapterBrowser.tsx owns filtering and sorting. Search matches top
 | .ch-bar / .ch-pct | .ds-course-nav-progress / .ds-course-nav-percent | 4px track and application-supplied percentage |
 
 This sidebar is a different component from the chapter-browser row. Preserve the existing button semantics and aria-current page/location states; do not turn these controls into anchors or generic sidebar links.
+
+
+## Course heading, summary and study utility navigation
+
+| Live selector/component | Proposed contract | Source mapping |
+|---|---|---|
+| `.cb-heading` | `.ds-course-heading` | Metallurgy course title panel; stacks at 850px |
+| `.cb-eyebrow`, heading title and description | `.ds-course-heading__eyebrow/title/description` | Source typography and semantic hierarchy |
+| `.cb-summary` | `.ds-course-summary` | Flex group of four source-owned course totals |
+| `.cb-summary span/strong/small` | `.ds-course-summary__item/value/label` | Inset metric tiles with tabular values |
+| `createStudyUtilityNav` / `.study-utility-nav` | `.ds-study-utility-nav` | Shared native-button utility navigation |
+| `.probability-utility-nav` | `.ds-study-utility-nav--horizontal` | Probability compact horizontal variant |
+
+The utility navigation is already shared production infrastructure. The design-system mapping documents its visual contract only; it does not replace the production component or its callback/state boundary.
