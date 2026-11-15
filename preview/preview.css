@@ -138,3 +138,14 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -.04em; }
 .sample-study-panel .ds-study-utility-row__title { font-size:11px; }
 .sample-study-panel .ds-study-utility-row__meta { font-size:9px; }
 .sample-study-panel .ds-study-utility-action { border:1px solid var(--ds-color-border); color:var(--ds-color-muted); font-size:10px; }
+
+
+/* Probability practice session fixture */
+.sample-practice-controls { display:grid; gap:12px; margin-top:14px; padding:12px; }
+.sample-practice-controls .ds-practice-question-nav { gap:5px; }
+.sample-practice-controls .ds-practice-actionbar { margin-top:0; padding:6px; gap:5px; }
+.sample-practice-controls .ds-practice-actionbar__primary,.sample-practice-controls .ds-practice-actionbar__secondary { padding:8px 10px; font-size:10px; }
+.sample-practice-controls .ds-practice-analysis-dock { margin-top:0; }
+.sample-practice-controls .ds-practice-analysis-dock__action { padding:7px 14px; font-size:10px; }
+.sample-practice-controls .ds-practice-week-status { gap:3px; font-size:9px; flex-direction:column; }
+.sample-practice-controls .ds-practice-week-status__label { font-size:9px; }
