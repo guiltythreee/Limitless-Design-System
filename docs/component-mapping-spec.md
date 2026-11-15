@@ -197,3 +197,17 @@ The live source stylesheet is `shared/studies/study-utility-nav.css`. These are 
 | Daily Goals | Two wider goal metrics; weekly seven-day goal grid; numeric 1–200 target form; goal-dependent progress colour | Goal limits, daily totals, streaks, week states and form callback stay in course |
 
 The family shares its shell and primitives, not identical panel composition. Retain the question-row divider and overview-progress variants where the live source uses them.
+
+
+## Probability practice-session controls
+
+| Live source pattern | Design-system contract | Reuse boundary |
+|---|---|---|
+| `.qnum`, `.qnum-correct`, `.qnum-incorrect`, `.qnum-partial`, `.qnum-cur` | `.ds-practice-question-marker` state modifiers | Button semantics, status and current index remain application-owned |
+| `.timerpill` | `.ds-practice-timer` | Timer value and lifecycle remain application-owned |
+| `.actionbar`, `.btn-main`, `.btn-side` | `.ds-practice-actionbar` primary/secondary slots | Sticky layout only; actions and state remain with player |
+| `.floating-analysis` | `.ds-practice-analysis-dock` | Dock geometry only; analysis navigation remains with consumer |
+| `.mile`, `.mile-fill`, `.mile-node`, `.mile-node-on` | `.ds-practice-goal-milestones` | Goal calculation and milestone state remain with dashboard |
+| `.weekcol`, `.weekcol-met`, `.weekcol-today` | `.ds-practice-week-status` | Daily counts and state remain with dashboard |
+
+These controls complement, rather than replace, the existing shared learning-player shell and selectable-option primitives.
