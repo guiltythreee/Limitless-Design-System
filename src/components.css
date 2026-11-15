@@ -734,3 +734,35 @@
 :where([data-limitless-design]) .ds-course-nav-progress{flex:1;height:4px;overflow:hidden;border-radius:4px;background:var(--ds-course-nav-track,var(--ds-color-surface-raised))}
 :where([data-limitless-design]) .ds-course-nav-progress>span{display:block;width:var(--ds-course-nav-progress-value,0%);height:100%;background:var(--ds-course-nav-progress-fill,var(--ds-progress-fill,var(--ds-color-accent)))}
 :where([data-limitless-design]) .ds-course-nav-percent{min-width:30px;color:var(--ds-color-muted);font-size:.68rem;text-align:right}
+
+
+/* Metallurgy course heading and summary: .cb-heading / .cb-summary source map. */
+:where([data-limitless-design]) .ds-course-heading{display:flex;align-items:center;justify-content:space-between;gap:1.2rem;padding:1.25rem 1.4rem;margin-bottom:1rem;border:1px solid var(--ds-color-border);border-radius:var(--ds-course-heading-radius,16px);background:var(--ds-course-heading-background,var(--ds-color-surface));box-shadow:var(--ds-course-heading-shadow,0 8px 30px #0000000a)}
+:where([data-limitless-design]) .ds-course-heading__eyebrow{margin:0 0 .35rem;color:var(--ds-color-accent);font-size:.68rem;font-weight:750;letter-spacing:.15em}
+:where([data-limitless-design]) .ds-course-heading__title{margin:0;color:var(--ds-color-heading);font-size:1.25rem;line-height:1.25}
+:where([data-limitless-design]) .ds-course-heading__description{margin:.35rem 0 0;color:var(--ds-color-muted);font-size:.82rem}
+:where([data-limitless-design]) .ds-course-summary{display:flex;flex-wrap:wrap;gap:.55rem}
+:where([data-limitless-design]) .ds-course-summary__item{min-width:74px;padding:.55rem .7rem;border:1px solid var(--ds-color-border);border-radius:11px;text-align:center;background:var(--ds-course-summary-background,var(--ds-color-surface-raised))}
+:where([data-limitless-design]) .ds-course-summary__value,:where([data-limitless-design]) .ds-course-summary__label{display:block}
+:where([data-limitless-design]) .ds-course-summary__value{color:var(--ds-color-heading);font-size:1rem;font-weight:700;font-variant-numeric:tabular-nums}
+:where([data-limitless-design]) .ds-course-summary__label{margin-top:2px;color:var(--ds-color-muted);font-size:.65rem}
+@media(max-width:850px){:where([data-limitless-design]) .ds-course-heading{align-items:flex-start;flex-direction:column}}
+@media(max-width:520px){:where([data-limitless-design]) .ds-course-heading{padding:1rem}:where([data-limitless-design]) .ds-course-summary{width:100%}:where([data-limitless-design]) .ds-course-summary__item{flex:1;min-width:58px}}
+
+/* Shared study utility navigation: source-mapped from shared/studies/study-utility-nav.css. */
+:where([data-limitless-design]) .ds-study-utility-nav{display:grid;gap:.35rem;min-width:0}
+:where([data-limitless-design]) .ds-study-utility-nav__item{display:flex;align-items:center;justify-content:space-between;gap:.75rem;width:100%;min-width:0;padding:.7rem .8rem;border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:var(--ds-utility-radius,.55rem);background:var(--ds-utility-surface,var(--ds-color-surface));color:var(--ds-color-text);font:inherit;text-align:left;cursor:pointer;transition:border-color .16s ease,background .16s ease,color .16s ease}
+:where([data-limitless-design]) .ds-study-utility-nav__item:hover,:where([data-limitless-design]) .ds-study-utility-nav__item:focus-visible{border-color:var(--ds-color-accent)}
+:where([data-limitless-design]) .ds-study-utility-nav__item:focus-visible{outline:2px solid var(--ds-color-focus);outline-offset:2px}
+:where([data-limitless-design]) .ds-study-utility-nav__item.is-active,:where([data-limitless-design]) .ds-study-utility-nav__item[aria-current="page"]{border-color:var(--ds-color-accent);background:var(--ds-utility-active-background,color-mix(in srgb,var(--ds-color-accent) 10%,transparent))}
+:where([data-limitless-design]) .ds-study-utility-nav__item.is-accent .ds-study-utility-nav__label{color:var(--ds-color-accent)}
+:where([data-limitless-design]) .ds-study-utility-nav__copy{display:grid;gap:.18rem;min-width:0}
+:where([data-limitless-design]) .ds-study-utility-nav__label{font-size:.82rem;font-weight:650;line-height:1.35}
+:where([data-limitless-design]) .ds-study-utility-nav__description{color:var(--ds-color-muted);font-size:.7rem;line-height:1.4}
+:where([data-limitless-design]) .ds-study-utility-nav__count{flex:none;min-width:1.65rem;padding:.2rem .4rem;border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:99px;color:var(--ds-color-muted);font-size:.68rem;text-align:center;font-variant-numeric:tabular-nums}
+:where([data-limitless-design]) .ds-study-utility-nav--horizontal{display:flex;flex-wrap:wrap;align-items:center;gap:.4rem;width:100%}
+:where([data-limitless-design]) .ds-study-utility-nav--horizontal .ds-study-utility-nav__item{width:auto;min-height:2.2rem;padding:.45rem .7rem;border-radius:99px}
+:where([data-limitless-design]) .ds-study-utility-nav--horizontal .ds-study-utility-nav__copy{display:block}
+:where([data-limitless-design]) .ds-study-utility-nav--horizontal .ds-study-utility-nav__label{font-size:.72rem;white-space:nowrap}
+:where([data-limitless-design]) .ds-study-utility-nav--horizontal .ds-study-utility-nav__count{min-width:1.3rem;padding:.08rem .3rem}
+@media(prefers-reduced-motion:reduce){:where([data-limitless-design]) .ds-study-utility-nav__item{transition:none}}
