@@ -180,3 +180,11 @@ These primitives define a portable API and baseline behavior; they are not claim
 - Do not claim these charts are reusable design-system chart components. A future chart contract requires a separate source-backed API and interaction audit; this checkpoint records the boundary without extracting chart logic.
 - Probability question review reuses the shared learning-player structure: `learning-player-feedback`, `learning-player-review`, and `learning-player-solution`. Shared `shared/learning-player/player.css` owns the review layout, feedback spacing, solution inset, and responsive option/review structure. Probability owns correctness wording, status palette, explanation content, mistake-category choices, attempt history, and persistence.
 - Mistake classification controls are application-specific actions inside the review state, not generic design-system buttons with classification behavior. Category definitions, selected state and storage remain application/shared-study logic.
+
+
+## Probability test setup selection boundary
+
+- The Probability test setup is a hierarchical parent/child checkbox interaction with native indeterminate parent state and independently collapsible chapter groups.
+- Chapter/topic selection, bulk actions, disclosure state, selected-topic summary, question-pool construction and test configuration remain application-owned.
+- This checkpoint does not define a reusable tree/selection primitive. Existing button, chip and field contracts cover only their own visual/native-control roles; they do not imply ownership of hierarchical selection or mixed state.
+- If a future design-system contract is proposed, audit keyboard interaction, checkbox indeterminate semantics, disclosure semantics, responsive scroll behavior and mixed parent/child state before defining its visual API.
