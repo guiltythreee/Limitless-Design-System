@@ -255,3 +255,13 @@ assert.match(mapping, /Probability chart and review mapping/);
 assert.match(audit, /Probability charts and answer review/);
 assert.match(contracts, /DiffBars.*DayBars/s);
 assert.match(contracts, /Mistake classification controls are application-specific/);
+
+
+// Probability's hierarchical test-scope picker remains application-owned.
+assert.match(contracts, /Probability test setup selection boundary/);
+assert.match(mapping, /Probability test setup selection boundary/);
+assert.match(audit, /Probability test setup selection/);
+assert.match(contracts, /native indeterminate parent state/);
+assert.match(mapping, /native-checkbox picker/);
+assert.match(audit, /parent checkbox exposes an indeterminate state/);
+assert.match(contracts, /does not define a reusable tree\/selection primitive/);
