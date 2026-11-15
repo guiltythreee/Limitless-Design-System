@@ -20,7 +20,7 @@ This specification converts the first live-component audit into a practical comp
 | Content panel | `.ds-panel` | Probability `.panel`; Metallurgy `.panel`; Home `.dashboard-panel`; Competition shared panel family; Codeforces `.cr-hero`, `.cr-ladder-section` | Implemented as a structural foundation; retain section-specific depth, blur, radius and padding |
 | Content card | `.ds-card` | Probability `.card`; Metallurgy course-card content; Home `.learning-card`; Competition `.subject-card`; Codeforces `.cr-focus-card` | Implemented as a structural foundation; do not collapse navigational cards, metric cards and content panels into one card contract |
 | Navigation card | `.ds-navigation-card` | Home `.shortcut-card`; Metallurgy course links; Competition `.subject-card-link` | Implemented as an anchor-only foundation; preserve icon/title/description/action layout and section-specific hover treatment |
-| Metric card | `.ds-metric-card` | Competition `.overview-card`; Codeforces `.cr-stats article`, `.cr-focus-card`, `.cr-week-card` | Metric typography, number alignment and density differ by section |
+| Metric card | `.ds-metric-card` | Competition `.overview-card`; Codeforces `.cr-stats article`, `.cr-focus-card`, `.cr-week-card` | Implemented with label/value/detail slots and section typography tokens; metric data remains application-owned |
 | Action button | `.ds-button` | Probability `.btn-main`, `.btn-side`; Metallurgy `.btn`; Competition `.action-button`; Codeforces `.cr-refresh-button` | Implemented with independent compact/prominent sizing; use variants only where fill, focus and disabled states align; refresh action remains high-visibility |
 | Selectable option | `.ds-option` | Probability `.optcard`; Metallurgy `.topic-card` | Distinct from action buttons; preserve selected/expanded state and option hit-area geometry |
 | Form field | `.ds-field` | Probability `.field`; Metallurgy `.field input`; Competition form fields; Codeforces `.cf-quick-toolbar input/select` | Implemented with compact and monospace variants; labels and error descriptions stay in markup |
@@ -31,7 +31,7 @@ This specification converts the first live-component audit into a practical comp
 | Segmented control | `.ds-segmented`, `.ds-segmented-option` | Probability `.probability-section-tabs` | Implemented as a separate family with selected fill, section token mapping and pressed/current states; not a tablist |
 | Sidebar item | `.ds-sidebar-link` | Home `.side-link`; Competition `.competition-side-link` | Implemented as an anchor foundation with active/current states and section tokens; container positioning and responsive orientation remain application-owned |
 | Stage selector | `.ds-stage-selector`, `.ds-stage-option` | Codeforces `.cr-stage-tab` | Implemented as a grid-based full-width selection with structured metadata and Codeforces theme mapping; not a tab strip |
-| Progress indicator | `.ds-progress` | Competition `.progress-track`; Codeforces `.cr-progress`, `.cr-mini-track` | Keep data semantics and accessible value text in application markup |
+| Progress indicator | `.ds-progress` | Competition `.progress-track`; Codeforces `.cr-progress`, `.cr-mini-track` | Implemented as track/fill styling with section geometry tokens; data semantics and accessible value text remain application-owned |
 
 ## Contract requirements by pattern
 
