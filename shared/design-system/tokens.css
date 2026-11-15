@@ -152,6 +152,12 @@
   --ds-color-on-accent: var(--ongold);
   --ds-color-border: var(--panel-line);
   --ds-color-success: var(--ok);
+  --ds-color-warning: var(--warn);
+  --ds-test-result-radius: 18px;
+  --ds-test-result-summary-padding: 1.3rem;
+  --ds-test-result-background: color-mix(in srgb, var(--inset) 55%, transparent);
+  --ds-test-result-divider: color-mix(in srgb, var(--gold) 10%, transparent);
+  --ds-test-result-score-color: var(--gold);
   --ds-color-danger: var(--bad, #b45353);
   --ds-color-focus: var(--gold);
   --ds-font-sans: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", "Noto Sans", Arial, sans-serif;
