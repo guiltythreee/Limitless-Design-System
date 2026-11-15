@@ -350,3 +350,14 @@ html[data-theme="light"] [data-limitless-design="codeforces"] {
   --ds-course-filter-radius: 10px;
   --ds-course-filter-background: var(--inset);
 }
+
+
+/* Sidebar chapter navigation uses the archive's native chip/track states. */
+[data-limitless-design="metallurgy"] {
+  --ds-course-nav-hover: var(--chip);
+  --ds-course-nav-active-background: var(--chip);
+  --ds-course-nav-active-border: var(--line);
+  --ds-course-nav-track: var(--track);
+  --ds-course-nav-progress-fill: linear-gradient(90deg, var(--mutedgold), var(--gold));
+  --ds-course-exam-color: #e0b06a;
+}
