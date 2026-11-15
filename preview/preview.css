@@ -109,3 +109,7 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -.04em; }
 .sample-stage-selector { margin:10px 0; padding:8px; border:1px solid var(--ds-color-border); border-radius:10px; background:var(--ds-color-surface); }
 .sample-stage-selector .ds-stage-option { font-size:11px; }
 .sample-stage-selector .ds-stage-option > :first-child { color:var(--ds-color-accent); font-size:10px; font-weight:700; }
+
+.sample-metric-card { padding:12px; }
+.sample-metric-card .ds-metric-card__value { font-size:20px; }
+.sample-progress { margin-top:9px; }
