@@ -121,3 +121,20 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -.04em; }
 .ds-study-utility-nav { margin:12px 0; }
 .ds-study-utility-nav__item { font-size:11px; }
 .ds-study-utility-nav__label { font-size:11px !important; }
+
+
+/* Shared study utility panel fixture */
+.sample-study-panel { margin-top:14px; padding:12px; }
+.sample-study-panel .ds-study-utility-panel__title { font-size:14px; }
+.sample-study-panel .ds-study-utility-panel__description { font-size:11px; }
+.sample-study-panel .ds-study-utility-metrics { margin:10px 0; }
+.sample-study-panel .ds-study-utility-metric { padding:8px; }
+.sample-study-panel .ds-study-utility-metric__label,.sample-study-panel .ds-study-utility-metric__detail { font-size:9px; }
+.sample-study-panel .ds-study-utility-metric__value { font-size:18px; }
+.sample-study-panel .ds-study-utility-progress { margin:10px 0; }
+.sample-study-panel .ds-study-utility-week-grid { margin:10px 0; }
+.sample-study-panel .ds-study-utility-week-label { color:var(--ds-color-muted); }
+.sample-study-panel .ds-study-utility-week-value { font-size:11px; }
+.sample-study-panel .ds-study-utility-row__title { font-size:11px; }
+.sample-study-panel .ds-study-utility-row__meta { font-size:9px; }
+.sample-study-panel .ds-study-utility-action { border:1px solid var(--ds-color-border); color:var(--ds-color-muted); font-size:10px; }
