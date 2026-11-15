@@ -7,6 +7,7 @@ const components = read("../src/components.css");
 const contracts = read("../docs/component-contracts.md");
 const audit = read("../docs/live-component-audit.md");
 const preview = read("../preview/index.html");
+const previewStyles = read("../preview/preview.css");
 const mapping = read("../docs/component-mapping-spec.md");
 
 const requiredTokens = [
