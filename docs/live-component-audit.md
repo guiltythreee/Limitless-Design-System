@@ -85,14 +85,14 @@ The existing layout and later overrides must be treated as a single cascade. No 
 
 ### 5. Codeforces
 
-Authoritative styles: `codeforces-red/codeforces-red.css`, plus `codeforces-problems.css` and `codeforces-contests.css`.
+Authoritative styles: `codeforces-red/codeforces-red.css`, `codeforces-problems.css` and `codeforces-contests.css` (all three are loaded by `codeforces-red/index.html`).
 
 Codeforces is a bespoke dashboard with several independently styled subsystems:
 
 - The topbar is a horizontal navigation bar; the content has a constrained main column.
 - Hero, ladder, account and milestone surfaces have individual layout and shadow rules.
 - The linked account area includes identity/avatar/connected state and a prominent refresh action.
-- `.cr-refresh-button` has a 42px minimum height, strong blue fill, high-visibility focus ring and a distinct disabled/wait state.
+- `.cr-refresh-button` has a 44px effective minimum height (the later-loaded `codeforces-problems.css` overrides the 42px base), strong blue fill, high-visibility focus ring and a distinct disabled/wait state.
 - `.cr-stage-tab` is a full-width grid control with a separate active state; it is not a conventional tab strip.
 - Weekly actions have their own sizing and disabled-state styling.
 - The light theme contains explicit overrides. Problem explorer fields and chips are defined in the companion problem stylesheet and must be audited alongside this file.
@@ -133,6 +133,8 @@ No live application imports this package. No production files are changed by thi
 | `competition/competition.css` | `24c4670d02284e212cd5858863b875e9af4e8163` |
 | `competition/competition-dashboard.css` | `20f249b68d4e2f912820e63bb51f926a9a191f5d` |
 | `codeforces-red/codeforces-red.css` | `38269749f98415773759e6dbfa2f5ca298a02beb` |
+| `codeforces-red/codeforces-problems.css` | `4437e7f0b927443b2ec2f59e2c87bec6ea72b912` |
+| `codeforces-red/codeforces-contests.css` | `ebfad0f4a1a8aab2682da5ee46af91e2a181ac30` |
 
 ### Markup and supporting component files
 
