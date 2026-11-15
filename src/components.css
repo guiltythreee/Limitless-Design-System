@@ -389,6 +389,65 @@
   color: var(--ds-color-difficulty-hard, var(--ds-color-danger));
 }
 
+:where([data-limitless-design]) .ds-metric-card {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: var(--ds-metric-card-min-height, 0);
+  padding: var(--ds-metric-card-padding, var(--ds-space-4));
+  border: 1px solid var(--ds-color-border);
+  border-radius: var(--ds-metric-card-radius, var(--ds-radius-md));
+  background: var(--ds-metric-card-background, var(--ds-color-surface));
+  box-shadow: var(--ds-metric-card-shadow, none);
+  backdrop-filter: var(--ds-metric-card-backdrop-filter, none);
+  color: var(--ds-color-text);
+}
+
+:where([data-limitless-design]) .ds-metric-card__label {
+  display: block;
+  color: var(--ds-metric-label-color, var(--ds-color-muted));
+  font: var(--ds-metric-label-font, 700 var(--ds-text-xs) var(--ds-font-sans));
+  letter-spacing: var(--ds-metric-label-spacing, 0.08em);
+  text-transform: var(--ds-metric-label-transform, uppercase);
+}
+
+:where([data-limitless-design]) .ds-metric-card__value {
+  display: block;
+  margin-top: var(--ds-metric-value-margin, var(--ds-space-2));
+  color: var(--ds-metric-value-color, var(--ds-color-heading));
+  font: var(--ds-metric-value-font, 600 var(--ds-text-xl) var(--ds-font-sans));
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
+}
+
+:where([data-limitless-design]) .ds-metric-card__detail {
+  display: block;
+  margin-top: var(--ds-metric-detail-margin, var(--ds-space-2));
+  color: var(--ds-color-muted);
+  font-size: var(--ds-metric-detail-size, var(--ds-text-xs));
+  line-height: 1.5;
+}
+
+:where([data-limitless-design]) .ds-progress {
+  width: 100%;
+  height: var(--ds-progress-height, 6px);
+  overflow: hidden;
+  border-radius: var(--ds-progress-radius, var(--ds-radius-pill));
+  background: var(--ds-progress-track, var(--ds-color-surface-raised));
+}
+
+:where([data-limitless-design]) .ds-progress > span {
+  display: block;
+  width: var(--ds-progress-value, 0%);
+  height: 100%;
+  border-radius: inherit;
+  background: var(--ds-progress-fill, var(--ds-color-accent));
+  transition: width var(--ds-motion-standard) var(--ds-ease-standard);
+}
+
+:where([data-limitless-design]) .ds-progress--thin {
+  height: var(--ds-progress-height-thin, 5px);
+}
+
 :where([data-limitless-design]) .ds-nav {
   display: flex;
   flex-wrap: wrap;
