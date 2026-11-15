@@ -301,7 +301,7 @@ assert.match(mapping, /Probability in-progress player presentation/);
 // Documentation and HTML must contain real line breaks, not escaped backslash-n text.
 for (const path of ["../docs/component-contracts.md", "../docs/component-mapping-spec.md", "../docs/live-visual-source-map.md", "../docs/live-component-audit.md", "../preview/index.html"]) {
   const content = read(path);
-  assert.ok(!content.includes(String.raw\`\\n\`), `Literal escaped newline found in ${path}`);
+  assert.ok(!content.includes("\\n"), `Literal escaped newline found in ${path}`);
 }
 
 // Follow-up source provenance must stay attached to the live visual audit.
