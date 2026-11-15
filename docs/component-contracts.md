@@ -172,3 +172,11 @@ These primitives define a portable API and baseline behavior; they are not claim
 - `.ds-practice-analysis-dock` maps the sticky floating analysis affordance. Its action and destination remain consumer-owned.
 - `.ds-practice-goal-milestones` and `.ds-practice-week-status` map the Probability dashboard goal milestones and daily streak cells. Goal fraction, reached thresholds, weekly status and counts remain data supplied by the dashboard.
 - Preserve reduced-motion handling for the milestone fill and forced-colour focus for the current question marker.
+
+
+## Probability chart and question-review boundaries
+
+- Probability's `DiffBars` and `DayBars` are application-rendered inline SVG charts. Their plot dimensions, scale normalization, gridlines, bar geometry, day labels, goal line, and hover tooltip are owned by `probability-source/app/components/Charts.tsx`; the shared utility visual/legend primitives provide surrounding layout only.
+- Do not claim these charts are reusable design-system chart components. A future chart contract requires a separate source-backed API and interaction audit; this checkpoint records the boundary without extracting chart logic.
+- Probability question review reuses the shared learning-player structure: `learning-player-feedback`, `learning-player-review`, and `learning-player-solution`. Shared `shared/learning-player/player.css` owns the review layout, feedback spacing, solution inset, and responsive option/review structure. Probability owns correctness wording, status palette, explanation content, mistake-category choices, attempt history, and persistence.
+- Mistake classification controls are application-specific actions inside the review state, not generic design-system buttons with classification behavior. Category definitions, selected state and storage remain application/shared-study logic.
