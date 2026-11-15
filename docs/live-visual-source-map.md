@@ -12,7 +12,7 @@ This map was checked against `guiltythreee/Limitless` main. The exact source blo
 | Metallurgy | `metallurgy-source/app/globals.css` | Same semantic variable names, but Metallurgy's own blue palette, page gradient, panel gradient, border, and light-theme values |
 | Home | `home-dashboard.css` plus `hub-theme.css` | `--home-panel`, `--home-panel-strong`, `--home-border`, `--home-ink`, `--home-muted`, `--home-blue`; artwork and background layers remain owned by the existing theme engine |
 | Competition | `competition/competition.css` and `competition/competition-dashboard.css` | Effective dashboard values from the later-loaded dashboard stylesheet: `--comp-panel`, `--comp-border`, `--comp-muted`, `--comp-ink`, `--comp-accent`; retain the existing `html[data-theme="light"]` overrides |
-| Codeforces | `codeforces-red/codeforces-red.css` | Existing literal dark/light palette, panel fills, borders, typography, and component-specific rules |
+| Codeforces | `codeforces-red/codeforces-red.css`, `codeforces-red/codeforces-problems.css`, and `codeforces-red/codeforces-contests.css` | Existing literal dark/light palette, panel fills, borders, typography, and component-specific rules across the dashboard and explorer surfaces |
 
 ## Fidelity rules
 
@@ -40,5 +40,7 @@ Source-level token aliases can be checked against the live CSS declarations. Tha
 | `competition/competition.css` | `24c4670d02284e212cd5858863b875e9af4e8163` |
 | `competition/competition-dashboard.css` | `20f249b68d4e2f912820e63bb51f926a9a191f5d` |
 | `codeforces-red/codeforces-red.css` | `38269749f98415773759e6dbfa2f5ca298a02beb` |
+| `codeforces-red/codeforces-problems.css` | `4437e7f0b927443b2ec2f59e2c87bec6ea72b912` |
+| `codeforces-red/codeforces-contests.css` | `ebfad0f4a1a8aab2682da5ee46af91e2a181ac30` |
 
 If any of these source files changes, re-audit the corresponding adapter before describing it as live-source-aligned.
