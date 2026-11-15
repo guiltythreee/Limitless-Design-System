@@ -197,6 +197,96 @@
   border-color: var(--ds-color-danger, #b45353);
 }
 
+:where([data-limitless-design]) .ds-segmented {
+  display: flex;
+  align-items: stretch;
+  gap: var(--ds-segmented-gap, var(--ds-space-1));
+  min-width: 0;
+  padding: var(--ds-segmented-padding, var(--ds-space-1));
+  border: 1px solid var(--ds-segmented-border, var(--ds-color-border));
+  border-radius: var(--ds-segmented-radius, var(--ds-radius-md));
+  background: var(--ds-segmented-background, var(--ds-color-surface));
+  box-shadow: var(--ds-segmented-shadow, none);
+}
+
+:where([data-limitless-design]) .ds-segmented-option {
+  flex: 1 1 0;
+  min-width: 0;
+  min-height: var(--ds-segmented-option-height, var(--ds-control-height-md));
+  padding: var(--ds-segmented-option-padding, var(--ds-space-2) var(--ds-space-3));
+  border: 1px solid transparent;
+  border-radius: var(--ds-segmented-option-radius, var(--ds-radius-sm));
+  background: transparent;
+  color: var(--ds-segmented-option-color, var(--ds-color-muted));
+  font: var(--ds-segmented-option-font, inherit);
+  cursor: pointer;
+}
+
+:where([data-limitless-design]) .ds-segmented-option:hover:not(:disabled) {
+  background: var(--ds-segmented-hover-background, var(--ds-color-surface-raised));
+  color: var(--ds-color-heading);
+}
+
+:where([data-limitless-design]) .ds-segmented-option[aria-pressed="true"],
+:where([data-limitless-design]) .ds-segmented-option[aria-current="page"],
+:where([data-limitless-design]) .ds-segmented-option.is-selected {
+  border-color: var(--ds-segmented-selected-border, var(--ds-color-border));
+  background: var(--ds-segmented-selected-background, var(--ds-color-surface-raised));
+  color: var(--ds-segmented-selected-color, var(--ds-color-heading));
+  box-shadow: var(--ds-segmented-selected-shadow, none);
+}
+
+:where([data-limitless-design]) .ds-segmented-option:focus-visible,
+:where([data-limitless-design]) .ds-stage-option:focus-visible {
+  outline: 2px solid var(--ds-color-focus);
+  outline-offset: 2px;
+}
+
+:where([data-limitless-design]) .ds-stage-selector {
+  display: grid;
+  gap: var(--ds-stage-gap, var(--ds-space-1));
+  min-width: 0;
+}
+
+:where([data-limitless-design]) .ds-stage-option {
+  display: grid;
+  grid-template-columns: var(--ds-stage-grid-columns, 27px minmax(0, 1fr) 15px);
+  align-items: center;
+  gap: var(--ds-stage-option-gap, var(--ds-space-2));
+  width: 100%;
+  min-width: 0;
+  padding: var(--ds-stage-option-padding, 9px 7px);
+  border: 1px solid transparent;
+  border-radius: var(--ds-stage-option-radius, var(--ds-radius-sm));
+  background: transparent;
+  color: var(--ds-stage-option-color, var(--ds-color-text));
+  font: inherit;
+  text-align: left;
+  cursor: pointer;
+}
+
+:where([data-limitless-design]) .ds-stage-option:hover:not(:disabled) {
+  background: var(--ds-stage-hover-background, var(--ds-color-surface-raised));
+}
+
+:where([data-limitless-design]) .ds-stage-option.is-active,
+:where([data-limitless-design]) .ds-stage-option[aria-pressed="true"],
+:where([data-limitless-design]) .ds-stage-option[aria-current="step"] {
+  border-color: var(--ds-stage-active-border, var(--ds-color-border));
+  background: var(--ds-stage-active-background, var(--ds-color-surface-raised));
+}
+
+:where([data-limitless-design]) .ds-stage-option b,
+:where([data-limitless-design]) .ds-stage-option small {
+  display: block;
+}
+
+:where([data-limitless-design]) .ds-stage-option small {
+  margin-top: 3px;
+  color: var(--ds-stage-muted, var(--ds-color-muted));
+  font-size: var(--ds-stage-small-size, var(--ds-text-xs));
+}
+
 :where([data-limitless-design]) .ds-tabs {
   display: flex;
   gap: var(--ds-space-2);
