@@ -44,3 +44,25 @@ Source-level token aliases can be checked against the live CSS declarations. Tha
 | `codeforces-red/codeforces-contests.css` | `ebfad0f4a1a8aab2682da5ee46af91e2a181ac30` |
 
 If any of these source files changes, re-audit the corresponding adapter before describing it as live-source-aligned.
+
+
+## Follow-up component source revisions
+
+The source-level follow-up mappings below were checked against `guiltythreee/Limitless` `main` at commit `fc350626309fd910e94f251427fb5bca487524d5`. These exact blobs make the later component-level findings reproducible.
+
+| Source file | Blob SHA on `main` | Mapping scope |
+|---|---|---|
+| `metallurgy-source/app/courses/CourseChapterBrowser.tsx` | `f2eecd028cf9e0a27aff4333f7f1480bbe42b0be` | Metallurgy chapter browser structure and markup |
+| `metallurgy-source/app/courses/course-chapter-browser.css` | `8a59427ff308cc109802a424142e48af3407a540` | Metallurgy course browser toolbar, rows and responsive rules |
+| `metallurgy-source/app/mt202/page.tsx` | `0045370d744a378091102e539798efbd5d9d0ef2` | MT202 archive sidebar and progress composition |
+| `metallurgy-source/app/courses/BookmarksPanel.tsx` | `3d14f6e6a2cadfe800b3e2a36b1214cfad7adcc9` | Bookmarks panel structure and empty state |
+| `metallurgy-source/app/courses/ActivityHistoryPanel.tsx` | `3b15b0fa664c5925de39f3fefaec071cdd6658d4` | Activity history and mistakes views |
+| `metallurgy-source/app/courses/DailyGoalsPanel.tsx` | `77ad1225bb2dd67dd714f79af95f03c4a7a7d9bf` | Daily goals panel and target form |
+| `shared/studies/StudyUtilityNav.ts` | `0d6708a09b2f24b42e9c9cc634398de118578f72` | Shared study utility navigation factory |
+| `shared/studies/study-utility-nav.css` | `a4ff88cb24b3881ebc026a423b5839255789d915` | Shared utility panel and navigation styling |
+| `probability-source/app/components/Test.tsx` | `fa5f5e38616dd88eca7697ea8f5f11163a81fa94` | Probability hierarchical test-scope picker |
+| `probability-source/app/components/Charts.tsx` | `21776cce47b9402fd663e05e09110310387f2cce` | Probability dashboard SVG charts |
+| `probability-source/app/components/Practice.tsx` | `1e71e4cc2e50040662ba8f0efe8d6ab301f26168` | Probability learning-player composition and practice controls |
+| `probability-source/app/components/Dashboard.tsx` | `daf03bae124c5af90c51d34359048f78ae83428f` | Probability dashboard goal and week visuals |
+| `shared/learning-player/PlayerShell.ts` | `b78076956089d99c352784dd05612e19cc6a8ed9` | Shared learning-player shell structure |
+| `shared/learning-player/player.css` | `f9d7ca51ca48022db7c0a3e70a9f6304f4889e57` | Shared learning-player feedback, review and solution styles |
