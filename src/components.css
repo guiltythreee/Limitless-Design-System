@@ -1388,3 +1388,30 @@
   :where([data-limitless-design]) .ds-overview-grid--five { grid-template-columns:repeat(2,minmax(0,1fr)); }
   :where([data-limitless-design]) .ds-probability-lower-grid { grid-template-columns:1fr; }
 }
+
+
+:where([data-limitless-design]) .ds-semester-programme {
+  margin-top:auto;
+  padding:1rem;
+  border:1px solid var(--ds-semester-programme-border,var(--ds-color-border));
+  border-radius:.65rem;
+  background:var(--ds-semester-programme-background,var(--ds-color-surface-raised));
+}
+:where([data-limitless-design]) .ds-semester-programme > span {
+  display:block;
+  color:var(--ds-color-accent);
+  font-size:.55rem;
+  letter-spacing:.15em;
+}
+:where([data-limitless-design]) .ds-semester-programme strong {
+  display:block;
+  margin:.55rem 0;
+  color:var(--ds-color-heading);
+  font:500 1rem Georgia,serif;
+}
+:where([data-limitless-design]) .ds-semester-programme p {
+  margin:0;
+  color:var(--ds-color-muted);
+  font-size:.62rem;
+  line-height:1.55;
+}
