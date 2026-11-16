@@ -266,3 +266,6 @@ These primitives define a portable API and baseline behavior; they are not claim
 - The route fixture includes the topbar and back link, full-width linked-account strip, two-column rating/milestones region and two large workspace launch cards.
 - The unauthenticated live baseline currently displays a milestone-loading state; the milestone-card family remains separately represented as a component state in the gallery.
 - Linked handles, API loading, rating values, rank calculations, milestone completion, refresh action and launch destinations remain Codeforces application-owned.
+
+
+The Metallurgy sidebar also includes its back link and programme identity block. The main heading groups the breadcrumb, semester title, description, emblem and four summary values into one panel. The course browser includes its search and filter toolbar before the four-card course grid.
