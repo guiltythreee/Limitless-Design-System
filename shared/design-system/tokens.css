@@ -497,6 +497,7 @@ html[data-theme="light"] [data-limitless-design="codeforces"] {
   --ds-app-topbar-height:68px;
   --ds-app-topbar-padding:0 clamp(20px,5vw,76px);
   --ds-app-topbar-gap:7px;
+  --ds-app-nav-gap:7px;
   --ds-app-topbar-background:rgba(5,13,25,.88);
   --ds-app-topbar-backdrop:blur(16px);
   --ds-app-shell-border:rgba(120,166,214,.2);
