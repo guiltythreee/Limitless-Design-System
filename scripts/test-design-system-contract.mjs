@@ -444,3 +444,9 @@ assert.match(preview, /<\/article>\s*<\/div>\s*<\/section>\s*<section class="the
 // Compact composition headings and Codeforces light badges retain readable separation/contrast.
 assert.ok(previewStyles.includes(".sample-live-page .ds-checklist-panel__heading .ds-page-hero__eyebrow,\n.sample-live-page .ds-study-utility-panel__header .ds-page-hero__eyebrow"));
 assert.ok(previewStyles.includes(".theme-preview.codeforces.light .ds-badge--accent {\n  color:#276da9;\n  border-color:#9dbfdf;"));
+
+
+// Desktop fidelity captures must isolate one theme and expand it to full width.
+assert.match(previewStyles, /\.theme-grid:has\(\.theme-preview:target\)\s*\{\s*grid-template-columns:minmax\(0,1fr\)/);
+assert.match(previewStyles, /\.theme-grid:has\(\.theme-preview:target\) \.theme-preview:not\(:target\)\s*\{\s*display:none/);
+assert.match(previewStyles, /\.theme-preview:target \.sample-live-page \.ds-semester-layout\s*\{\s*grid-template-columns:minmax\(250px,310px\) minmax\(0,1fr\)/);
