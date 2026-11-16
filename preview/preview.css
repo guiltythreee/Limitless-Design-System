@@ -299,3 +299,41 @@ html { scroll-behavior:auto !important; }
   color:#276da9;
   border-color:#9dbfdf;
 }
+
+
+/*
+ * Fidelity capture mode: target one theme at a time at the full preview width.
+ * Side-by-side dark/light cards are useful for browsing, but their half-width
+ * geometry cannot be compared fairly with full-width production routes.
+ */
+.theme-grid:has(.theme-preview:target) {
+  grid-template-columns:minmax(0,1fr);
+}
+.theme-grid:has(.theme-preview:target) .theme-preview:not(:target) {
+  display:none;
+}
+.theme-grid:has(.theme-preview:target) .theme-preview:target {
+  width:100%;
+  min-width:0;
+}
+.theme-preview:target .sample-live-page .ds-shortcut-grid {
+  grid-template-columns:repeat(4,minmax(0,1fr));
+}
+.theme-preview:target .sample-live-page .ds-course-card-grid {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+.theme-preview:target .sample-live-page .ds-semester-layout {
+  grid-template-columns:minmax(250px,310px) minmax(0,1fr);
+}
+.theme-preview:target .sample-live-page .ds-page-hero {
+  min-height:clamp(260px,32vw,360px);
+}
+@media(max-width:760px) {
+  .theme-preview:target .sample-live-page .ds-shortcut-grid,
+  .theme-preview:target .sample-live-page .ds-course-card-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+  .theme-preview:target .sample-live-page .ds-semester-layout {
+    grid-template-columns:1fr;
+  }
+}
