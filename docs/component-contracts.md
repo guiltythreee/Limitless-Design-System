@@ -215,3 +215,14 @@ These primitives define a portable API and baseline behavior; they are not claim
 - Light fixtures must opt into the explicit light-theme adapter and identify themselves as light in the visible preview label.
 - Element IDs must remain unique across all ten fixtures; cloned light fixtures suffix their IDs and update label/heading references.
 - CI renders the full preview in Chromium at 1440px and 390px viewport widths. This is a rendered-layout smoke check, not pixel-equivalence evidence against production.
+
+
+## Source-mapped page composition primitives
+
+- `.ds-page-hero` composes an eyebrow, title, description, action row and optional emblem. The consuming application owns its route, content and action behaviour.
+- `.ds-shortcut-card` presents compact module destinations; `.ds-launch-card` presents larger learning or contest destinations. Links and routing remain application-owned.
+- `.ds-overview-card` and `.ds-overview-grid` present labelled metrics with optional accent variants. Metric values and calculations remain application-owned.
+- `.ds-course-card` and `.ds-semester-option` present programme course metadata and semester navigation; course selection and programme state remain application-owned.
+- `.ds-account-panel` presents linked-account identity and a refresh action slot. Authentication, handle storage and API refresh remain application-owned.
+- `.ds-checklist-panel`, `.ds-checklist__item` and `.ds-milestone-card` are presentation-only. Completion state, mastery rules, rating thresholds and persistence remain application-owned.
+- These primitives are exercised in the five live page compositions and in both theme fixtures. They do not replace complete application pages or their data models.
