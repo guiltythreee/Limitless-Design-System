@@ -66,3 +66,17 @@ The source-level follow-up mappings below were checked against `guiltythreee/Lim
 | `probability-source/app/components/Dashboard.tsx` | `daf03bae124c5af90c51d34359048f78ae83428f` | Probability dashboard goal and week visuals |
 | `shared/learning-player/PlayerShell.ts` | `b78076956089d99c352784dd05612e19cc6a8ed9` | Shared learning-player shell structure |
 | `shared/learning-player/player.css` | `f9d7ca51ca48022db7c0a3e70a9f6304f4889e57` | Shared learning-player feedback, review and solution styles |
+
+
+## Top-level live page composition sources
+
+These page files were captured and compared in the read-only production baseline pass. Their exact blobs are pinned to `guiltythreee/Limitless` `main` for reproducible composition mapping.
+
+| Source file | Blob SHA on `main` | Mapping scope |
+|---|---|---|
+| `index.html` | `1d4f9ff1a3921b9775c00db1b45c3ddbc24c98a3` | Home dashboard hero, shortcuts, learning cards and page hierarchy |
+| `probability-source/app/page.tsx` | `82070366ff123b9fc0f1c7ffa14bdca2ba6d868d` | Probability archive hero, record panel, study progress and navigation |
+| `metallurgy-source/app/page.tsx` | `7bab0fdef6a8ecbb9b01d7c166e4d25f64d8aac1` | Metallurgy semester navigation, programme summary and course cards |
+| `metallurgy-source/app/semester-landing.css` | `60640c22ba1b62715a24eed66350d5c565ccd8ee` | Metallurgy semester sidebar, hero, summary and course-card visual rules |
+| `competition/index.html` | `a09dbd51fc92d3d07df1c635e199a7603c162586` | Competition campaign hero, overview metrics and weekly checklist composition |
+| `codeforces-red/index.html` | `87d43672ffe0f38e1252dc89650a966bd77695bd` | Codeforces account identity, rating dashboard, milestones and launch tiles |
