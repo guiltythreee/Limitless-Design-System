@@ -226,3 +226,11 @@ These primitives define a portable API and baseline behavior; they are not claim
 - `.ds-account-panel` presents linked-account identity and a refresh action slot. Authentication, handle storage and API refresh remain application-owned.
 - `.ds-checklist-panel`, `.ds-checklist__item` and `.ds-milestone-card` are presentation-only. Completion state, mastery rules, rating thresholds and persistence remain application-owned.
 - These primitives are exercised in the five live page compositions and in both theme fixtures. They do not replace complete application pages or their data models.
+
+## Application navigation shell primitives
+
+- `.ds-app-topbar`, `.ds-app-brand`, `.ds-app-search` and `.ds-app-profile` provide the shared topbar slots used by the Home, Competition, Metallurgy, Probability and Codeforces route fixtures.
+- `.ds-app-sidebar` and `.ds-app-sidebar-note` provide navigation-rail structure; width, sticky/fixed positioning, active treatment, backdrop and typography are supplied by the consuming route adapter.
+- `.ds-app-breadcrumb` provides a route breadcrumb slot.
+- The live route structures differ: Home and Competition use 245px workspace rails, Metallurgy uses a 310px semester rail inside its page layout, and Probability/Codeforces do not use the same sidebar shell. These primitives do not force those layouts into one geometry.
+- Search, profile, navigation destinations, theme toggling and all route state remain application-owned. The preview shells are static visual fixtures only.
