@@ -1190,3 +1190,53 @@
     display:none;
   }
 }
+
+
+/* Wide dashboard promotions are distinct from compact shortcut and launch cards. */
+:where([data-limitless-design]) .ds-promo-card {
+  display:flex;
+  align-items:center;
+  gap:1rem;
+  box-sizing:border-box;
+  min-width:0;
+  padding:1rem 1.2rem;
+  border:1px solid var(--ds-promo-border,var(--ds-color-border));
+  border-radius:var(--ds-promo-radius,.9rem);
+  background:var(--ds-promo-background,var(--ds-color-surface));
+  color:var(--ds-color-text);
+  text-decoration:none;
+}
+:where([data-limitless-design]) .ds-promo-card__icon {
+  display:grid;
+  place-items:center;
+  flex:none;
+  width:2.5rem;
+  height:2.5rem;
+  border-radius:.65rem;
+  background:var(--ds-promo-icon-background,var(--ds-color-surface-raised));
+  color:var(--ds-promo-accent,var(--ds-color-accent));
+  font-size:1.35rem;
+}
+:where([data-limitless-design]) .ds-promo-card__copy { min-width:0; }
+:where([data-limitless-design]) .ds-promo-card__eyebrow {
+  color:var(--ds-promo-accent,var(--ds-color-accent));
+  font-size:.55rem;
+  font-weight:700;
+  letter-spacing:.16em;
+}
+:where([data-limitless-design]) .ds-promo-card__title {
+  display:block;
+  margin:.25rem 0;
+  color:var(--ds-color-heading);
+  font-size:.95rem;
+}
+:where([data-limitless-design]) .ds-promo-card__description {
+  margin:0;
+  color:var(--ds-color-muted);
+  font-size:.68rem;
+  line-height:1.55;
+}
+@media(max-width:760px) {
+  :where([data-limitless-design]) .ds-promo-card { align-items:flex-start; padding:.9rem; }
+  :where([data-limitless-design]) .ds-promo-card__icon { width:2rem; height:2rem; }
+}
