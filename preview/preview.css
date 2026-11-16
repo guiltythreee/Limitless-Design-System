@@ -1112,3 +1112,109 @@ body:has(.theme-preview.metallurgy:target)::after {
 body:has(.theme-preview.metallurgy.light:target)::after {
   background:linear-gradient(180deg,rgba(243,246,250,.48),rgba(243,246,250,.82));
 }
+
+
+/* Metallurgy landing layout: full-height semester rail, one programme header with inline metrics, then the course browser. */
+.theme-preview.metallurgy:target .sample-live-page {
+  padding:0;
+  margin:0;
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-layout {
+  width:min(1540px,100%);
+  min-height:calc(100vh - 62px);
+  margin:0 auto;
+  grid-template-columns:minmax(250px,310px) minmax(0,1fr);
+  gap:0;
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-sidebar {
+  top:62px;
+  height:calc(100vh - 62px);
+  padding:1.5rem 1.15rem;
+  border-right:1px solid var(--ds-color-border);
+  border-radius:0;
+  background:var(--ds-semester-sidebar-background,rgba(23,29,37,.82));
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-sidebar__label {
+  margin:1.45rem .35rem .65rem;
+  font-size:.62rem;
+  letter-spacing:.16em;
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-option {
+  display:grid;
+  grid-template-columns:34px minmax(0,1fr) auto;
+  gap:.7rem;
+  align-items:center;
+  min-height:0;
+  padding:.8rem .7rem;
+  border-radius:9px;
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-option.is-active {
+  background:var(--ds-semester-option-active-background,rgba(96,165,250,.12));
+  border-color:var(--ds-semester-option-active-border,rgba(96,165,250,.3));
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-option__number {
+  width:32px;
+  height:32px;
+  border-radius:9px;
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-main {
+  min-width:0;
+  padding:clamp(1.25rem,3vw,2.5rem);
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-header {
+  max-width:1160px;
+  margin:0 auto 1.25rem;
+  padding:1.5rem 1.65rem;
+  --ds-semester-header-background:rgba(27,36,48,.88);
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-course-toolbar {
+  margin-top:.9rem;
+  border-radius:8px;
+  padding:.75rem 0;
+  border:0;
+  border-bottom:1px solid var(--ds-color-border);
+  background:transparent;
+}
+.theme-preview.metallurgy:target .sample-live-page .sample-live-panel {
+  max-width:1160px;
+  margin:0 auto;
+  padding:1.4rem 1.5rem;
+  border-radius:12px;
+  border-color:var(--ds-color-border);
+  background:var(--ds-semester-header-background,rgba(27,36,48,.88));
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-study-utility-panel__header strong {
+  font:500 1.55rem Georgia,serif;
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-programme {
+  margin-top:2rem;
+  border-radius:10px;
+}
+.theme-preview.metallurgy.light:target .sample-live-page .ds-semester-header,
+.theme-preview.metallurgy.light:target .sample-live-page .sample-live-panel {
+  --ds-semester-header-background:rgba(255,255,255,.88);
+}
+.theme-preview.metallurgy.light:target .sample-live-page .ds-semester-sidebar {
+  --ds-semester-sidebar-background:rgba(255,255,255,.82);
+  --ds-semester-option-active-background:rgba(37,99,235,.12);
+  --ds-semester-option-active-border:rgba(37,99,235,.3);
+}
+@media(max-width:620px) {
+  .theme-preview.metallurgy:target .sample-live-page .ds-semester-layout { display:block; }
+  .theme-preview.metallurgy:target .sample-live-page .ds-semester-sidebar {
+    position:static;
+    height:auto;
+    max-height:none;
+    border-right:0;
+    border-bottom:1px solid var(--ds-color-border);
+    padding:.8rem;
+  }
+  .theme-preview.metallurgy:target .sample-live-page .ds-semester-back { margin-bottom:.7rem; }
+  .theme-preview.metallurgy:target .sample-live-page .ds-semester-sidebar__label { margin:.8rem .25rem .5rem; }
+  .theme-preview.metallurgy:target .sample-live-page .ds-semester-brand { padding:.2rem .2rem .8rem; }
+  .theme-preview.metallurgy:target .sample-live-page .ds-semester-course-list { grid-template-columns:repeat(3,minmax(0,1fr)); }
+  .theme-preview.metallurgy:target .sample-live-page .ds-semester-programme { display:none; }
+  .theme-preview.metallurgy:target .sample-live-page .ds-semester-main { padding:.75rem; }
+  .theme-preview.metallurgy:target .sample-live-page .ds-semester-header,
+  .theme-preview.metallurgy:target .sample-live-page .sample-live-panel { padding:1rem; }
+}
