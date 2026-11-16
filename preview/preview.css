@@ -513,7 +513,7 @@ body:has(.theme-preview:target) .theme-grid {
 .theme-preview.probability:target {
   grid-template-rows:66px auto 1fr;
 }
-.ds-app-topbar--archive {
+.ds-app-topbar--probability {
   height:66px;
   padding:0 40px;
   border-bottom:1px solid rgba(105,166,225,.2);
@@ -521,7 +521,7 @@ body:has(.theme-preview:target) .theme-grid {
   color:#8fc7ff;
   font:18px Georgia,serif;
 }
-.ds-app-topbar--archive a { padding:8px 12px; border:1px solid rgba(105,166,225,.24); color:#8fc7ff; font:10px Arial,sans-serif; letter-spacing:1px; text-decoration:none; }
+.ds-app-topbar--probability a { padding:8px 12px; border:1px solid rgba(105,166,225,.24); color:#8fc7ff; font:10px Arial,sans-serif; letter-spacing:1px; text-decoration:none; }
 .ds-app-breadcrumb {
   grid-row:2;
   grid-column:1;
@@ -557,8 +557,8 @@ body:has(.theme-preview:target) .theme-grid {
   box-shadow:inset 2px 0 #287bc0;
 }
 .theme-preview.light .ds-app-sidebar-note { border-color:rgba(80,115,150,.25); color:#617b95; }
-.theme-preview.probability.light .ds-app-topbar--archive { background:rgba(250,247,238,.96); color:#2a2230; }
-.theme-preview.probability.light .ds-app-topbar--archive a { color:#684d1b; border-color:rgba(138,100,20,.3); }
+.theme-preview.probability.light .ds-app-topbar--probability { background:rgba(250,247,238,.96); color:#2a2230; }
+.theme-preview.probability.light .ds-app-topbar--probability a { color:#684d1b; border-color:rgba(138,100,20,.3); }
 .theme-preview.light .ds-app-breadcrumb { color:#526e8b; }
 .theme-preview.competition:target .ds-app-sidebar { padding:23px 13px; }
 .theme-preview.competition:target .ds-app-sidebar small { margin:0 11px 8px; color:#7896b6; font-size:9px; font-weight:700; letter-spacing:2px; }
@@ -578,7 +578,7 @@ body:has(.theme-preview:target) .theme-grid {
   .theme-preview.home:target .sample-live-page,
   .theme-preview.competition:target .sample-live-page { grid-row:3; grid-column:1; padding:16px; }
   .theme-preview.metallurgy:target .sample-live-page { padding:16px; }
-  .theme-preview.probability:target .ds-app-topbar--archive { padding:0 16px; }
+  .theme-preview.probability:target .ds-app-topbar--probability { padding:0 16px; }
   .theme-preview.probability:target .ds-app-breadcrumb { padding:16px 16px 0; font-size:8px; }
   .theme-preview.probability:target .sample-live-page { padding:12px 16px 40px; }
   .theme-preview.codeforces:target .ds-app-topbar { padding:0 16px; }
