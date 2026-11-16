@@ -1240,3 +1240,151 @@
   :where([data-limitless-design]) .ds-promo-card { align-items:flex-start; padding:.9rem; }
   :where([data-limitless-design]) .ds-promo-card__icon { width:2rem; height:2rem; }
 }
+
+
+/* Probability archive route composition: large serif hero and separate progress record. */
+:where([data-limitless-design]) .ds-probability-archive-hero {
+  min-height:29rem;
+  padding:clamp(2rem,5vw,4.5rem);
+  align-items:center;
+  background:var(--ds-probability-hero-background,var(--ds-page-hero-background,var(--ds-color-surface)));
+}
+:where([data-limitless-design]) .ds-probability-archive-hero .ds-page-hero__copy { max-width:46rem; }
+:where([data-limitless-design]) .ds-probability-archive-hero .ds-page-hero__title {
+  margin:.9rem 0 .8rem;
+  font:500 clamp(3.5rem,6vw,5rem)/1.02 Georgia,"Times New Roman",serif;
+  letter-spacing:-.035em;
+}
+:where([data-limitless-design]) .ds-probability-archive-hero .ds-page-hero__description {
+  max-width:42rem;
+  font-size:1rem;
+  line-height:1.75;
+}
+:where([data-limitless-design]) .ds-probability-archive-hero .ds-page-hero__actions { gap:.5rem; }
+:where([data-limitless-design]) .ds-probability-tags {
+  display:flex;
+  flex-wrap:wrap;
+  gap:.5rem;
+  margin-top:1.5rem;
+}
+:where([data-limitless-design]) .ds-probability-tags span {
+  padding:.55rem .75rem;
+  border:1px solid var(--ds-color-border);
+  color:var(--ds-color-muted);
+  font-size:.55rem;
+  letter-spacing:.12em;
+}
+:where([data-limitless-design]) .ds-probability-emblem {
+  display:grid;
+  place-items:center;
+  align-content:center;
+  flex:none;
+  width:clamp(9rem,15vw,13rem);
+  aspect-ratio:1;
+  border:1px solid var(--ds-probability-emblem-border,var(--ds-color-border));
+  border-radius:50%;
+  background:var(--ds-probability-emblem-background,var(--ds-color-surface));
+  color:var(--ds-color-accent);
+}
+:where([data-limitless-design]) .ds-probability-emblem span { font:4rem/1 Georgia,serif; }
+:where([data-limitless-design]) .ds-probability-emblem small { margin-top:.8rem; font-size:.48rem; letter-spacing:.3em; }
+:where([data-limitless-design]) .ds-study-progress-panel {
+  margin-top:1.25rem;
+  padding:1.6rem 1.8rem;
+  border:1px solid var(--ds-color-border);
+  border-radius:1rem;
+  background:var(--ds-study-panel-background,var(--ds-color-surface));
+  color:var(--ds-color-text);
+}
+:where([data-limitless-design]) .ds-study-progress-panel__header {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  margin-bottom:1rem;
+}
+:where([data-limitless-design]) .ds-study-progress-panel__header h2 {
+  margin:.4rem 0 0;
+  color:var(--ds-color-heading);
+  font:500 1.5rem Georgia,serif;
+}
+:where([data-limitless-design]) .ds-study-progress-panel__header small {
+  color:var(--ds-color-muted);
+  font-size:.6rem;
+}
+:where([data-limitless-design]) .ds-study-progress-panel__body {
+  display:grid;
+  grid-template-columns:minmax(13rem,1.2fr) minmax(0,4fr);
+  gap:1.25rem;
+  align-items:center;
+}
+:where([data-limitless-design]) .ds-study-progress-panel__completion > div:first-child {
+  display:flex;
+  justify-content:space-between;
+  gap:.6rem;
+  margin-bottom:.65rem;
+  color:var(--ds-color-muted);
+  font-size:.75rem;
+}
+:where([data-limitless-design]) .ds-study-progress-panel__completion strong {
+  color:var(--ds-color-accent);
+  font-size:1.1rem;
+  font-variant-numeric:tabular-nums;
+}
+:where([data-limitless-design]) .ds-overview-grid--five { grid-template-columns:repeat(5,minmax(0,1fr)); }
+:where([data-limitless-design]) .ds-study-progress-panel .ds-overview-card {
+  min-height:5.2rem;
+  padding:.8rem;
+  border-radius:.55rem;
+  background:var(--ds-study-metric-background,var(--ds-color-surface-raised));
+}
+:where([data-limitless-design]) .ds-study-progress-panel .ds-overview-card__value {
+  display:block;
+  margin:0;
+  color:var(--ds-color-heading);
+  font:500 1.6rem Georgia,serif;
+}
+:where([data-limitless-design]) .ds-study-progress-panel__note {
+  margin:1.4rem 0 0;
+  color:var(--ds-color-muted);
+  font-size:.6rem;
+}
+:where([data-limitless-design]) .ds-probability-lower-grid {
+  display:grid;
+  grid-template-columns:minmax(0,.9fr) minmax(0,1.25fr);
+  gap:1rem;
+  margin-top:1.25rem;
+}
+:where([data-limitless-design]) .ds-probability-lower-grid > * { min-width:0; padding:1.5rem; }
+:where([data-limitless-design]) .ds-probability-lower-grid h2 {
+  margin:.6rem 0;
+  color:var(--ds-color-heading);
+  font:500 1.45rem Georgia,serif;
+}
+:where([data-limitless-design]) .ds-probability-lower-grid p {
+  color:var(--ds-color-muted);
+  font-size:.75rem;
+}
+:where([data-limitless-design]) .ds-probability-pathway-grid {
+  display:grid;
+  grid-template-columns:repeat(2,minmax(0,1fr));
+  gap:.6rem;
+  margin-top:1rem;
+}
+:where([data-limitless-design]) .ds-probability-pathway-grid article {
+  display:grid;
+  gap:.3rem;
+  padding:.8rem;
+  border:1px solid var(--ds-color-border);
+  border-radius:.6rem;
+  background:var(--ds-color-surface-raised);
+}
+:where([data-limitless-design]) .ds-probability-pathway-grid strong { color:var(--ds-color-heading); font-size:.75rem; }
+:where([data-limitless-design]) .ds-probability-pathway-grid small { color:var(--ds-color-muted); font-size:.6rem; }
+@media(max-width:760px) {
+  :where([data-limitless-design]) .ds-probability-archive-hero { min-height:0; }
+  :where([data-limitless-design]) .ds-probability-archive-hero .ds-probability-emblem { display:none; }
+  :where([data-limitless-design]) .ds-study-progress-panel__body { grid-template-columns:1fr; }
+  :where([data-limitless-design]) .ds-overview-grid--five { grid-template-columns:repeat(2,minmax(0,1fr)); }
+  :where([data-limitless-design]) .ds-probability-lower-grid { grid-template-columns:1fr; }
+}
