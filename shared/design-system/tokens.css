@@ -532,8 +532,9 @@ html[data-theme="light"] [data-limitless-design="probability"] {
   --ds-app-shell-border:rgba(138,100,20,.25);
 }
 html[data-theme="light"] [data-limitless-design="codeforces"] {
-  --ds-app-topbar-background:rgba(245,250,255,.93);
-  --ds-app-shell-border:rgba(59,112,159,.22);
+  --ds-app-topbar-background:rgba(248,251,255,.92);
+  --ds-app-topbar-shadow:0 8px 28px rgba(30,60,90,.08);
+  --ds-app-shell-border:#cbd9e8;
 }
 
 
