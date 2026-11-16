@@ -356,8 +356,13 @@ const metallurgyStart = preview.indexOf('<article class="theme-preview metallurg
 assert.ok(probabilityDarkStart >= 0 && probabilityLightStart > probabilityDarkStart && metallurgyStart > probabilityLightStart);
 const probabilityDarkEnd = preview.lastIndexOf("</article>", probabilityLightStart);
 const probabilityLightEnd = preview.lastIndexOf("</article>", metallurgyStart);
-const classesIn = (markup) => [...new Set([...markup.matchAll(/class="([^"]+)"/g)].flatMap((match) => match[1].split(/\\s+/)))].sort();
+const classesIn = (markup) => [...new Set([...markup.matchAll(/class="([^"]+)"/g)].flatMap((match) => match[1].split(/\s+/)))].sort();
 const darkProbabilityClasses = classesIn(preview.slice(probabilityDarkStart, probabilityDarkEnd + "</article>".length)).filter((name) => name !== "dark");
 const lightProbabilityClasses = classesIn(preview.slice(probabilityLightStart, probabilityLightEnd + "</article>".length)).filter((name) => name !== "light");
 assert.deepEqual(lightProbabilityClasses, darkProbabilityClasses,
   "Probability dark and light previews must show the same component inventory");
+
+assert.ok(preview.includes('data-preview-theme="light"'), "Probability light preview must use its light theme adapter");
+assert.ok(preview.includes('<p class="preview-label">Light theme</p>'), "Probability light preview label must identify the light theme");
+const previewIds = [...preview.matchAll(/\\bid="([^"]+)"/g)].map((match) => match[1]);
+assert.equal(new Set(previewIds).size, previewIds.length, "Preview element IDs must be unique across theme fixtures");
