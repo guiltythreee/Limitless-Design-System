@@ -1314,7 +1314,7 @@
 }
 :where([data-limitless-design]) .ds-study-progress-panel__body {
   display:grid;
-  grid-template-columns:minmax(13rem,1.2fr) minmax(0,4fr);
+  grid-template-columns:minmax(13rem,1.5fr) minmax(0,4fr);
   gap:1.25rem;
   align-items:center;
 }
