@@ -56,7 +56,7 @@ The current branch contains more than the initial shared primitives. The impleme
 
 ## Verification status and remaining fidelity work
 
-The contract suite checks token/adapter coverage, component selectors, parity of all five dark/light fixture pairs, unique IDs, source mappings, accessibility-related CSS constraints, documentation provenance and the Home/Competition light-canvas contrast contract. GitHub Actions is the authoritative recorded test result for each branch commit.
+The contract suite checks token/adapter coverage, component selectors, parity of all five dark/light fixture pairs, unique IDs, source mappings, accessibility-related CSS constraints, documentation provenance and the Home/Competition light-canvas and Codeforces light-stage contrast contracts. GitHub Actions is the authoritative recorded test result for each branch commit.
 
 The preview is a static visual fixture across five section adapters in dark and light themes. It is not the live application and does not establish pixel parity. The remaining visual-validation milestone is a side-by-side browser comparison against the live application using matching content, state, theme and viewport. Production integration remains a separate review and is not part of this repository's current scope.
 
@@ -64,3 +64,5 @@ The preview is a static visual fixture across five section adapters in dark and 
 The dark/light fixtures now expose identical component-class inventories for all five sections; the contract also checks unique element IDs and explicit light-theme adapters. CI captures full-page Chromium renders plus viewport-level screenshots for each of the five sections at 1440px desktop and 390px mobile widths, then uploads them as a 14-day workflow artifact. These renders verify that the static fixture loads and lays out at both target widths; they are not a live-site screenshot comparison or a pixel-diff test.
 
 The Home and Competition light fixtures explicitly use a light preview canvas; this is a fixture-only backdrop for readable inspection and does not change the production theme adapters.
+
+The Codeforces light preview mirrors the production `html[data-theme="light"]` stage-selector values locally because the isolated fixture does not change the document-level theme attribute.
