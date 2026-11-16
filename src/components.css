@@ -1545,3 +1545,123 @@
   outline:2px solid var(--ds-color-focus);
   outline-offset:3px;
 }
+
+
+/* Metallurgy semester landing page header and navigation identity. */
+:where([data-limitless-design]) .ds-semester-back {
+  display:inline-flex;
+  align-items:center;
+  gap:.6rem;
+  margin-bottom:1.5rem;
+  color:var(--ds-color-muted);
+  font-size:.78rem;
+  text-decoration:none;
+}
+:where([data-limitless-design]) .ds-semester-brand {
+  display:flex;
+  align-items:center;
+  gap:.8rem;
+  padding:.3rem .25rem 1.5rem;
+  border-bottom:1px solid var(--ds-color-border);
+}
+:where([data-limitless-design]) .ds-semester-brand-mark {
+  display:grid;
+  place-items:center;
+  flex:none;
+  width:42px;
+  height:42px;
+  border-radius:12px;
+  background:var(--ds-semester-brand-background,var(--ds-color-surface-raised));
+  color:var(--ds-color-accent);
+  font-size:1.35rem;
+}
+:where([data-limitless-design]) .ds-semester-brand strong,
+:where([data-limitless-design]) .ds-semester-brand small { display:block; }
+:where([data-limitless-design]) .ds-semester-brand strong {
+  color:var(--ds-color-heading);
+  font:500 1.05rem Georgia,serif;
+}
+:where([data-limitless-design]) .ds-semester-brand small {
+  margin-top:.2rem;
+  color:var(--ds-color-muted);
+  font-size:.68rem;
+}
+:where([data-limitless-design]) .ds-semester-header {
+  max-width:1160px;
+  margin:0 auto 1.25rem;
+  padding:1.5rem 1.65rem;
+  border:1px solid var(--ds-color-border);
+  border-radius:12px;
+  background:var(--ds-semester-header-background,var(--ds-color-surface));
+}
+:where([data-limitless-design]) .ds-semester-breadcrumb {
+  color:var(--ds-color-muted);
+  font-size:.61rem;
+  letter-spacing:.13em;
+}
+:where([data-limitless-design]) .ds-semester-breadcrumb span { padding:0 .45rem; color:var(--ds-color-accent); }
+:where([data-limitless-design]) .ds-semester-title-row {
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:1rem;
+  padding:1.5rem 0 1.15rem;
+}
+:where([data-limitless-design]) .ds-semester-eyebrow {
+  color:var(--ds-color-accent);
+  font-size:.62rem;
+  font-weight:750;
+  letter-spacing:.17em;
+}
+:where([data-limitless-design]) .ds-semester-title-row h1 {
+  margin:.45rem 0 .3rem;
+  color:var(--ds-color-heading);
+  font:500 clamp(1.7rem,3.5vw,2.7rem)/1.15 Georgia,serif;
+}
+:where([data-limitless-design]) .ds-semester-title-row p {
+  margin:0;
+  color:var(--ds-color-muted);
+  font-size:.82rem;
+  line-height:1.6;
+}
+:where([data-limitless-design]) .ds-semester-title-symbol {
+  display:grid;
+  place-items:center;
+  flex:none;
+  width:66px;
+  height:66px;
+  border:1px solid var(--ds-color-border);
+  border-radius:50%;
+  color:var(--ds-color-accent);
+  font-size:2rem;
+}
+:where([data-limitless-design]) .ds-semester-summary {
+  display:grid;
+  grid-template-columns:repeat(4,minmax(0,1fr));
+  gap:.6rem;
+  padding-top:1rem;
+  border-top:1px solid var(--ds-color-border);
+}
+:where([data-limitless-design]) .ds-semester-summary > div {
+  display:flex;
+  align-items:baseline;
+  justify-content:flex-start;
+  gap:.55rem;
+  min-width:0;
+  padding:.35rem .45rem;
+}
+:where([data-limitless-design]) .ds-semester-summary strong {
+  color:var(--ds-color-heading);
+  font:500 1.35rem Georgia,serif;
+  white-space:nowrap;
+}
+:where([data-limitless-design]) .ds-semester-summary span {
+  color:var(--ds-color-muted);
+  font-size:.66rem;
+  white-space:nowrap;
+}
+@media(max-width:620px) {
+  :where([data-limitless-design]) .ds-semester-brand { padding:.2rem .2rem .8rem; }
+  :where([data-limitless-design]) .ds-semester-title-symbol { width:46px; height:46px; font-size:1.35rem; }
+  :where([data-limitless-design]) .ds-semester-summary { grid-template-columns:repeat(2,minmax(0,1fr)); }
+}
