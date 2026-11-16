@@ -246,3 +246,10 @@ These primitives define a portable API and baseline behavior; they are not claim
 - The archive landing page uses a large serif Probability hero, blue-toned circular emblem, four route actions and compact programme tags.
 - The separate study-progress panel pairs chapter completion with five summary metrics; the lower content is a two-column continuation/pathways layout.
 - The fixture uses the live page's structure and labels. Counts are static sample values; progress, course navigation, pathways, browser storage and actions remain Probability application-owned.
+
+
+## Metallurgy semester landing sidebar and course grid
+
+- The landing fixture includes Semester 3–8 options, the programme-structure note, a 310px desktop semester rail, four horizontal summary metrics and four Semester 3 course cards.
+- The 310px sticky desktop rail collapses into a compact mobile selector region; course cards change from three columns to one column at the narrow breakpoint.
+- Semester selection, course manifests, course availability, progress, counts and routing remain Metallurgy application-owned.
