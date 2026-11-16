@@ -581,3 +581,13 @@ for (const section of ["home", "competition", "metallurgy", "probability", "code
   assert.ok(tokens.includes(`[data-limitless-design="${section}"]`), `Missing ${section} shell token adapter`);
   assert.ok(tokens.includes(`html[data-theme="light"] [data-limitless-design="${section}"]`), `Missing ${section} light shell token adapter`);
 }
+
+
+// Shared Home/Competition workspace layout is composed from reusable shell primitives, not preview-only grid markup.
+for (const selector of [".ds-app-layout", ".ds-app-main"]) {
+  assert.ok(components.includes(selector), `Missing app layout primitive: ${selector}`);
+  assert.ok(preview.includes(selector.slice(1)), `Missing app layout fixture: ${selector}`);
+}
+assert.match(components, /\.ds-app-layout\s*\{\s*display:grid/);
+assert.match(previewStyles, /\.theme-preview\.home:target \.ds-app-layout/);
+assert.match(previewStyles, /\.theme-preview\.competition:target \.ds-app-layout/);
