@@ -559,3 +559,11 @@ for (const asset of [
 ]) {
   assert.ok(previewStyles.includes(asset), `Missing live theme artwork asset: ${asset}`);
 }
+
+
+// Metallurgy main heading groups the programme breadcrumb/title and four summary metrics in one panel.
+for (const selector of [".ds-semester-header", ".ds-semester-brand", ".ds-semester-back", ".ds-semester-summary", ".ds-course-toolbar"]) {
+  assert.ok(components.includes(selector), `Missing Metallurgy landing selector: ${selector}`);
+  assert.ok(preview.includes(selector.slice(1)), `Missing Metallurgy landing fixture: ${selector}`);
+}
+assert.match(previewStyles, /\.theme-preview\.metallurgy:target \.sample-live-page\s*\{\s*padding:0/);
