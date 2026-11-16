@@ -1069,8 +1069,9 @@
 
 /* Application navigation shell primitives. Route adapters supply the actual theme and geometry. */
 :where([data-limitless-design]) .ds-app-topbar {
-  position:relative;
-  z-index:20;
+  position:sticky;
+  top:0;
+  z-index:100;
   display:flex;
   align-items:center;
   justify-content:space-between;
@@ -1083,6 +1084,7 @@
   background:var(--ds-app-topbar-background,var(--ds-color-surface));
   color:var(--ds-color-text);
   backdrop-filter:var(--ds-app-topbar-backdrop,none);
+  box-shadow:var(--ds-app-topbar-shadow,none);
 }
 :where([data-limitless-design]) .ds-app-brand {
   display:flex;
@@ -1140,6 +1142,10 @@
   min-width:0;
   padding:var(--ds-app-sidebar-padding,1.25rem .8rem);
   border-right:1px solid var(--ds-app-shell-border,var(--ds-color-border));
+  position:var(--ds-app-sidebar-position,sticky);
+  top:var(--ds-app-sidebar-top,var(--ds-app-topbar-height,62px));
+  height:var(--ds-app-sidebar-height,calc(100vh - var(--ds-app-topbar-height,62px)));
+  overflow-y:var(--ds-app-sidebar-overflow,auto);
   background:var(--ds-app-sidebar-background,var(--ds-color-surface));
   color:var(--ds-color-text);
   backdrop-filter:var(--ds-app-sidebar-backdrop,none);
