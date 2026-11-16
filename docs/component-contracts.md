@@ -253,3 +253,9 @@ These primitives define a portable API and baseline behavior; they are not claim
 - The landing fixture includes Semester 3–8 options, the programme-structure note, a 310px desktop semester rail, four horizontal summary metrics and four Semester 3 course cards.
 - The 310px sticky desktop rail collapses into a compact mobile selector region; course cards change from three columns to one column at the narrow breakpoint.
 - Semester selection, course manifests, course availability, progress, counts and routing remain Metallurgy application-owned.
+
+
+## Competition campaign dashboard composition
+
+- The dashboard fixture groups the campaign heading, three metric cards and weekly checklist inside the source page's bordered main panel; the five-subject mastery section follows below.
+- The campaign panel, accent borders, metric hierarchy, checklist row dividers and workspace navigation have separate presentation slots. The page's campaign dates, mastery values, checklist state, subject calculations and roadmap routing remain Competition-owned.
