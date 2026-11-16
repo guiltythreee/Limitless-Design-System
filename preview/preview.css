@@ -1347,3 +1347,70 @@ body:has(.theme-preview.metallurgy.light:target)::after {
   --ds-launch-background:var(--home-panel-strong);
   --ds-launch-border:var(--home-border);
 }
+
+
+.theme-preview.codeforces:target .sample-live-page .ds-account-panel {
+  border-radius:19px;
+  border-color:rgba(116,160,211,.2);
+  background:linear-gradient(145deg,rgba(13,29,49,.96),rgba(8,19,34,.96));
+  box-shadow:0 16px 44px rgba(0,0,0,.18),inset 0 1px 0 rgba(255,255,255,.025);
+}
+.theme-preview.codeforces:target .sample-live-page .ds-page-hero {
+  background:
+    radial-gradient(ellipse at 100% 0%,rgba(63,143,226,.2),transparent 40%),
+    linear-gradient(145deg,rgba(12,34,59,.98),rgba(8,20,37,.98));
+}
+.theme-preview.codeforces:target .sample-live-page .ds-page-hero::before {
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.22;
+  background-image:linear-gradient(rgba(118,169,221,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(118,169,221,.07) 1px,transparent 1px);
+  background-size:28px 28px;
+  mask-image:linear-gradient(135deg,#000,transparent 78%);
+}
+.theme-preview.codeforces:target .sample-live-page .ds-page-hero .ds-overview-card {
+  min-height:86px;
+  padding:15px 16px;
+  border-top-width:2px;
+  border-radius:13px;
+  background:linear-gradient(145deg,rgba(23,48,77,.84),rgba(11,28,49,.88));
+}
+.theme-preview.codeforces:target .sample-live-page .ds-page-hero .ds-overview-card__label {
+  color:#a9c0dc;
+  font-size:9px;
+  letter-spacing:1.2px;
+}
+.theme-preview.codeforces:target .sample-live-page .ds-page-hero .ds-overview-card__value {
+  margin-top:10px;
+  color:#f3f8ff;
+  font-size:25px;
+}
+.theme-preview.codeforces:target .sample-live-page .ds-codeforces-milestones {
+  max-height:620px;
+  overflow:auto;
+  background:linear-gradient(150deg,rgba(17,31,55,.97),rgba(9,20,37,.97));
+  box-shadow:0 16px 44px rgba(0,0,0,.18);
+}
+.theme-preview.codeforces.light:target .sample-live-page .ds-account-panel {
+  background:linear-gradient(145deg,rgba(255,255,255,.97),rgba(240,246,253,.97));
+  border-color:#cbdbea;
+  box-shadow:0 12px 30px rgba(50,80,110,.08);
+}
+.theme-preview.codeforces.light:target .sample-live-page .ds-page-hero {
+  background:radial-gradient(ellipse at 100% 0%,rgba(84,157,230,.13),transparent 40%),linear-gradient(145deg,#f5faff,#e8f2fc);
+  border-color:#c5d9eb;
+}
+.theme-preview.codeforces.light:target .sample-live-page .ds-page-hero::before { opacity:.3; }
+.theme-preview.codeforces.light:target .sample-live-page .ds-page-hero .ds-overview-card {
+  background:linear-gradient(145deg,#fff,#edf5fc);
+  border-color:#ccdeed;
+}
+.theme-preview.codeforces.light:target .sample-live-page .ds-page-hero .ds-overview-card__label,
+.theme-preview.codeforces.light:target .sample-live-page .ds-page-hero .ds-page-hero__description { color:#607b96; }
+.theme-preview.codeforces.light:target .sample-live-page .ds-page-hero .ds-overview-card__value { color:#1d3d5c; }
+.theme-preview.codeforces.light:target .sample-live-page .ds-codeforces-milestones {
+  background:linear-gradient(145deg,rgba(255,255,255,.97),rgba(240,246,253,.97));
+  border-color:#cbdbea;
+}
