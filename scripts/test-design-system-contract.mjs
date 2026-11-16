@@ -516,3 +516,13 @@ assert.ok(preview.includes("Semester 8"));
 assert.ok(preview.includes("MT203 · SEMESTER 3"));
 assert.match(previewStyles, /\.theme-preview\.metallurgy:target \.sample-live-page \.ds-semester-layout\s*\{\s*grid-template-columns:minmax\(250px,310px\)/);
 assert.match(previewStyles, /\.theme-preview\.metallurgy:target \.sample-live-page \.ds-overview-card\s*\{\s*display:flex/);
+
+
+// Competition page composition mirrors the live campaign panel, three metrics, four-item weekly checklist and subject section.
+for (const selector of [".ds-competition-dashboard", ".ds-competition-heading", ".ds-competition-subjects", ".ds-competition-roadmap-link", ".ds-overview-grid--three"]) {
+  assert.ok(components.includes(selector), `Missing Competition composition selector: ${selector}`);
+  assert.ok(preview.includes(selector.slice(1)), `Missing Competition composition fixture: ${selector}`);
+}
+assert.ok(preview.includes("Week 3 · Proof methods and first algorithms"));
+assert.ok(preview.includes("Logical reasoning"));
+assert.match(previewStyles, /\.theme-preview\.competition:target \.sample-live-page \.ds-competition-dashboard/);
