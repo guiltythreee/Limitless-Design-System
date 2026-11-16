@@ -469,7 +469,7 @@ body:has(.theme-preview:target) .theme-grid {
   flex-direction:column;
   justify-content:space-between;
   min-width:0;
-  min-height:calc(100vh - 64px);
+  min-height:calc(100vh - 62px);
   padding:22px 14px 25px;
   border-right:1px solid rgba(105,166,225,.19);
   background:rgba(5,14,26,.78);
@@ -1121,7 +1121,7 @@ body:has(.theme-preview.metallurgy.light:target)::after {
 }
 .theme-preview.metallurgy:target .sample-live-page .ds-semester-layout {
   width:min(1540px,100%);
-  min-height:calc(100vh - 62px);
+  min-height:calc(100vh - 64px);
   margin:0 auto;
   grid-template-columns:minmax(250px,310px) minmax(0,1fr);
   gap:0;
