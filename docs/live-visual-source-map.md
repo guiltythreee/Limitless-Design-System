@@ -80,3 +80,20 @@ These page files were captured and compared in the read-only production baseline
 | `metallurgy-source/app/semester-landing.css` | `60640c22ba1b62715a24eed66350d5c565ccd8ee` | Metallurgy semester sidebar, hero, summary and course-card visual rules |
 | `competition/index.html` | `a09dbd51fc92d3d07df1c635e199a7603c162586` | Competition campaign hero, overview metrics and weekly checklist composition |
 | `codeforces-red/index.html` | `87d43672ffe0f38e1252dc89650a966bd77695bd` | Codeforces account identity, rating dashboard, milestones and launch tiles |
+
+
+## Theme and background source revisions
+
+The preview references the live, root-relative production artwork assets rather than substituting generated imagery. These source revisions define the image paths, theme palette and overlay treatment used by the route adapters:
+
+| Source file | Production `main` blob SHA | Preview use |
+|---|---|---|
+| `hub-theme.css` | `c2bc5221992545a386a00adc7fb07865683fe290` | Home cathedral/sky-city artwork, landscape/portrait variants and light-mode veil |
+| `theme-backgrounds.css` | `6188f962da12ef928f70672bff47a370e079a3ae` | Shared Limitless dark/light desktop/mobile artwork used by workspace routes |
+| `metallurgy-source/app/globals.css` | `a04e345f7e366c3efbdf234f8ed2b1e37d80d5e5` | Metallurgy dark/light page gradients, shared artwork veil and grid overlay |
+| `probability-source/app/globals.css` | `0aa9402b923679cb62c5139e86f83152716da12f` | Probability page gradients, lesson background layer and theme veil |
+| `probability-source/app/backgrounds.ts` | `b5ba7b012662a80d9d233a045e82ff69a2e2c7b0` | Active lesson artwork IDs and dark/light desktop/mobile asset fallback rules |
+| `competition/competition-dashboard.css` | `20f249b68d4e2f912820e63bb51f926a9a191f5d` | Competition shared artwork overlay and workspace shell geometry |
+| `codeforces-red/codeforces-red.css` | `38269749f98415773759e6dbfa2f5ca298a02beb` | Codeforces shared artwork overlay and route-specific dark/light surfaces |
+
+The preview's image URLs point to the production static asset host. If those assets move, update this map and the preview adapters together.
