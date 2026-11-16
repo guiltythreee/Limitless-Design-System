@@ -1414,3 +1414,7 @@ body:has(.theme-preview.metallurgy.light:target)::after {
   background:linear-gradient(145deg,rgba(255,255,255,.97),rgba(240,246,253,.97));
   border-color:#cbdbea;
 }
+
+.theme-preview.codeforces.light {
+  --ds-app-topbar-shadow:0 8px 28px rgba(30,60,90,.08);
+}
