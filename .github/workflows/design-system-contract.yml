@@ -23,3 +23,22 @@ jobs:
           node-version: 22
       - name: Run design-system contract
         run: npm test
+
+      - name: Install Chromium for rendered preview checks
+        run: |
+          npx --yes playwright@1.56.1 install --with-deps chromium
+
+      - name: Capture desktop and mobile design-system previews
+        run: |
+          mkdir -p artifacts
+          npx --yes playwright@1.56.1 screenshot --browser chromium --viewport-size="1440,1000" --full-page "file://$GITHUB_WORKSPACE/preview/index.html" artifacts/design-system-desktop.png
+          npx --yes playwright@1.56.1 screenshot --browser chromium --viewport-size="390,844" --full-page "file://$GITHUB_WORKSPACE/preview/index.html" artifacts/design-system-mobile.png
+
+      - name: Upload rendered preview evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: design-system-preview-${{ github.sha }}
+          path: artifacts/
+          if-no-files-found: warn
+          retention-days: 14
