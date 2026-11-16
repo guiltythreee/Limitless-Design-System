@@ -253,3 +253,16 @@ Question content, difficulty, topic, elapsed time, current index, answer selecti
 | Codeforces linked account, rating metrics, milestones and workspace launchers | `.ds-account-panel`, `.ds-page-hero`, `.ds-overview-card`, `.ds-milestone-card`, `.ds-launch-card` | Linked handle, live API data, rating thresholds, rank calculation and navigation |
 
 The fixtures intentionally use sample values. No page data, application state or account integration is moved into the design-system package.
+
+## Application navigation shell mapping
+
+| Live pattern | Design-system primitive | Route-specific contract |
+|---|---|---|
+| Home 62px topbar, brand, global search and profile | `.ds-app-topbar`, `.ds-app-brand`, `.ds-app-search`, `.ds-app-profile` | 245px first grid column, 62px header, Home's shared artwork/theme engine |
+| Home navigation rail | `.ds-app-sidebar`, `.ds-app-sidebar-note` | 245px sticky rail; Home active-gradient and inset marker remain route-adapted |
+| Competition 62px header and workspace rail | `.ds-app-topbar`, `.ds-app-brand`, `.ds-app-profile`, `.ds-app-sidebar` | 245px fixed rail, campaign note and competition-specific active state |
+| Metallurgy navbar and semester navigation | `.ds-app-topbar`, `.ds-app-brand`; existing `.ds-semester-layout` / `.ds-semester-sidebar` | 64px navbar and 310px sticky semester rail; course and semester controls remain distinct |
+| Probability archive header and breadcrumb | `.ds-app-topbar`, `.ds-app-breadcrumb` | 66px archive header, serif brand, archive-specific background and breadcrumb spacing |
+| Codeforces header and navigation | `.ds-app-topbar`, `.ds-app-brand`, `.ds-app-profile` | 68px topbar, centered 1120px main region and Codeforces-specific navigation |
+
+The shell primitives are layout/presentation slots. The route fixtures now include source-mapped topbars and, where applicable, sidebars. Artwork, responsive navigation behavior, links, search, theme controls and application state are not implemented by the design-system package.
