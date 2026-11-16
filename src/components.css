@@ -1665,3 +1665,25 @@
   :where([data-limitless-design]) .ds-semester-title-symbol { width:46px; height:46px; font-size:1.35rem; }
   :where([data-limitless-design]) .ds-semester-summary { grid-template-columns:repeat(2,minmax(0,1fr)); }
 }
+
+
+:where([data-limitless-design]) .ds-app-layout {
+  display:grid;
+  grid-template-columns:minmax(0,var(--ds-app-sidebar-width,0px)) minmax(0,1fr);
+  min-height:calc(100vh - var(--ds-app-topbar-height,62px));
+}
+:where([data-limitless-design]) .ds-app-main {
+  min-width:0;
+  padding:var(--ds-app-main-padding,1.5rem);
+}
+:where([data-limitless-design]) .ds-app-layout--single {
+  grid-template-columns:minmax(0,1fr);
+}
+@media(max-width:760px) {
+  :where([data-limitless-design]) .ds-app-layout {
+    grid-template-columns:minmax(0,1fr);
+    grid-template-rows:auto minmax(0,1fr);
+    min-height:0;
+  }
+  :where([data-limitless-design]) .ds-app-main { padding:var(--ds-app-main-padding-mobile,1rem); }
+}
