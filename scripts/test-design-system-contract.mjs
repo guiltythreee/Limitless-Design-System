@@ -507,3 +507,12 @@ assert.match(preview, /STUDIES &amp; DISCIPLINES/);
 assert.match(preview, /Chapter completion/);
 assert.match(preview, /Not started/);
 assert.match(previewStyles, /\.theme-preview\.probability:target \.sample-live-page \.ds-probability-archive-hero/);
+
+
+// Metallurgy semester landing includes all six semester choices, the programme note and four semester courses.
+assert.ok(components.includes(".ds-semester-programme"));
+assert.ok(preview.includes("PROGRAMME STRUCTURE"));
+assert.ok(preview.includes("Semester 8"));
+assert.ok(preview.includes("MT203 · SEMESTER 3"));
+assert.match(previewStyles, /\.theme-preview\.metallurgy:target \.sample-live-page \.ds-semester-layout\s*\{\s*grid-template-columns:minmax\(250px,310px\)/);
+assert.match(previewStyles, /\.theme-preview\.metallurgy:target \.sample-live-page \.ds-overview-card\s*\{\s*display:flex/);
