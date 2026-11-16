@@ -579,5 +579,5 @@ for (const token of [
 }
 for (const section of ["home", "competition", "metallurgy", "probability", "codeforces"]) {
   assert.ok(tokens.includes(`[data-limitless-design="${section}"]`), `Missing ${section} shell token adapter`);
-  assert.ok(tokens.includes(`[data-limitless-design="${section}"]`), `Missing ${section} shell token adapter`);
+  assert.ok(tokens.includes(`html[data-theme="light"] [data-limitless-design="${section}"]`), `Missing ${section} light shell token adapter`);
 }
