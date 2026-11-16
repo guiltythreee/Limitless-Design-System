@@ -469,7 +469,7 @@ body:has(.theme-preview:target) .theme-grid {
   flex-direction:column;
   justify-content:space-between;
   min-width:0;
-  min-height:calc(100vh - 62px);
+  min-height:calc(100vh - 64px);
   padding:22px 14px 25px;
   border-right:1px solid rgba(105,166,225,.19);
   background:rgba(5,14,26,.78);
@@ -508,7 +508,7 @@ body:has(.theme-preview:target) .theme-grid {
 }
 .theme-preview.home:target .sample-live-page { padding:26px clamp(18px,2.3vw,38px) 28px; }
 .theme-preview.competition:target .sample-live-page { padding:28px 25px 65px; }
-.theme-preview.metallurgy:target .ds-app-topbar { height:62px; }
+.theme-preview.metallurgy:target .ds-app-topbar { height:64px; }
 .theme-preview.metallurgy:target .sample-live-page { grid-row:2; padding:28px 3vw 55px; }
 .theme-preview.probability:target {
   grid-template-rows:66px auto 1fr;
@@ -698,12 +698,12 @@ body:has(.theme-preview:target) .theme-grid {
 }
 .theme-preview.metallurgy:target .sample-live-page .ds-semester-sidebar {
   position:sticky;
-  top:62px;
+  top:64px;
   align-self:start;
   display:flex;
   flex-direction:column;
   gap:.45rem;
-  height:calc(100vh - 62px);
+  height:calc(100vh - 64px);
   overflow:auto;
   padding:1.5rem 1.15rem;
   border:0;
@@ -1127,8 +1127,8 @@ body:has(.theme-preview.metallurgy.light:target)::after {
   gap:0;
 }
 .theme-preview.metallurgy:target .sample-live-page .ds-semester-sidebar {
-  top:62px;
-  height:calc(100vh - 62px);
+  top:64px;
+  height:calc(100vh - 64px);
   padding:1.5rem 1.15rem;
   border-right:1px solid var(--ds-color-border);
   border-radius:0;
