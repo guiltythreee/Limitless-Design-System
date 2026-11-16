@@ -941,3 +941,67 @@ body:has(.theme-preview:target) .theme-grid {
   }
   .theme-preview.codeforces:target .sample-live-page .ds-launch-card { min-height:13rem; }
 }
+
+
+/* Reuse the live theme artwork assets for the Home, Competition and Codeforces route captures. */
+html:has(.theme-preview:target),
+body:has(.theme-preview:target) {
+  background:transparent;
+}
+body:has(.theme-preview.home:target)::before,
+body:has(.theme-preview.competition:target)::before,
+body:has(.theme-preview.codeforces:target)::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-20;
+  pointer-events:none;
+  background-image:url("https://limitless.beyondthelimits.workers.dev/cathedral-hd.webp");
+  background-position:center center;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+body:has(.theme-preview.home:target)::after,
+body:has(.theme-preview.competition:target)::after,
+body:has(.theme-preview.codeforces:target)::after {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-19;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(3,9,18,.48),rgba(3,9,18,.42) 55%,rgba(3,9,18,.72));
+}
+.theme-preview.home:target,
+.theme-preview.competition:target,
+.theme-preview.codeforces:target {
+  background:transparent;
+}
+.theme-preview.home:target .sample-live-page,
+.theme-preview.competition:target .sample-live-page,
+.theme-preview.codeforces:target .sample-live-page {
+  background:transparent;
+}
+body:has(.theme-preview.light:target.home)::before,
+body:has(.theme-preview.home.light:target)::before,
+body:has(.theme-preview.competition.light:target)::before,
+body:has(.theme-preview.codeforces.light:target)::before {
+  background-image:url("https://limitless.beyondthelimits.workers.dev/themes/light/landscape.webp");
+}
+body:has(.theme-preview.light:target.home)::after,
+body:has(.theme-preview.home.light:target)::after,
+body:has(.theme-preview.competition.light:target)::after,
+body:has(.theme-preview.codeforces.light:target)::after {
+  background:linear-gradient(180deg,rgba(255,250,235,.1) 0%,rgba(255,250,235,0) 40%,rgba(40,30,60,.16) 100%);
+}
+@media(max-aspect-ratio:4/5) {
+  body:has(.theme-preview.home:target)::before,
+  body:has(.theme-preview.competition:target)::before,
+  body:has(.theme-preview.codeforces:target)::before {
+    background-image:url("https://limitless.beyondthelimits.workers.dev/themes/dark/portrait.webp");
+  }
+  body:has(.theme-preview.home.light:target)::before,
+  body:has(.theme-preview.competition.light:target)::before,
+  body:has(.theme-preview.codeforces.light:target)::before {
+    background-image:url("https://limitless.beyondthelimits.workers.dev/themes/light/portrait.webp");
+  }
+}
