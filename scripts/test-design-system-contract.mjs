@@ -374,3 +374,7 @@ assert.equal(new Set(previewIds).size, previewIds.length, "Preview element IDs m
 
 // Light Home and Competition fixtures must not place dark text on the dark page canvas.
 assert.ok(previewStyles.includes(".theme-preview.home.light,\n.theme-preview.competition.light {\n  --ds-color-canvas: #f0f5fa;"));
+
+
+// The isolated Codeforces light fixture mirrors its live html[data-theme="light"] stage tokens.
+assert.ok(previewStyles.includes(".theme-preview.codeforces.light {\n  --ds-stage-option-color: #294967;\n  --ds-stage-active-background: #e1effc;\n  --ds-stage-active-border: #9bbfdf;\n  --ds-stage-muted: #607991;"));
