@@ -378,3 +378,11 @@ assert.ok(previewStyles.includes(".theme-preview.home.light,\n.theme-preview.com
 
 // The isolated Codeforces light fixture mirrors its live html[data-theme="light"] stage tokens.
 assert.ok(previewStyles.includes(".theme-preview.codeforces.light {\n  --ds-stage-option-color: #294967;\n  --ds-stage-active-background: #e1effc;\n  --ds-stage-active-border: #9bbfdf;\n  --ds-stage-muted: #607991;"));
+
+
+// Each theme article has a stable anchor for isolated mobile screenshot capture.
+for (const section of previewSections) {
+  for (const theme of ["dark", "light"]) {
+    assert.ok(preview.includes(`id="${section}-${theme}-preview"`), `Missing screenshot anchor for ${section} ${theme}`);
+  }
+}
