@@ -51,7 +51,7 @@ The current branch contains more than the initial shared primitives. The impleme
 - **Foundations:** scoped design tokens; Probability, Metallurgy, Home, Competition and Codeforces adapters; app topbars, brands, search/profile slots, sidebars and breadcrumbs; dashboard promotion banners; panels, cards, navigation cards, buttons, options, fields, chips, badges, tabs, segmented controls, stage selectors, metric cards and progress indicators.
 - **Metallurgy:** chapter rows; course-browser toolbar, search, filters and empty state; archive sidebar navigation and progress; course heading and summary metrics.
 - **Shared study utilities:** vertical and horizontal utility navigation; panel shell, controls/actions, toolbar, metrics, visual/legend slots, progress, weekly grid, history/question/item rows, empty state and goal form variants.
-- **Probability:** practice-session question markers, timer, action bar, analysis dock, goal milestones and weekly status; native checkbox visual; test completion summary, result rows and test-history table; in-progress player composition.
+- **Probability:** archive hero, emblem, five-stat study-progress panel and lower two-column archive layout; practice-session question markers, timer, action bar, analysis dock, goal milestones and weekly status; native checkbox visual; test completion summary, result rows and test-history table; in-progress player composition.
 - **Audit boundaries:** Probability chart SVGs, hierarchical test-scope selection, mistake classification, answer grading, timers, navigation, persistence, dashboard calculations and all application state remain owned by the live application.
 
 ## Verification status and remaining fidelity work
