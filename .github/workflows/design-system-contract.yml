@@ -40,6 +40,30 @@ jobs:
             done
           done
 
+      - name: Capture unauthenticated live application baselines (best effort)
+        continue-on-error: true
+        run: |
+          mkdir -p artifacts/live
+          status_file="artifacts/live-baseline-status.txt"
+          : > "$status_file"
+          while IFS="|" read -r name route; do
+            for viewport in "desktop|1440,1000" "mobile|390,844"; do
+              IFS="|" read -r size dimensions <<< "$viewport"
+              output="artifacts/live/${name}-${size}.png"
+              if npx --yes playwright@1.56.1 screenshot --browser chromium --viewport-size="$dimensions" --timeout=20000 --wait-for-timeout=1000 "https://limitless.beyondthelimits.workers.dev${route}" "$output"; then
+                echo "${name} ${size}: captured" | tee -a "$status_file"
+              else
+                echo "${name} ${size}: unavailable or blocked" | tee -a "$status_file"
+              fi
+            done
+          done <<'ROUTES'
+          home|/
+          probability|/probability/studies/
+          metallurgy|/metallurgy/
+          competition|/competition/
+          codeforces|/codeforces-red/
+          ROUTES
+
       - name: Upload rendered preview evidence
         if: always()
         uses: actions/upload-artifact@v4
