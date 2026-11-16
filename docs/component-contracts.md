@@ -239,3 +239,10 @@ These primitives define a portable API and baseline behavior; they are not claim
 
 - `.ds-promo-card` is the wide, horizontal destination banner used for the Home Competition and Codeforces Red promotions. It is intentionally separate from compact `.ds-shortcut-card` and large `.ds-launch-card` patterns.
 - The icon, eyebrow, title and description are independent slots. Route adapters provide each promotion's accent, border and surface; the application owns destination and content.
+
+
+## Probability archive landing composition
+
+- The archive landing page uses a large serif Probability hero, blue-toned circular emblem, four route actions and compact programme tags.
+- The separate study-progress panel pairs chapter completion with five summary metrics; the lower content is a two-column continuation/pathways layout.
+- The fixture uses the live page's structure and labels. Counts are static sample values; progress, course navigation, pathways, browser storage and actions remain Probability application-owned.
