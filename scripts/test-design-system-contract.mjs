@@ -423,3 +423,9 @@ for (const [path, sha] of [["index.html", "1d4f9ff1a3921b9775c00db1b45c3ddbc24c9
   assert.ok(sourceMap.includes(path), `Missing top-level source mapping: ${path}`);
   assert.ok(sourceMap.includes(sha), `Missing top-level source revision: ${path}`);
 }
+
+
+// Live-route section screenshot anchors must not be delayed by smooth scrolling.
+assert.ok(previewStyles.includes("html { scroll-behavior:auto !important; }"));
+assert.ok(previewStyles.includes(".theme-preview.competition .ds-page-hero__eyebrow + .ds-page-hero__eyebrow { display:block; margin-top:.55rem; }"));
+assert.ok(previewStyles.includes(".theme-preview.codeforces.light .ds-milestone-card__copy strong { color:#1c3d5c; }"));
