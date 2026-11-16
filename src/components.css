@@ -1065,3 +1065,128 @@
   :where([data-limitless-design]) .ds-page-hero { align-items:flex-start; }
   :where([data-limitless-design]) .ds-page-hero__emblem { display:none; }
 }
+
+
+/* Application navigation shell primitives. Route adapters supply the actual theme and geometry. */
+:where([data-limitless-design]) .ds-app-topbar {
+  position:relative;
+  z-index:20;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:var(--ds-app-topbar-gap,1rem);
+  box-sizing:border-box;
+  min-width:0;
+  min-height:var(--ds-app-topbar-height,3.875rem);
+  padding:var(--ds-app-topbar-padding,0 1.5rem);
+  border-bottom:1px solid var(--ds-app-shell-border,var(--ds-color-border));
+  background:var(--ds-app-topbar-background,var(--ds-color-surface));
+  color:var(--ds-color-text);
+  backdrop-filter:var(--ds-app-topbar-backdrop,none);
+}
+:where([data-limitless-design]) .ds-app-brand {
+  display:flex;
+  align-items:center;
+  gap:var(--ds-app-brand-gap,.55rem);
+  min-width:0;
+  color:var(--ds-app-brand-color,var(--ds-color-heading));
+  font:var(--ds-app-brand-font,700 .95rem var(--ds-font-sans));
+  letter-spacing:var(--ds-app-brand-tracking,.12em);
+  text-decoration:none;
+  white-space:nowrap;
+}
+:where([data-limitless-design]) .ds-app-search {
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  box-sizing:border-box;
+  width:min(100%,var(--ds-app-search-width,35rem));
+  min-width:0;
+  min-height:2.375rem;
+  padding:0 .8rem;
+  border:1px solid var(--ds-app-shell-border,var(--ds-color-border));
+  border-radius:var(--ds-app-search-radius,999px);
+  background:var(--ds-app-search-background,var(--ds-color-surface-raised));
+  color:var(--ds-color-muted);
+  font-size:.75rem;
+}
+:where([data-limitless-design]) .ds-app-search kbd {
+  margin-left:auto;
+  padding:.18rem .38rem;
+  border-radius:.3rem;
+  background:var(--ds-app-search-kbd-background,var(--ds-color-surface));
+  color:var(--ds-color-muted);
+  font: .625rem var(--ds-font-sans);
+}
+:where([data-limitless-design]) .ds-app-profile {
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:.45rem;
+  min-width:0;
+  padding:.4rem .7rem;
+  border:1px solid var(--ds-app-shell-border,var(--ds-color-border));
+  border-radius:var(--ds-app-profile-radius,999px);
+  background:var(--ds-app-profile-background,var(--ds-color-surface-raised));
+  color:var(--ds-color-text);
+  font-size:.7rem;
+  white-space:nowrap;
+}
+:where([data-limitless-design]) .ds-app-sidebar {
+  display:flex;
+  flex-direction:column;
+  justify-content:space-between;
+  box-sizing:border-box;
+  min-width:0;
+  padding:var(--ds-app-sidebar-padding,1.25rem .8rem);
+  border-right:1px solid var(--ds-app-shell-border,var(--ds-color-border));
+  background:var(--ds-app-sidebar-background,var(--ds-color-surface));
+  color:var(--ds-color-text);
+  backdrop-filter:var(--ds-app-sidebar-backdrop,none);
+}
+:where([data-limitless-design]) .ds-app-sidebar nav {
+  display:grid;
+  gap:var(--ds-app-sidebar-gap,.45rem);
+}
+:where([data-limitless-design]) .ds-app-sidebar nav a {
+  display:flex;
+  align-items:center;
+  gap:.75rem;
+  min-width:0;
+  padding:.7rem .8rem;
+  border-radius:var(--ds-app-sidebar-link-radius,.6rem);
+  color:var(--ds-app-sidebar-link-color,var(--ds-color-muted));
+  font:var(--ds-app-sidebar-link-font,inherit);
+  text-decoration:none;
+}
+:where([data-limitless-design]) .ds-app-sidebar nav a.is-active,
+:where([data-limitless-design]) .ds-app-sidebar nav a[aria-current="page"] {
+  background:var(--ds-app-sidebar-active-background,var(--ds-color-surface-raised));
+  color:var(--ds-app-sidebar-active-color,var(--ds-color-heading));
+  box-shadow:var(--ds-app-sidebar-active-shadow,none);
+}
+:where([data-limitless-design]) .ds-app-sidebar-note {
+  padding:1rem .8rem 0;
+  border-top:1px solid var(--ds-app-shell-border,var(--ds-color-border));
+  color:var(--ds-color-muted);
+}
+:where([data-limitless-design]) .ds-app-breadcrumb {
+  min-width:0;
+  color:var(--ds-app-breadcrumb-color,var(--ds-color-muted));
+  font:var(--ds-app-breadcrumb-font,.625rem var(--ds-font-sans));
+  letter-spacing:var(--ds-app-breadcrumb-tracking,.08em);
+}
+:where([data-limitless-design]) .ds-app-topbar a:focus-visible,
+:where([data-limitless-design]) .ds-app-sidebar a:focus-visible {
+  outline:2px solid var(--ds-color-focus);
+  outline-offset:3px;
+}
+@media(max-width:760px) {
+  :where([data-limitless-design]) .ds-app-topbar {
+    gap:.5rem;
+    padding-inline:1rem;
+  }
+  :where([data-limitless-design]) .ds-app-search {
+    display:none;
+  }
+}
