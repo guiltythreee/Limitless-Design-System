@@ -349,20 +349,24 @@ assert.ok(components.includes("@media(max-width:760px){:where([data-limitless-de
 assert.ok(components.includes(".ds-practice-actionbar__secondary{min-height:44px;padding-inline:.8rem}"));
 
 
-// Probability dark/light fixtures must expose the same component inventory.
-const probabilityDarkStart = preview.indexOf('<article class="theme-preview probability dark"');
-const probabilityLightStart = preview.indexOf('<article class="theme-preview probability light"');
-const metallurgyStart = preview.indexOf('<article class="theme-preview metallurgy dark"');
-assert.ok(probabilityDarkStart >= 0 && probabilityLightStart > probabilityDarkStart && metallurgyStart > probabilityLightStart);
-const probabilityDarkEnd = preview.lastIndexOf("</article>", probabilityLightStart);
-const probabilityLightEnd = preview.lastIndexOf("</article>", metallurgyStart);
-const classesIn = (markup) => [...new Set([...markup.matchAll(/class="([^"]+)"/g)].flatMap((match) => match[1].split(/\s+/)))].sort();
-const darkProbabilityClasses = classesIn(preview.slice(probabilityDarkStart, probabilityDarkEnd + "</article>".length)).filter((name) => name !== "dark");
-const lightProbabilityClasses = classesIn(preview.slice(probabilityLightStart, probabilityLightEnd + "</article>".length)).filter((name) => name !== "light");
-assert.deepEqual(lightProbabilityClasses, darkProbabilityClasses,
-  "Probability dark and light previews must show the same component inventory");
-
-assert.ok(preview.includes('data-preview-theme="light"'), "Probability light preview must use its light theme adapter");
-assert.ok(preview.includes('<p class="preview-label">Light theme</p>'), "Probability light preview label must identify the light theme");
+// Each section's dark/light fixtures must expose the same component inventory.
+const previewSections = ["probability", "metallurgy", "home", "competition", "codeforces"];
+const previewClasses = (markup) => [...new Set([...markup.matchAll(/class="([^"]+)"/g)].flatMap((match) => match[1].split(/\s+/)))].sort();
+for (const section of previewSections) {
+  const darkStart = preview.indexOf(`<article class="theme-preview ${section} dark"`);
+  const lightStart = preview.indexOf(`<article class="theme-preview ${section} light"`);
+  const nextSection = previewSections[previewSections.indexOf(section) + 1];
+  const nextStart = nextSection
+    ? preview.indexOf(`<article class="theme-preview ${nextSection} dark"`, lightStart)
+    : preview.length;
+  assert.ok(darkStart >= 0 && lightStart > darkStart && nextStart > lightStart, `Missing dark/light preview pair: ${section}`);
+  const darkEnd = preview.lastIndexOf("</article>", lightStart);
+  const lightEnd = preview.lastIndexOf("</article>", nextStart);
+  const darkClasses = previewClasses(preview.slice(darkStart, darkEnd + "</article>".length)).filter((name) => name !== "dark");
+  const lightClasses = previewClasses(preview.slice(lightStart, lightEnd + "</article>".length)).filter((name) => name !== "light");
+  assert.deepEqual(lightClasses, darkClasses, `${section} dark and light previews must show the same component inventory`);
+}
+assert.ok(preview.includes('data-preview-theme="light"'), "Light previews must use light theme adapters");
+assert.ok(preview.includes('<p class="preview-label">Light theme</p>'), "Light previews must identify their theme");
 const previewIds = [...preview.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
 assert.equal(new Set(previewIds).size, previewIds.length, "Preview element IDs must be unique across theme fixtures");
