@@ -439,3 +439,8 @@ for (const section of previewSections) {
 
 // Probability theme grid and group must close before Metallurgy starts; groups stay siblings under main.
 assert.match(preview, /<\/article>\s*<\/div>\s*<\/section>\s*<section class="theme-group" id="metallurgy"/);
+
+
+// Compact composition headings and Codeforces light badges retain readable separation/contrast.
+assert.ok(previewStyles.includes(".sample-live-page .ds-checklist-panel__heading .ds-page-hero__eyebrow,\n.sample-live-page .ds-study-utility-panel__header .ds-page-hero__eyebrow"));
+assert.ok(previewStyles.includes(".theme-preview.codeforces.light .ds-badge--accent {\n  color:#276da9;\n  border-color:#9dbfdf;"));
