@@ -59,3 +59,6 @@ The current branch contains more than the initial shared primitives. The impleme
 The contract suite checks token/adapter coverage, component selectors, preview fixtures, source mappings, accessibility-related CSS constraints and documentation provenance. GitHub Actions is the authoritative recorded test result for each branch commit.
 
 The preview is a static visual fixture across five section adapters in dark and light themes. It is not the live application and does not establish pixel parity. The remaining visual-validation milestone is a side-by-side browser comparison against the live application using matching content, state, theme and viewport. Production integration remains a separate review and is not part of this repository's current scope.
+
+
+The dark/light fixtures now expose identical component-class inventories for all five sections; the contract also checks unique element IDs and explicit light-theme adapters. CI captures full-page Chromium renders at 1440px desktop and 390px mobile widths and uploads them as a 14-day workflow artifact. These renders verify that the static fixture loads and lays out at both target widths; they are not a live-site screenshot comparison or a pixel-diff test.
