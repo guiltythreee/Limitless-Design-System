@@ -216,3 +216,8 @@ The first-pass source comparison read the initial `.actionbar .btn-main/.btn-sid
 ## Rendered preview inspection checkpoint
 
 The static design-system fixture was rendered in Chromium at 1440px desktop and 390px mobile widths. The first rendered inspection exposed uneven component coverage between dark and light themes in Probability, Metallurgy and Home. Those theme pairs now share the same component-class inventories; unique IDs and light-theme adapter presence are contract-tested. The screenshot workflow stores both viewport renders as a 14-day Actions artifact. This confirms the fixture's rendered layout only; production side-by-side comparison remains outstanding.
+
+
+## Follow-up rendered contrast correction — Home and Competition
+
+The first section-level Chromium render showed that Home and Competition light adapters correctly supplied dark foreground tokens but their preview canvas remained transparent, exposing the dark page background. The fixture now sets a light canvas only on `.theme-preview.home.light` and `.theme-preview.competition.light`. A contract assertion protects this preview-only correction; production tokens and application styles are unchanged.
