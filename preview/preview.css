@@ -1256,3 +1256,77 @@ body:has(.theme-preview.metallurgy.light:target)::after {
   --ds-app-shell-border:rgba(59,112,159,.22);
   --ds-app-brand-color:#1c3d5c;
 }
+
+
+/* Home and Competition share the reusable topbar + app-layout + sidebar/main shell. */
+.theme-preview.home:target,
+.theme-preview.competition:target {
+  grid-template-columns:minmax(0,1fr);
+  grid-template-rows:var(--ds-app-topbar-height,62px) minmax(0,1fr);
+}
+.theme-preview.home:target .ds-app-layout,
+.theme-preview.competition:target .ds-app-layout {
+  grid-row:2;
+  grid-column:1;
+  grid-template-columns:var(--ds-app-sidebar-width,245px) minmax(0,1fr);
+  min-height:calc(100vh - var(--ds-app-topbar-height,62px));
+}
+.theme-preview.home:target .ds-app-sidebar,
+.theme-preview.competition:target .ds-app-sidebar {
+  grid-row:1;
+  grid-column:1;
+  min-height:calc(100vh - var(--ds-app-topbar-height,62px));
+}
+.theme-preview.home:target .ds-app-main,
+.theme-preview.competition:target .ds-app-main {
+  grid-row:1;
+  grid-column:2;
+  min-width:0;
+  padding:var(--ds-app-main-padding,1.5rem);
+}
+.theme-preview.home:target .sample-live-page,
+.theme-preview.competition:target .sample-live-page {
+  grid-row:auto;
+  grid-column:auto;
+  margin:0;
+  padding:0;
+}
+@media(max-width:760px) {
+  .theme-preview.home:target .ds-app-layout,
+  .theme-preview.competition:target .ds-app-layout {
+    grid-template-columns:minmax(0,1fr);
+    grid-template-rows:auto minmax(0,1fr);
+    min-height:0;
+  }
+  .theme-preview.home:target .ds-app-sidebar,
+  .theme-preview.competition:target .ds-app-sidebar {
+    grid-row:1;
+    grid-column:1;
+    min-height:0;
+    height:auto;
+    padding:8px 12px;
+    border-right:0;
+    border-bottom:1px solid var(--ds-app-shell-border);
+  }
+  .theme-preview.home:target .ds-app-main,
+  .theme-preview.competition:target .ds-app-main {
+    grid-row:2;
+    grid-column:1;
+    padding:var(--ds-app-main-padding-mobile,16px);
+  }
+  .theme-preview.home:target .ds-app-sidebar nav,
+  .theme-preview.competition:target .ds-app-sidebar nav {
+    display:flex;
+    overflow-x:auto;
+    gap:5px;
+  }
+  .theme-preview.home:target .ds-app-sidebar nav a,
+  .theme-preview.competition:target .ds-app-sidebar nav a {
+    flex:none;
+    min-height:36px;
+    padding:8px;
+    font-size:11px;
+  }
+  .theme-preview.home:target .ds-app-sidebar-note,
+  .theme-preview.competition:target .ds-app-sidebar-note { display:none; }
+}
