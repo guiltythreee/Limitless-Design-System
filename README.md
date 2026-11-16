@@ -66,3 +66,16 @@ The dark/light fixtures now expose identical component-class inventories for all
 The Home and Competition light fixtures explicitly use a light preview canvas; this is a fixture-only backdrop for readable inspection and does not change the production theme adapters.
 
 The Codeforces light preview mirrors the production `html[data-theme="light"]` stage-selector values locally because the isolated fixture does not change the document-level theme attribute.
+
+
+## Live page composition coverage
+
+The preview now also contains source-mapped page-level compositions for all five live routes:
+
+- **Home:** welcome hero, module shortcuts and continue-learning cards.
+- **Probability:** archive hero, personal record panel and archive metrics.
+- **Metallurgy:** semester navigation, programme summary and semester course cards.
+- **Competition:** campaign hero, mastery/week/time metrics and weekly checklist.
+- **Codeforces:** linked-account panel, rating metrics, milestones and workspace launch cards.
+
+These are presentation contracts built from reusable primitives, not replacements for live page structure, application data, navigation or behavior. The source map pins each page entry point and the Metallurgy semester stylesheet.
