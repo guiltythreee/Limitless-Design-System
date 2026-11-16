@@ -240,3 +240,16 @@ The Probability test setup uses a hierarchical native-checkbox picker: a chapter
 The static preview composes the existing question-status rail, timer, question metadata, bookmark affordance, prompt, selectable options and action-bar slots into one player screen. This is a composition of existing visual contracts, not a new stateful component.
 
 Question content, difficulty, topic, elapsed time, current index, answer selection, bookmark state, navigation, grading, persistence and keyboard handling remain application/shared learning-player responsibilities. The fixture is shown in both Probability themes; its compact layout is a visual reference only.
+
+
+## Top-level page composition mapping
+
+| Live page pattern | Design-system primitives | Application-owned boundary |
+|---|---|---|
+| Home welcome banner, featured modules and continue-learning cards | `.ds-page-hero`, `.ds-shortcut-card`, `.ds-launch-card` | Global navigation, destinations, artwork, progress and module state |
+| Probability archive hero, personal record and study summary | `.ds-page-hero`, `.ds-overview-card`, `.ds-progress` | Lesson completion, attempts, accuracy, streak and browser storage |
+| Metallurgy semester navigation, programme summary and course cards | `.ds-semester-layout`, `.ds-semester-option`, `.ds-overview-card`, `.ds-course-card` | Semester selection, manifest counts, course routing and completion data |
+| Competition campaign heading, mastery metrics and weekly task list | `.ds-page-hero`, `.ds-overview-card`, `.ds-checklist-panel`, `.ds-checklist__item` | Campaign schedule, topic mastery, task completion and roadmap calculations |
+| Codeforces linked account, rating metrics, milestones and workspace launchers | `.ds-account-panel`, `.ds-page-hero`, `.ds-overview-card`, `.ds-milestone-card`, `.ds-launch-card` | Linked handle, live API data, rating thresholds, rank calculation and navigation |
+
+The fixtures intentionally use sample values. No page data, application state or account integration is moved into the design-system package.
