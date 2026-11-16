@@ -259,3 +259,10 @@ These primitives define a portable API and baseline behavior; they are not claim
 
 - The dashboard fixture groups the campaign heading, three metric cards and weekly checklist inside the source page's bordered main panel; the five-subject mastery section follows below.
 - The campaign panel, accent borders, metric hierarchy, checklist row dividers and workspace navigation have separate presentation slots. The page's campaign dates, mastery values, checklist state, subject calculations and roadmap routing remain Competition-owned.
+
+
+## Codeforces dashboard page composition
+
+- The route fixture includes the topbar and back link, full-width linked-account strip, two-column rating/milestones region and two large workspace launch cards.
+- The unauthenticated live baseline currently displays a milestone-loading state; the milestone-card family remains separately represented as a component state in the gallery.
+- Linked handles, API loading, rating values, rank calculations, milestone completion, refresh action and launch destinations remain Codeforces application-owned.
