@@ -1530,3 +1530,18 @@
   :where([data-limitless-design]) .ds-competition-dashboard { padding:1rem; }
   :where([data-limitless-design]) .ds-competition-subjects { grid-template-columns:1fr; }
 }
+
+
+:where([data-limitless-design]) .ds-app-backlink {
+  display:inline-block;
+  width:max-content;
+  max-width:100%;
+  color:var(--ds-app-breadcrumb-color,var(--ds-color-muted));
+  font-size:.75rem;
+  text-decoration:none;
+}
+:where([data-limitless-design]) .ds-app-backlink:hover { color:var(--ds-color-accent); }
+:where([data-limitless-design]) .ds-app-backlink:focus-visible {
+  outline:2px solid var(--ds-color-focus);
+  outline-offset:3px;
+}
