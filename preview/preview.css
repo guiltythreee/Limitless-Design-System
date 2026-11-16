@@ -206,3 +206,12 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -.04em; }
 .theme-preview.competition.light {
   --ds-color-canvas: #f0f5fa;
 }
+
+
+/* Mirror the live html[data-theme="light"] Codeforces stage-selector overrides inside the isolated fixture. */
+.theme-preview.codeforces.light {
+  --ds-stage-option-color: #294967;
+  --ds-stage-active-background: #e1effc;
+  --ds-stage-active-border: #9bbfdf;
+  --ds-stage-muted: #607991;
+}
