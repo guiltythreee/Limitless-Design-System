@@ -41,7 +41,7 @@ Open `preview/index.html` on the development branch to inspect the shared primit
 
 ## Live-site visual fidelity
 
-The current Limitless CSS is authoritative. See `docs/live-visual-source-map.md` for the exact source files and theme variables used by each adapter. See `docs/live-component-audit.md` for the first source-level comparison of live controls against the proposed primitives, including the known non-equivalences and migration blockers. See `docs/component-mapping-spec.md` for the proposed reusable pattern inventory and its semantic/adoption boundaries. The preview is a component-contract fixture, not a pixel-perfect screenshot claim. Existing app styles and artwork must remain unchanged until a separate, source-backed integration review.
+The current Limitless CSS is authoritative. See `docs/live-visual-source-map.md` for the exact source files and theme variables used by each adapter. See `docs/live-component-audit.md` for the source-level comparison of live controls against the proposed primitives. See `docs/component-mapping-spec.md` for the reusable pattern inventory and adoption boundaries. See `docs/visual-parity-gap-audit.md` for the current route-by-route visual differences and the acceptance criteria for declaring parity. The preview is a component-contract fixture, not a pixel-perfect screenshot claim. Existing app styles and artwork must remain unchanged until a separate, source-backed integration review.
 
 
 ## Implemented visual inventory
