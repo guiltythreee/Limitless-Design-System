@@ -1005,3 +1005,32 @@ body:has(.theme-preview.codeforces.light:target)::after {
     background-image:url("https://limitless.beyondthelimits.workers.dev/themes/light/portrait.webp");
   }
 }
+
+
+/* Probability uses its active lesson artwork layer over the archive's own page gradient. */
+body:has(.theme-preview.probability:target)::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-20;
+  pointer-events:none;
+  background-image:url("https://limitless.beyondthelimits.workers.dev/probability/backgrounds/sample-space.webp");
+  background-position:center 65%;
+  background-size:cover;
+  background-repeat:no-repeat;
+}
+body:has(.theme-preview.probability:target)::after {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-19;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(8,7,13,.28),rgba(8,7,13,.12) 40%,rgba(8,7,13,.34) 100%);
+}
+.theme-preview.probability:target,
+.theme-preview.probability:target .sample-live-page { background:transparent; }
+@media(max-width:767px) {
+  body:has(.theme-preview.probability:target)::before {
+    background-image:url("https://limitless.beyondthelimits.workers.dev/probability/backgrounds/sample-space-phone.webp");
+  }
+}
