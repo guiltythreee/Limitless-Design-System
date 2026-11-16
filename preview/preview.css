@@ -1089,3 +1089,26 @@ body:has(.theme-preview.probability.light:target) {
     background-image:url("https://limitless.beyondthelimits.workers.dev/themes/shared/limitless-light-mobile.webp");
   }
 }
+
+
+body:has(.theme-preview.metallurgy:target)::before {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-3;
+  pointer-events:none;
+  background-size:cover;
+  background-position:center;
+  background-repeat:no-repeat;
+}
+body:has(.theme-preview.metallurgy:target)::after {
+  content:"";
+  position:fixed;
+  inset:0;
+  z-index:-2;
+  pointer-events:none;
+  background:linear-gradient(180deg,rgba(13,17,23,.58),rgba(13,17,23,.88));
+}
+body:has(.theme-preview.metallurgy.light:target)::after {
+  background:linear-gradient(180deg,rgba(243,246,250,.48),rgba(243,246,250,.82));
+}
