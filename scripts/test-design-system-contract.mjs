@@ -400,7 +400,7 @@ for (const selector of pageCompositionSelectors) {
 }
 const pageCompositionFixtures = [
   ["Home", ["ds-shortcut-grid", "ds-page-hero", "ds-launch-grid"]],
-  ["Probability", ["sample-record-panel", "ds-page-hero", "ds-overview-grid--four"]],
+  ["Probability", ["ds-study-progress-panel", "ds-probability-archive-hero", "ds-overview-grid--five"]],
   ["Metallurgy", ["ds-semester-layout", "ds-course-card-grid", "ds-semester-sidebar"]],
   ["Competition", ["ds-checklist-panel", "ds-checklist__item", "ds-overview-card"]],
   ["Codeforces", ["ds-account-panel", "ds-milestone-grid", "ds-launch-grid"]],
