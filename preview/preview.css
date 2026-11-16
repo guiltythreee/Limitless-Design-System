@@ -287,3 +287,15 @@ html { scroll-behavior:auto !important; }
 .theme-preview.codeforces.light .ds-milestone-card__step { background:#e7f1fa; color:#28699c; }
 .theme-preview.codeforces.light .ds-milestone-card__copy strong { color:#1c3d5c; }
 .theme-preview.codeforces.light .ds-milestone-card__copy small { color:#627d96; }
+
+
+/* Separate compact section labels from their adjacent panel headings. */
+.sample-live-page .ds-checklist-panel__heading .ds-page-hero__eyebrow,
+.sample-live-page .ds-study-utility-panel__header .ds-page-hero__eyebrow {
+  display:block;
+  margin-bottom:.35rem;
+}
+.theme-preview.codeforces.light .ds-badge--accent {
+  color:#276da9;
+  border-color:#9dbfdf;
+}
