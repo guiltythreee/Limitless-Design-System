@@ -450,3 +450,13 @@ assert.ok(previewStyles.includes(".theme-preview.codeforces.light .ds-badge--acc
 assert.match(previewStyles, /\.theme-grid:has\(\.theme-preview:target\)\s*\{\s*grid-template-columns:minmax\(0,1fr\)/);
 assert.match(previewStyles, /\.theme-grid:has\(\.theme-preview:target\) \.theme-preview:not\(:target\)\s*\{\s*display:none/);
 assert.match(previewStyles, /\.theme-preview:target \.sample-live-page \.ds-semester-layout\s*\{\s*grid-template-columns:minmax\(250px,310px\) minmax\(0,1fr\)/);
+
+
+// Live production baselines are captured in both themes using the site's shared preference key.
+const workflow = readFileSync(new URL("../.github/workflows/design-system-contract.yml", import.meta.url), "utf8");
+assert.match(workflow, /limitless\.site\.theme/);
+assert.match(workflow, /value":"light"/);
+assert.match(workflow, /value":"dark"/);
+assert.match(workflow, /--load-storage/);
+assert.match(workflow, /for theme in dark light/);
+assert.match(workflow, /\$\{name\}-\$\{theme\}-\$\{size\}\.png/);
