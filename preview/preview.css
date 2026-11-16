@@ -1330,3 +1330,19 @@ body:has(.theme-preview.metallurgy.light:target)::after {
   .theme-preview.home:target .ds-app-sidebar-note,
   .theme-preview.competition:target .ds-app-sidebar-note { display:none; }
 }
+
+
+.theme-preview.home.light {
+  --ds-page-hero-background:linear-gradient(110deg,rgba(239,247,255,.99),rgba(216,235,253,.97));
+  --ds-page-hero-border:#91b5d6;
+  --ds-page-hero-title:var(--home-ink);
+  --ds-page-hero-description:var(--home-muted);
+  --ds-page-hero-eyebrow:#326b9d;
+  --ds-page-hero-shadow:0 18px 50px rgba(30,55,80,.12);
+  --ds-shortcut-background:var(--home-panel);
+  --ds-shortcut-border:var(--home-border);
+  --ds-shortcut-icon-background:rgba(50,110,160,.1);
+  --ds-shortcut-icon-color:#326b9d;
+  --ds-launch-background:var(--home-panel-strong);
+  --ds-launch-border:var(--home-border);
+}
