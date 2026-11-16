@@ -494,13 +494,14 @@ html[data-theme="light"] [data-limitless-design="codeforces"] {
   --ds-app-breadcrumb-color:var(--lp-color-muted,var(--dim));
 }
 [data-limitless-design="codeforces"] {
-  --ds-app-topbar-height:62px;
-  --ds-app-topbar-padding:0 clamp(18px,4vw,54px);
-  --ds-app-topbar-background:rgba(5,14,26,.86);
+  --ds-app-topbar-height:68px;
+  --ds-app-topbar-padding:0 clamp(20px,5vw,76px);
+  --ds-app-topbar-gap:7px;
+  --ds-app-topbar-background:rgba(5,13,25,.88);
   --ds-app-topbar-backdrop:blur(16px);
   --ds-app-shell-border:rgba(120,166,214,.2);
   --ds-app-brand-font:700 .95rem var(--ds-font-sans);
-  --ds-app-brand-tracking:.14em;
+  --ds-app-brand-tracking:2.5px;
   --ds-app-profile-radius:8px;
 }
 html[data-theme="light"] [data-limitless-design="home"] {
