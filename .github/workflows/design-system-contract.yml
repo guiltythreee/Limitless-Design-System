@@ -33,6 +33,10 @@ jobs:
           mkdir -p artifacts
           npx --yes playwright@1.56.1 screenshot --browser chromium --viewport-size="1440,1000" --full-page "file://$GITHUB_WORKSPACE/preview/index.html" artifacts/design-system-desktop.png
           npx --yes playwright@1.56.1 screenshot --browser chromium --viewport-size="390,844" --full-page "file://$GITHUB_WORKSPACE/preview/index.html" artifacts/design-system-mobile.png
+          for section in probability metallurgy home competition codeforces; do
+            npx --yes playwright@1.56.1 screenshot --browser chromium --viewport-size="1440,1000" --wait-for-timeout=250 "file://$GITHUB_WORKSPACE/preview/index.html#${section}" "artifacts/${section}-desktop.png"
+            npx --yes playwright@1.56.1 screenshot --browser chromium --viewport-size="390,844" --wait-for-timeout=250 "file://$GITHUB_WORKSPACE/preview/index.html#${section}" "artifacts/${section}-mobile.png"
+          done
 
       - name: Upload rendered preview evidence
         if: always()
