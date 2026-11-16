@@ -449,7 +449,7 @@ assert.ok(previewStyles.includes(".theme-preview.codeforces.light .ds-badge--acc
 // Desktop fidelity captures must isolate one theme and expand it to full width.
 assert.match(previewStyles, /\.theme-grid:has\(\.theme-preview:target\)\s*\{\s*grid-template-columns:minmax\(0,1fr\)/);
 assert.match(previewStyles, /\.theme-grid:has\(\.theme-preview:target\) \.theme-preview:not\(:target\)\s*\{\s*display:none/);
-assert.match(previewStyles, /\.theme-preview:target \.sample-live-page \.ds-semester-layout\s*\{\s*grid-template-columns:minmax\(250px,310px\) minmax\(0,1fr\)/);
+assert.match(previewStyles, /\.theme-preview:target \.sample-live-page \.ds-semester-layout\s*\{\s*grid-template-columns:minmax\(250px,var\(--ds-app-sidebar-width,310px\)\) minmax\(0,1fr\)/);
 
 
 // Live production baselines are captured in both themes using the site's shared preference key.
@@ -514,7 +514,7 @@ assert.ok(components.includes(".ds-semester-programme"));
 assert.ok(preview.includes("PROGRAMME STRUCTURE"));
 assert.ok(preview.includes("Semester 8"));
 assert.ok(preview.includes("MT203 · SEMESTER 3"));
-assert.match(previewStyles, /\.theme-preview\.metallurgy:target \.sample-live-page \.ds-semester-layout\s*\{\s*grid-template-columns:minmax\(250px,310px\)/);
+assert.match(previewStyles, /\.theme-preview\.metallurgy:target \.sample-live-page \.ds-semester-layout\s*\{\s*grid-template-columns:minmax\(250px,var\(--ds-app-sidebar-width,310px\)\)/);
 assert.match(previewStyles, /\.theme-preview\.metallurgy:target \.sample-live-page \.ds-overview-card\s*\{\s*display:flex/);
 
 
