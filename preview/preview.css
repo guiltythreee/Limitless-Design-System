@@ -337,3 +337,51 @@ html { scroll-behavior:auto !important; }
     grid-template-columns:1fr;
   }
 }
+
+
+/* A targeted fidelity capture shows only the page composition, not the component gallery chrome. */
+body:has(.theme-preview:target) {
+  padding:0;
+}
+body:has(.theme-preview:target) .preview-header,
+body:has(.theme-preview:target) .group-heading {
+  display:none;
+}
+body:has(.theme-preview:target) .preview-main,
+body:has(.theme-preview:target) .theme-group,
+body:has(.theme-preview:target) .theme-grid {
+  width:100%;
+  max-width:none;
+  margin:0;
+  padding:0;
+  border:0;
+  gap:0;
+}
+.theme-preview:target {
+  padding:0;
+  border:0;
+  border-radius:0;
+  background:var(--ds-color-canvas);
+  box-shadow:none;
+}
+.theme-preview:target > :not(.sample-live-page) {
+  display:none;
+}
+.theme-preview:target .sample-live-page {
+  width:100%;
+  min-height:100vh;
+  padding:clamp(18px,2.8vw,40px);
+  border:0;
+  border-radius:0;
+}
+.theme-preview:target .sample-live-page .ds-launch-grid {
+  grid-template-columns:repeat(3,minmax(0,1fr));
+}
+@media(max-width:760px) {
+  .theme-preview:target .sample-live-page {
+    padding:16px;
+  }
+  .theme-preview:target .sample-live-page .ds-launch-grid {
+    grid-template-columns:1fr;
+  }
+}
