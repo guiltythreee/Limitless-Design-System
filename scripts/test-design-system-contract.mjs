@@ -435,3 +435,7 @@ assert.ok(previewStyles.includes(".theme-preview.codeforces.light .ds-milestone-
 for (const section of previewSections) {
   assert.ok(preview.includes(`<section class="theme-group" id="${section}"`), `Missing preview navigation target: ${section}`);
 }
+
+
+// Probability theme grid and group must close before Metallurgy starts; groups stay siblings under main.
+assert.match(preview, /<\/article>\s*<\/div>\s*<\/section>\s*<section class="theme-group" id="metallurgy"/);
