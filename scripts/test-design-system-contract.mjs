@@ -386,3 +386,27 @@ for (const section of previewSections) {
     assert.ok(preview.includes(`id="${section}-${theme}-preview"`), `Missing screenshot anchor for ${section} ${theme}`);
   }
 }
+
+
+// Live page compositions are represented by reusable, source-mapped primitives.
+const pageCompositionSelectors = [
+  "ds-page-hero", "ds-page-hero__title", "ds-shortcut-card", "ds-launch-card",
+  "ds-overview-card", "ds-course-card", "ds-semester-layout", "ds-semester-option",
+  "ds-account-panel", "ds-checklist-panel", "ds-checklist__item", "ds-milestone-card",
+];
+for (const selector of pageCompositionSelectors) {
+  assert.ok(components.includes(selector), `Missing page-composition primitive: ${selector}`);
+  assert.ok(preview.includes(selector), `Missing live page-composition fixture: ${selector}`);
+}
+const pageCompositionFixtures = [
+  ["Home", ["ds-shortcut-grid", "ds-page-hero", "ds-launch-grid"]],
+  ["Probability", ["sample-record-panel", "ds-page-hero", "ds-overview-grid--four"]],
+  ["Metallurgy", ["ds-semester-layout", "ds-course-card-grid", "ds-semester-sidebar"]],
+  ["Competition", ["ds-checklist-panel", "ds-checklist__item", "ds-overview-card"]],
+  ["Codeforces", ["ds-account-panel", "ds-milestone-grid", "ds-launch-grid"]],
+];
+for (const [section, selectors] of pageCompositionFixtures) {
+  for (const selector of selectors) {
+    assert.ok(preview.includes(selector), `Missing ${section} live composition: ${selector}`);
+  }
+}
