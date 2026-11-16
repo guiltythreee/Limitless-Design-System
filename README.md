@@ -76,6 +76,6 @@ The preview now also contains source-mapped page-level compositions for all five
 - **Probability:** archive hero, personal record panel and archive metrics.
 - **Metallurgy:** semester navigation, programme summary and semester course cards.
 - **Competition:** workspace topbar/sidebar, campaign dashboard panel, three mastery/week/time metrics, four-item weekly checklist and five-subject mastery row.
-- **Codeforces:** linked-account panel, rating metrics, milestones and workspace launch cards.
+- **Codeforces:** topbar/back link, linked-account strip, two-column rating/milestones dashboard, loading-state slot and large training/virtual-contest launch cards.
 
 These are presentation contracts built from reusable primitives, not replacements for live page structure, application data, navigation or behavior. The source map pins each page entry point and the Metallurgy semester stylesheet.
