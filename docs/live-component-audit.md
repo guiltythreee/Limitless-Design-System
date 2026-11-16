@@ -206,3 +206,8 @@ The Probability test setup uses native 16px checkboxes with `accent-[var(--gold)
 ## Follow-up source revision checkpoint
 
 The component-level follow-up findings (Metallurgy course browser and MT202 archive, shared study utility panels, Probability test setup, charts and player) were checked against `guiltythreee/Limitless` `main` at commit `fc350626309fd910e94f251427fb5bca487524d5`. Exact source blob SHAs are recorded in `docs/live-visual-source-map.md` under **Follow-up component source revisions**. This supplements the initial source list above; it does not change the integration boundary.
+
+
+## Follow-up fidelity correction — Probability practice actionbar
+
+The first-pass source comparison read the initial `.actionbar .btn-main/.btn-side` declarations but missed the later cascade override at lines 637–642 of the audited Probability stylesheet. The effective desktop button radius is **9px**, not 999px. The live mobile override at max-width 760px also sets the sticky bottom offset to 8px, gap to 0.45rem, bar padding to 0.55rem, and control minimum height to 44px. The design-system primitives now follow the effective cascade, and the contract suite asserts these values. The audited source blob remains `0aa9402b923679cb62c5139e86f83152716da12f`.
