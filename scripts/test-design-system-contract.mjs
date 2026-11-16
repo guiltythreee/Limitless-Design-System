@@ -482,3 +482,13 @@ for (const section of ["home", "competition", "metallurgy", "probability", "code
   assert.ok(preview.includes(`ds-app-topbar--${section}`), `Missing ${section} topbar source variant`);
 }
 assert.match(components, /\.ds-app-sidebar a:focus-visible/);
+
+
+// Home dashboard lower hierarchy includes the live Learning pulse and both full-width workspace banners.
+assert.ok(components.includes(".ds-promo-card"));
+assert.ok(components.includes(".ds-promo-card__icon"));
+assert.ok(preview.includes("sample-home-pulse"));
+assert.ok(preview.includes("sample-home-competition"));
+assert.ok(preview.includes("sample-home-red"));
+assert.match(previewStyles, /\.theme-preview\.home:target \.sample-live-page \.ds-page-hero\s*\{\s*min-height:194px/);
+assert.match(previewStyles, /\.theme-preview\.home:target \.sample-live-page \.ds-launch-grid\s*\{\s*grid-template-columns:repeat\(3,minmax\(0,1fr\)\)/);
