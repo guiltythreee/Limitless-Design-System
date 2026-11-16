@@ -688,3 +688,69 @@ body:has(.theme-preview:target) .theme-grid {
 }
 .theme-preview.probability:target .ds-probability-lower-grid .ds-page-hero__eyebrow { color:var(--ds-color-accent); }
 .theme-preview.probability:target .ds-probability-pathway-grid article { border-color:var(--ds-color-border); }
+
+
+/* Metallurgy semester rail and summary row follow the live 310px sidebar geometry. */
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-layout {
+  grid-template-columns:minmax(250px,310px) minmax(0,1fr);
+  gap:0;
+  align-items:start;
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-sidebar {
+  position:sticky;
+  top:62px;
+  align-self:start;
+  display:flex;
+  flex-direction:column;
+  gap:.45rem;
+  height:calc(100vh - 62px);
+  overflow:auto;
+  padding:1.5rem 1.15rem;
+  border:0;
+  border-right:1px solid var(--ds-color-border);
+  border-radius:0;
+  background:var(--ds-semester-sidebar-background,var(--ds-color-surface));
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-sidebar__label { margin:.2rem .35rem .65rem; }
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-option { min-height:3.4rem; padding:.7rem; }
+.theme-preview.metallurgy:target .sample-live-page .ds-semester-programme {
+  margin-top:auto;
+  padding:1rem;
+  --ds-semester-programme-background:var(--ds-color-surface-raised);
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-overview-grid--four { gap:.75rem; }
+.theme-preview.metallurgy:target .sample-live-page .ds-overview-card {
+  display:flex;
+  align-items:center;
+  gap:.6rem;
+  min-height:58px;
+  padding:.7rem .8rem;
+  border-radius:.7rem;
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-overview-card__value {
+  margin:0;
+  font-size:1.45rem;
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-overview-card__detail {
+  margin:0;
+  font-size:.65rem;
+}
+.theme-preview.metallurgy:target .sample-live-page .ds-course-card-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }
+.theme-preview.metallurgy:target .sample-live-page .ds-course-card { min-height:18rem; }
+.theme-preview.metallurgy.light:target .sample-live-page .ds-semester-sidebar {
+  --ds-semester-sidebar-background:rgba(247,249,252,.96);
+}
+@media(max-width:760px) {
+  .theme-preview.metallurgy:target .sample-live-page .ds-semester-layout { grid-template-columns:1fr; }
+  .theme-preview.metallurgy:target .sample-live-page .ds-semester-sidebar {
+    position:static;
+    height:auto;
+    display:grid;
+    grid-template-columns:repeat(3,minmax(0,1fr));
+    padding:.8rem;
+    border:1px solid var(--ds-color-border);
+    border-radius:.8rem;
+  }
+  .theme-preview.metallurgy:target .sample-live-page .ds-semester-programme { display:none; }
+  .theme-preview.metallurgy:target .sample-live-page .ds-course-card-grid { grid-template-columns:1fr; }
+}
