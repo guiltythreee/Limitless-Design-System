@@ -116,7 +116,7 @@ Build a component mapping specification, not replacement CSS:
 1. Define separate patterns for panel/card, action button, selectable option, field, metadata chip, difficulty/status badge, section tabs, segmented control, sidebar item, navigation card and dashboard metric.
 2. For each pattern, record source selector, markup semantics, desktop/mobile dimensions, dark/light behavior, interaction states and section-specific exceptions.
 3. Only consolidate a pattern when the live sections genuinely share its geometry and behavior. Otherwise retain section variants or keep the original implementation.
-4. Add side-by-side browser screenshots from the actual live pages and fixture using matching viewport, theme, content and state before claiming visual parity.
+4. Route-level live screenshots and fixture renders are now captured for all five sections at desktop and mobile sizes. The remaining verification is component-level, state-matched comparison and a pixel-diff pass before claiming visual parity.
 
 No live application imports this package. No production files are changed by this audit.
 
@@ -215,7 +215,7 @@ The first-pass source comparison read the initial `.actionbar .btn-main/.btn-sid
 
 ## Rendered preview inspection checkpoint
 
-The static design-system fixture was rendered in Chromium at 1440px desktop and 390px mobile widths. The first rendered inspection exposed uneven component coverage between dark and light themes in Probability, Metallurgy and Home. Those theme pairs now share the same component-class inventories; unique IDs and light-theme adapter presence are contract-tested. The screenshot workflow stores full-page desktop/mobile renders, desktop section views, and separate mobile screenshots for all ten section/theme pairs as a 14-day Actions artifact. This confirms the fixture's rendered layout only; production side-by-side comparison remains outstanding.
+The static design-system fixture was rendered in Chromium at 1440px desktop and 390px mobile widths. The first rendered inspection exposed uneven component coverage between dark and light themes in Probability, Metallurgy and Home. Those theme pairs now share the same component-class inventories; unique IDs and light-theme adapter presence are contract-tested. The screenshot workflow stores full-page desktop/mobile renders, desktop section views, and separate mobile screenshots for all ten section/theme pairs as a 14-day Actions artifact. This confirms the fixture's rendered layout and provides unauthenticated live-route baselines. Detailed component-level pixel comparison remains outstanding.
 
 
 ## Follow-up rendered contrast correction — Home and Competition
