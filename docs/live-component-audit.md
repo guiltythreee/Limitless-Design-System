@@ -211,3 +211,8 @@ The component-level follow-up findings (Metallurgy course browser and MT202 arch
 ## Follow-up fidelity correction — Probability practice actionbar
 
 The first-pass source comparison read the initial `.actionbar .btn-main/.btn-side` declarations but missed the later cascade override at lines 637–642 of the audited Probability stylesheet. The effective desktop button radius is **9px**, not 999px. The live mobile override at max-width 760px also sets the sticky bottom offset to 8px, gap to 0.45rem, bar padding to 0.55rem, and control minimum height to 44px. The design-system primitives now follow the effective cascade, and the contract suite asserts these values. The audited source blob remains `0aa9402b923679cb62c5139e86f83152716da12f`.
+
+
+## Rendered preview inspection checkpoint
+
+The static design-system fixture was rendered in Chromium at 1440px desktop and 390px mobile widths. The first rendered inspection exposed uneven component coverage between dark and light themes in Probability, Metallurgy and Home. Those theme pairs now share the same component-class inventories; unique IDs and light-theme adapter presence are contract-tested. The screenshot workflow stores both viewport renders as a 14-day Actions artifact. This confirms the fixture's rendered layout only; production side-by-side comparison remains outstanding.
