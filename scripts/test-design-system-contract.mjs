@@ -364,5 +364,5 @@ assert.deepEqual(lightProbabilityClasses, darkProbabilityClasses,
 
 assert.ok(preview.includes('data-preview-theme="light"'), "Probability light preview must use its light theme adapter");
 assert.ok(preview.includes('<p class="preview-label">Light theme</p>'), "Probability light preview label must identify the light theme");
-const previewIds = [...preview.matchAll(/\\bid="([^"]+)"/g)].map((match) => match[1]);
+const previewIds = [...preview.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
 assert.equal(new Set(previewIds).size, previewIds.length, "Preview element IDs must be unique across theme fixtures");
