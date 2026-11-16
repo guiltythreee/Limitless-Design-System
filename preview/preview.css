@@ -649,3 +649,42 @@ body:has(.theme-preview:target) .theme-grid {
   .theme-preview.probability:target .sample-live-page .ds-page-hero,
   .theme-preview.codeforces:target .sample-live-page .ds-page-hero { min-height:0; }
 }
+
+
+/* Probability archive page values are source-specific blue, not the gold course-player palette. */
+.theme-preview.probability:target .sample-live-page .ds-probability-archive-hero {
+  --ds-page-hero-background:linear-gradient(120deg,#071a30 0%,#0b2d50 58%,#12385d 100%);
+  --ds-page-hero-border:rgba(76,151,225,.35);
+  --ds-page-hero-title:#edf5ff;
+  --ds-page-hero-description:#b7cde4;
+  --ds-page-hero-eyebrow:#65b8ff;
+  --ds-color-accent:#58aaf0;
+  --ds-color-on-accent:#071a30;
+  --ds-probability-emblem-border:rgba(105,177,235,.34);
+  --ds-probability-emblem-background:rgba(5,25,47,.4);
+}
+.theme-preview.probability.light:target .sample-live-page .ds-probability-archive-hero {
+  --ds-page-hero-background:linear-gradient(120deg,#e7f1fb 0%,#d9eafa 58%,#cfe3f7 100%);
+  --ds-page-hero-border:rgba(54,117,174,.32);
+  --ds-page-hero-title:#173b5d;
+  --ds-page-hero-description:#425e78;
+  --ds-page-hero-eyebrow:#276da9;
+  --ds-color-accent:#247fc5;
+  --ds-color-on-accent:#fff;
+  --ds-probability-emblem-border:rgba(54,117,174,.3);
+  --ds-probability-emblem-background:rgba(255,255,255,.45);
+}
+.theme-preview.probability:target .ds-study-progress-panel {
+  --ds-study-panel-background:rgba(7,19,34,.88);
+  --ds-study-metric-background:rgba(17,39,64,.5);
+}
+.theme-preview.probability.light:target .ds-study-progress-panel {
+  --ds-study-panel-background:rgba(247,250,253,.94);
+  --ds-study-metric-background:rgba(255,255,255,.86);
+}
+.theme-preview.probability:target .ds-probability-lower-grid > * {
+  border-color:var(--ds-color-border);
+  background:var(--ds-color-surface);
+}
+.theme-preview.probability:target .ds-probability-lower-grid .ds-page-hero__eyebrow { color:var(--ds-color-accent); }
+.theme-preview.probability:target .ds-probability-pathway-grid article { border-color:var(--ds-color-border); }
