@@ -433,6 +433,8 @@ html[data-theme="light"] [data-limitless-design="codeforces"] {
   --ds-app-topbar-background:rgba(4,12,23,.9);
   --ds-app-topbar-backdrop:blur(18px);
   --ds-app-sidebar-width:245px;
+  --ds-app-main-padding:26px 30px 28px;
+  --ds-app-main-padding-mobile:16px;
   --ds-app-sidebar-padding:22px 14px 25px;
   --ds-app-sidebar-background:rgba(5,14,26,.62);
   --ds-app-sidebar-backdrop:blur(12px);
@@ -455,6 +457,8 @@ html[data-theme="light"] [data-limitless-design="codeforces"] {
   --ds-app-topbar-background:rgba(4,12,23,.91);
   --ds-app-topbar-backdrop:blur(16px);
   --ds-app-sidebar-width:245px;
+  --ds-app-main-padding:28px 25px 65px;
+  --ds-app-main-padding-mobile:16px;
   --ds-app-sidebar-padding:23px 13px;
   --ds-app-sidebar-background:rgba(5,14,26,.76);
   --ds-app-sidebar-backdrop:blur(14px);
