@@ -364,7 +364,7 @@ body:has(.theme-preview:target) .theme-grid {
   background:var(--ds-color-canvas);
   box-shadow:none;
 }
-.theme-preview:target > :not(.sample-live-page) {
+.theme-preview:target > :not(.sample-live-page):not(.ds-app-layout):not(.ds-app-topbar):not(.ds-app-breadcrumb) {
   display:none;
 }
 .theme-preview:target .sample-live-page {
@@ -399,7 +399,7 @@ body:has(.theme-preview:target) .theme-grid {
   grid-template-columns:var(--ds-app-sidebar-width,245px) minmax(0,1fr);
   grid-template-rows:62px minmax(0,1fr);
 }
-.theme-preview:target > :not(.sample-live-page):not(.ds-app-topbar):not(.ds-app-sidebar):not(.ds-app-breadcrumb) {
+.theme-preview:target > :not(.sample-live-page):not(.ds-app-layout):not(.ds-app-topbar):not(.ds-app-sidebar):not(.ds-app-breadcrumb) {
   display:none;
 }
 .ds-app-topbar {
