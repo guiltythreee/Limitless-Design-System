@@ -853,9 +853,9 @@
 :where([data-limitless-design]) .ds-practice-question-marker[aria-current="step"]{outline:2px solid var(--ds-color-focus);outline-offset:1px;color:var(--ds-color-heading)}
 :where([data-limitless-design]) .ds-practice-timer{display:inline-flex;align-items:center;gap:.4rem;padding:.3rem .9rem;border:1px dashed var(--ds-color-accent);border-radius:999px;color:var(--ds-color-accent);font-size:14px;font-variant-numeric:tabular-nums}
 :where([data-limitless-design]) .ds-practice-actionbar{position:sticky;bottom:12px;z-index:20;display:flex;align-items:center;gap:.7rem;margin-top:1.5rem;padding:.7rem;border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:18px;background:var(--ds-practice-actionbar-background,var(--ds-color-surface));backdrop-filter:blur(10px)}
-:where([data-limitless-design]) .ds-practice-actionbar__primary{flex:1;min-width:0;border-radius:999px;padding:.85rem 1rem;background:var(--ds-color-accent);color:var(--ds-color-on-accent);font-weight:700;letter-spacing:.06em}
+:where([data-limitless-design]) .ds-practice-actionbar__primary{flex:1;min-width:0;border-radius:9px;padding:.85rem 1rem;background:var(--ds-color-accent);color:var(--ds-color-on-accent);font-weight:700;letter-spacing:.06em}
 :where([data-limitless-design]) .ds-practice-actionbar__primary:disabled{opacity:.4;cursor:not-allowed}
-:where([data-limitless-design]) .ds-practice-actionbar__secondary{border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:999px;padding:.85rem 1.3rem;color:var(--ds-color-text)}
+:where([data-limitless-design]) .ds-practice-actionbar__secondary{border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:9px;padding:.85rem 1.3rem;color:var(--ds-color-text)}
 :where([data-limitless-design]) .ds-practice-actionbar__secondary:disabled{opacity:.35;cursor:not-allowed}
 :where([data-limitless-design]) .ds-practice-analysis-dock{position:sticky;bottom:14px;display:flex;justify-content:center;margin-top:1rem;pointer-events:none}
 :where([data-limitless-design]) .ds-practice-analysis-dock__action{pointer-events:auto;border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:999px;padding:.75rem 1.5rem;background:var(--ds-practice-analysis-background,var(--ds-color-surface));color:var(--ds-color-accent);box-shadow:0 8px 30px rgba(0,0,0,.35)}
@@ -868,6 +868,7 @@
 :where([data-limitless-design]) .ds-practice-week-status__label{display:block;font-size:13px;color:var(--ds-color-text)}
 :where([data-limitless-design]) .ds-practice-week-status.is-met{background:var(--ds-practice-week-met-background)}
 :where([data-limitless-design]) .ds-practice-week-status.is-today{outline:1px solid var(--ds-color-focus)}
+@media(max-width:760px){:where([data-limitless-design]) .ds-practice-actionbar{bottom:8px;gap:.45rem;padding:.55rem}:where([data-limitless-design]) .ds-practice-actionbar__primary,:where([data-limitless-design]) .ds-practice-actionbar__secondary{min-height:44px;padding-inline:.8rem}}
 @media(prefers-reduced-motion:reduce){:where([data-limitless-design]) .ds-practice-goal-milestones__fill{transition:none}}
 @media(forced-colors:active){:where([data-limitless-design]) .ds-practice-question-marker[aria-current="step"]{outline-color:Highlight}}
 
