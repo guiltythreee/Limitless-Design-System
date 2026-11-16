@@ -207,3 +207,11 @@ These primitives define a portable API and baseline behavior; they are not claim
 - The composition is a visual fixture, not a new stateful component or a replacement for Practice.tsx / LearningPlayerShell.
 - The consumer supplies question text, difficulty, topic, timer value, current index, answer selection, bookmark state and enabled/disabled states. Navigation, grading, timer lifecycle, answer persistence and keyboard handling remain application/shared learning-player responsibilities.
 - The static preview is shown in both Probability themes. Its compact mobile layout is only a visual contract; responsive player behaviour remains owned by the live application.
+
+
+## Cross-theme preview parity
+
+- Every section's dark and light preview fixtures must contain the same component-class inventory.
+- Light fixtures must opt into the explicit light-theme adapter and identify themselves as light in the visible preview label.
+- Element IDs must remain unique across all ten fixtures; cloned light fixtures suffix their IDs and update label/heading references.
+- CI renders the full preview in Chromium at 1440px and 390px viewport widths. This is a rendered-layout smoke check, not pixel-equivalence evidence against production.
