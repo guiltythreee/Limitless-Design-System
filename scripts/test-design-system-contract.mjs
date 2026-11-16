@@ -467,3 +467,18 @@ assert.match(previewStyles, /body:has\(\.theme-preview:target\) \.preview-header
 assert.match(previewStyles, /\.theme-preview:target > :not\(\.sample-live-page\)/);
 assert.match(previewStyles, /\.theme-preview:target \.sample-live-page\s*\{\s*width:100%/);
 assert.match(previewStyles, /\.theme-preview:target \.sample-live-page \.ds-launch-grid\s*\{\s*grid-template-columns:repeat\(3,minmax\(0,1fr\)\)/);
+
+
+// Shared application shell primitives are source-backed and present in every dark/light route fixture.
+const appShellSelectors = [
+  ".ds-app-topbar", ".ds-app-brand", ".ds-app-search", ".ds-app-profile",
+  ".ds-app-sidebar", ".ds-app-sidebar-note", ".ds-app-breadcrumb",
+];
+for (const selector of appShellSelectors) {
+  assert.ok(components.includes(selector), `Missing application shell primitive: ${selector}`);
+  assert.ok(preview.includes(selector.slice(1)), `Missing application shell fixture: ${selector}`);
+}
+for (const section of ["home", "competition", "metallurgy", "probability", "codeforces"]) {
+  assert.ok(preview.includes(`ds-app-topbar--${section}`), `Missing ${section} topbar source variant`);
+}
+assert.match(components, /\.ds-app-sidebar nav a:focus-visible/);
