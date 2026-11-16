@@ -266,3 +266,5 @@ The fixtures intentionally use sample values. No page data, application state or
 | Codeforces header and navigation | `.ds-app-topbar`, `.ds-app-brand`, `.ds-app-profile` | 68px topbar, centered 1120px main region and Codeforces-specific navigation |
 
 The shell primitives are layout/presentation slots. The route fixtures now include source-mapped topbars and, where applicable, sidebars. Artwork, responsive navigation behavior, links, search, theme controls and application state are not implemented by the design-system package.
+
+| Home destination banner | `.ds-promo-card` with icon, eyebrow, title and description slots | Promotion destinations and copy remain Home-owned; Competition and Codeforces Red use distinct surface/accent variants |
