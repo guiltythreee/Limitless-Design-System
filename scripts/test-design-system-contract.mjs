@@ -526,3 +526,12 @@ for (const selector of [".ds-competition-dashboard", ".ds-competition-heading", 
 assert.ok(preview.includes("Week 3 · Proof methods and first algorithms"));
 assert.ok(preview.includes("Logical reasoning"));
 assert.match(previewStyles, /\.theme-preview\.competition:target \.sample-live-page \.ds-competition-dashboard/);
+
+
+// Codeforces route composition includes its back link, account strip, two-column dashboard and live loading state.
+assert.ok(components.includes(".ds-app-backlink"));
+assert.ok(preview.includes("ds-app-backlink"));
+assert.ok(preview.includes("ds-codeforces-loading"));
+assert.ok(preview.includes("ds-codeforces-milestones"));
+assert.match(previewStyles, /\.theme-preview\.codeforces:target \.sample-live-page\s*\{\s*display:grid;\s*grid-template-columns:minmax\(0,1\.45fr\) minmax\(0,1fr\)/);
+assert.match(previewStyles, /\.theme-preview\.codeforces:target \.sample-live-page \.ds-launch-grid/);
