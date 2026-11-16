@@ -226,3 +226,8 @@ The first section-level Chromium render showed that Home and Competition light a
 ## Follow-up rendered contrast correction — Codeforces stage selector
 
 The Codeforces light screenshot exposed a stage-selector contrast gap: the live light-theme values are scoped under `html[data-theme="light"] [data-limitless-design="codeforces"]`, while the isolated fixture uses a local `.codeforces.light` theme class and intentionally leaves the document theme unchanged. The preview now mirrors the exact live light values for stage text, active background/border and muted metadata. This is fixture-only and does not alter the production adapter. The contract suite asserts all four values.
+
+
+## Live route composition comparison checkpoint
+
+Unauthenticated Chromium baselines were captured for Home, Probability, Metallurgy, Competition and Codeforces at desktop and mobile widths. This exposed a gap in the earlier preview: it showed useful isolated controls but omitted the principal page compositions visible on the live routes. The preview now includes source-mapped compositions for the Home welcome/shortcut/learning area, Probability archive hero and record panel, Metallurgy semester/course area, Competition campaign/metrics/checklist, and Codeforces account/rating/milestone/launch area. Each is represented in both themes; data, state and route behaviour remain application-owned.
