@@ -180,7 +180,7 @@ These primitives define a portable API and baseline behavior; they are not claim
 - `.ds-practice-question-nav` is a wrapping navigation rail for question markers. Each marker remains a native button; the application supplies question number, status and `aria-current="step"`.
 - `.ds-practice-question-marker` supports the source's correct, incorrect and partial states. Status styling is visual only; grading and current-question navigation remain in the learning-player/application.
 - `.ds-practice-timer` is a tabular-numeral timer pill. Stopwatch lifecycle, pause/resume and elapsed-time persistence remain application-owned.
-- `.ds-practice-actionbar` is the sticky action container; primary/secondary button classes only map geometry and disabled appearance. Submit, next, previous and retry behavior remain outside the package.
+- `.ds-practice-actionbar` is the sticky action container; primary/secondary buttons use the final live 9px radius (the earlier 999px declaration is overridden later in the live cascade). At widths up to 760px, the bar moves to 8px from the bottom, uses a 0.45rem gap and 0.55rem padding, and both controls have a 44px minimum height. Submit, next, previous and retry behavior remain outside the package.
 - `.ds-practice-analysis-dock` maps the sticky floating analysis affordance. Its action and destination remain consumer-owned.
 - `.ds-practice-goal-milestones` and `.ds-practice-week-status` map the Probability dashboard goal milestones and daily streak cells. Goal fraction, reached thresholds, weekly status and counts remain data supplied by the dashboard.
 - Preserve reduced-motion handling for the milestone fill and forced-colour focus for the current question marker.
