@@ -754,3 +754,62 @@ body:has(.theme-preview:target) .theme-grid {
   .theme-preview.metallurgy:target .sample-live-page .ds-semester-programme { display:none; }
   .theme-preview.metallurgy:target .sample-live-page .ds-course-card-grid { grid-template-columns:1fr; }
 }
+
+
+/* Competition route source palette and full dashboard proportions. */
+.theme-preview.competition:target .sample-live-page .ds-competition-dashboard {
+  --ds-competition-panel-background:rgba(8,20,36,.88);
+  --ds-competition-panel-border:rgba(101,166,226,.22);
+  --ds-color-accent:#67b6ff;
+  --ds-color-heading:#eaf3ff;
+  --ds-color-text:#dbe8f6;
+  --ds-color-muted:#a8bfd7;
+  --ds-color-border:rgba(101,166,226,.2);
+  --ds-color-surface:rgba(9,23,40,.88);
+  --ds-color-surface-raised:rgba(19,42,66,.72);
+  --ds-overview-accent:#57b1ff;
+  --ds-overview-value:#7fc3ff;
+}
+.theme-preview.competition:target .sample-live-page .ds-competition-dashboard .ds-overview-card--violet {
+  --ds-overview-accent:#a78bfa;
+  --ds-overview-value:#c4a8ff;
+}
+.theme-preview.competition:target .sample-live-page .ds-competition-dashboard .ds-overview-card--amber {
+  --ds-overview-accent:#f4b45f;
+  --ds-overview-value:#ffc16e;
+}
+.theme-preview.competition:target .sample-live-page .ds-competition-dashboard .ds-checklist-panel {
+  --ds-color-surface:rgba(8,20,36,.72);
+}
+.theme-preview.competition:target .sample-live-page .ds-competition-subjects .ds-overview-grid {
+  grid-template-columns:repeat(5,minmax(0,1fr));
+}
+.theme-preview.competition.light:target .sample-live-page .ds-competition-dashboard {
+  --ds-competition-panel-background:rgba(248,252,255,.96);
+  --ds-competition-panel-border:rgba(62,112,158,.28);
+  --ds-color-accent:#23699f;
+  --ds-color-heading:#173b5d;
+  --ds-color-text:#294963;
+  --ds-color-muted:#526f89;
+  --ds-color-border:rgba(62,112,158,.22);
+  --ds-color-surface:rgba(255,255,255,.9);
+  --ds-color-surface-raised:rgba(239,246,252,.95);
+  --ds-overview-accent:#398bd0;
+  --ds-overview-value:#247fc5;
+}
+.theme-preview.competition.light:target .sample-live-page .ds-competition-dashboard .ds-overview-card--violet {
+  --ds-overview-accent:#8c6bd1;
+  --ds-overview-value:#7052b5;
+}
+.theme-preview.competition.light:target .sample-live-page .ds-competition-dashboard .ds-overview-card--amber {
+  --ds-overview-accent:#d48a2f;
+  --ds-overview-value:#a96d18;
+}
+.theme-preview.competition.light:target .sample-live-page .ds-competition-dashboard .ds-checklist-panel {
+  --ds-color-surface:rgba(255,255,255,.94);
+}
+@media(max-width:760px) {
+  .theme-preview.competition:target .sample-live-page .ds-competition-subjects .ds-overview-grid {
+    grid-template-columns:repeat(2,minmax(0,1fr));
+  }
+}
