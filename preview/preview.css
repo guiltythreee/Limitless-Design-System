@@ -1418,3 +1418,14 @@ body:has(.theme-preview.metallurgy.light:target)::after {
 .theme-preview.codeforces.light {
   --ds-app-topbar-shadow:0 8px 28px rgba(30,60,90,.08);
 }
+
+
+body:has(.theme-preview.competition.light:target)::after {
+  background:rgba(229,237,245,.72);
+}
+body:has(.theme-preview.codeforces.light:target)::after {
+  background:rgba(239,247,255,.84);
+}
+body:has(.theme-preview.probability.light:target)::after {
+  background:linear-gradient(180deg,rgba(255,250,240,.18),rgba(255,250,240,.5));
+}
