@@ -340,3 +340,10 @@ for (const selector of additionalProbabilityPreview) {
 }
 assert.equal((preview.match(/class="ds-test-history"/g) ?? []).length, 2,
   "Test history table must be previewed in both Probability themes");
+
+
+// Probability actionbar follows the final live cascade, including the mobile override.
+assert.ok(components.includes(".ds-practice-actionbar__primary{flex:1;min-width:0;border-radius:9px"));
+assert.ok(components.includes(".ds-practice-actionbar__secondary{border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:9px"));
+assert.ok(components.includes("@media(max-width:760px){:where([data-limitless-design]) .ds-practice-actionbar{bottom:8px;gap:.45rem;padding:.55rem}"));
+assert.ok(components.includes(".ds-practice-actionbar__secondary{min-height:44px;padding-inline:.8rem}"));
