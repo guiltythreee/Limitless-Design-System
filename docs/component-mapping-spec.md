@@ -258,7 +258,7 @@ The fixtures intentionally use sample values. No page data, application state or
 
 | Live pattern | Design-system primitive | Route-specific contract |
 |---|---|---|
-| Home 62px topbar, brand, global search and profile | `.ds-app-topbar`, `.ds-app-brand`, `.ds-app-search`, `.ds-app-profile` | 245px first grid column, 62px header, Home's shared artwork/theme engine |
+| Home 62px topbar, brand, global search and profile | `.ds-app-topbar`, `.ds-app-layout`, `.ds-app-main`, `.ds-app-brand`, `.ds-app-search`, `.ds-app-profile` | 245px first grid column, 62px header, Home's shared artwork/theme engine |
 | Home navigation rail | `.ds-app-sidebar`, `.ds-app-sidebar-note` | 245px sticky rail; Home active-gradient and inset marker remain route-adapted |
 | Competition 62px header and workspace rail | `.ds-app-topbar`, `.ds-app-brand`, `.ds-app-profile`, `.ds-app-sidebar` | 245px fixed rail, campaign note and competition-specific active state |
 | Metallurgy navbar and semester navigation | `.ds-app-topbar`, `.ds-app-brand`; existing `.ds-semester-layout` / `.ds-semester-sidebar` | 64px navbar and 310px sticky semester rail; course and semester controls remain distinct |
