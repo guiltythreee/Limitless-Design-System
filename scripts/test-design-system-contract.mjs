@@ -481,4 +481,4 @@ for (const selector of appShellSelectors) {
 for (const section of ["home", "competition", "metallurgy", "probability", "codeforces"]) {
   assert.ok(preview.includes(`ds-app-topbar--${section}`), `Missing ${section} topbar source variant`);
 }
-assert.match(components, /\.ds-app-sidebar nav a:focus-visible/);
+assert.match(components, /\.ds-app-sidebar a:focus-visible/);
