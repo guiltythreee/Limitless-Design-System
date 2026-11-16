@@ -410,3 +410,16 @@ for (const [section, selectors] of pageCompositionFixtures) {
     assert.ok(preview.includes(selector), `Missing ${section} live composition: ${selector}`);
   }
 }
+
+
+// New page-composition light variants must not retain dark-only launch surfaces.
+assert.ok(previewStyles.includes(".theme-preview.home.light .sample-launch-violet"));
+assert.ok(previewStyles.includes(".theme-preview.home.light .sample-launch-teal"));
+assert.ok(previewStyles.includes(".theme-preview.codeforces.light .sample-launch-blue"));
+assert.ok(previewStyles.includes(".theme-preview.codeforces.light .sample-launch-violet"));
+
+// Top-level page sources are pinned in the visual source map.
+for (const [path, sha] of [["index.html", "1d4f9ff1a3921b9775c00db1b45c3ddbc24c98a3"], ["probability-source/app/page.tsx", "82070366ff123b9fc0f1c7ffa14bdca2ba6d868d"], ["metallurgy-source/app/page.tsx", "7bab0fdef6a8ecbb9b01d7c166e4d25f64d8aac1"], ["metallurgy-source/app/semester-landing.css", "60640c22ba1b62715a24eed66350d5c565ccd8ee"], ["competition/index.html", "a09dbd51fc92d3d07df1c635e199a7603c162586"], ["codeforces-red/index.html", "87d43672ffe0f38e1252dc89650a966bd77695bd"]]) {
+  assert.ok(sourceMap.includes(path), `Missing top-level source mapping: ${path}`);
+  assert.ok(sourceMap.includes(sha), `Missing top-level source revision: ${path}`);
+}
