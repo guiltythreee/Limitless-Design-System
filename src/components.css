@@ -1415,3 +1415,118 @@
   font-size:.62rem;
   line-height:1.55;
 }
+
+
+/* Competition campaign dashboard composition. */
+:where([data-limitless-design]) .ds-overview-grid--three { grid-template-columns:repeat(3,minmax(0,1fr)); }
+:where([data-limitless-design]) .ds-competition-dashboard {
+  padding:1.75rem;
+  border:1px solid var(--ds-competition-panel-border,var(--ds-color-border));
+  border-radius:1.15rem;
+  background:var(--ds-competition-panel-background,var(--ds-color-surface));
+  box-shadow:var(--ds-competition-panel-shadow,0 18px 45px rgba(0,0,0,.12));
+}
+:where([data-limitless-design]) .ds-competition-heading {
+  padding-bottom:1.25rem;
+  border-bottom:1px solid var(--ds-color-border);
+}
+:where([data-limitless-design]) .ds-competition-heading__campaign {
+  display:block;
+  margin-top:1.25rem;
+  color:var(--ds-color-accent);
+  font-size:.65rem;
+  font-weight:700;
+  letter-spacing:.16em;
+}
+:where([data-limitless-design]) .ds-competition-heading h1 {
+  margin:.45rem 0 .7rem;
+  color:var(--ds-color-heading);
+  font:700 clamp(2.2rem,4vw,2.8rem)/1.08 var(--ds-font-sans);
+  letter-spacing:-.035em;
+}
+:where([data-limitless-design]) .ds-competition-heading p {
+  max-width:58rem;
+  margin:0;
+  color:var(--ds-color-muted);
+  font-size:1rem;
+  line-height:1.65;
+}
+:where([data-limitless-design]) .ds-competition-dashboard > .ds-overview-grid { margin-top:1.1rem; }
+:where([data-limitless-design]) .ds-competition-dashboard .ds-overview-card {
+  min-height:8rem;
+  padding:1rem;
+  border-top:3px solid var(--ds-overview-accent,var(--ds-color-accent));
+  border-radius:.85rem;
+  background:var(--ds-color-surface-raised);
+}
+:where([data-limitless-design]) .ds-competition-dashboard .ds-overview-card__value {
+  display:block;
+  margin:.55rem 0 .35rem;
+  color:var(--ds-overview-value,var(--ds-color-heading));
+  font-size:1.65rem;
+}
+:where([data-limitless-design]) .ds-competition-dashboard .ds-overview-card__value small {
+  color:var(--ds-color-muted);
+  font-size:.75rem;
+  font-weight:400;
+}
+:where([data-limitless-design]) .ds-competition-dashboard .ds-overview-card__detail {
+  display:block;
+  margin:.25rem 0;
+  color:var(--ds-color-muted);
+  font-size:.65rem;
+  line-height:1.5;
+}
+:where([data-limitless-design]) .ds-competition-dashboard .ds-checklist-panel {
+  margin-top:1.1rem;
+  padding:1.25rem;
+  border:1px solid var(--ds-color-border);
+  border-radius:.9rem;
+  background:var(--ds-color-surface);
+}
+:where([data-limitless-design]) .ds-competition-dashboard .ds-checklist-panel__heading {
+  padding-bottom:.55rem;
+  border-bottom:1px solid var(--ds-color-border);
+}
+:where([data-limitless-design]) .ds-competition-dashboard .ds-checklist-panel__heading strong {
+  display:block;
+  margin-top:.35rem;
+  color:var(--ds-color-heading);
+  font-size:1.05rem;
+}
+:where([data-limitless-design]) .ds-competition-dashboard .ds-checklist__item {
+  padding:.75rem .2rem;
+  font-size:.85rem;
+}
+:where([data-limitless-design]) .ds-competition-roadmap-link {
+  display:inline-block;
+  margin-top:.65rem;
+  color:var(--ds-color-accent);
+  font-size:.85rem;
+  text-decoration:none;
+}
+:where([data-limitless-design]) .ds-competition-subjects {
+  display:grid;
+  grid-template-columns:minmax(0,1fr) minmax(0,.8fr);
+  gap:1.5rem;
+  margin-top:1.5rem;
+}
+:where([data-limitless-design]) .ds-competition-subjects h2 {
+  margin:.35rem 0;
+  color:var(--ds-color-heading);
+  font-size:1.25rem;
+}
+:where([data-limitless-design]) .ds-competition-subjects > p {
+  margin:0;
+  color:var(--ds-color-muted);
+  font-size:.9rem;
+  line-height:1.65;
+}
+:where([data-limitless-design]) .ds-competition-subjects .ds-overview-grid {
+  grid-column:1/-1;
+}
+@media(max-width:760px) {
+  :where([data-limitless-design]) .ds-overview-grid--three { grid-template-columns:1fr; }
+  :where([data-limitless-design]) .ds-competition-dashboard { padding:1rem; }
+  :where([data-limitless-design]) .ds-competition-subjects { grid-template-columns:1fr; }
+}
