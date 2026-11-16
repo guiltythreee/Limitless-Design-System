@@ -210,7 +210,7 @@ The family shares its shell and primitives, not identical panel composition. Ret
 |---|---|---|
 | `.qnum`, `.qnum-correct`, `.qnum-incorrect`, `.qnum-partial`, `.qnum-cur` | `.ds-practice-question-marker` state modifiers | Button semantics, status and current index remain application-owned |
 | `.timerpill` | `.ds-practice-timer` | Timer value and lifecycle remain application-owned |
-| `.actionbar`, `.btn-main`, `.btn-side` | `.ds-practice-actionbar` primary/secondary slots | Sticky layout only; actions and state remain with player |
+| `.actionbar`, `.btn-main`, `.btn-side` | `.ds-practice-actionbar` primary/secondary slots | Final cascade: 9px button radius; at ≤760px, bottom 8px, 0.45rem gap, 0.55rem bar padding and 44px minimum button height; actions and state remain with player |
 | `.floating-analysis` | `.ds-practice-analysis-dock` | Dock geometry only; analysis navigation remains with consumer |
 | `.mile`, `.mile-fill`, `.mile-node`, `.mile-node-on` | `.ds-practice-goal-milestones` | Goal calculation and milestone state remain with dashboard |
 | `.weekcol`, `.weekcol-met`, `.weekcol-today` | `.ds-practice-week-status` | Daily counts and state remain with dashboard |
