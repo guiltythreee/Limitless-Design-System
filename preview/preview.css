@@ -271,3 +271,19 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -.04em; }
 .theme-preview.home.light .sample-launch-teal { --ds-launch-background:linear-gradient(145deg,#dcf8ee,#f2fff9); --ds-launch-border:rgba(25,133,100,.25); }
 .theme-preview.codeforces.light .sample-launch-blue { --ds-launch-background:linear-gradient(145deg,#e2f1ff,#f4f9ff); --ds-launch-border:#9dbfdf; }
 .theme-preview.codeforces.light .sample-launch-violet { --ds-launch-background:linear-gradient(145deg,#eee8ff,#f8f6ff); --ds-launch-border:#c5b7e8; }
+
+
+/* Keep section-anchor screenshots deterministic and preserve readable component widths in half-page theme panels. */
+html { scroll-behavior:auto !important; }
+.sample-live-page .ds-shortcut-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.sample-live-page .ds-course-card-grid { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.theme-preview.codeforces .ds-page-hero .ds-overview-grid--four { grid-template-columns:repeat(2,minmax(0,1fr)); }
+.theme-preview.competition .ds-page-hero__eyebrow + .ds-page-hero__eyebrow { display:block; margin-top:.55rem; }
+.theme-preview.light .ds-overview-card--blue { --ds-overview-accent:#247fc5; --ds-overview-value:#247fc5; }
+.theme-preview.light .ds-overview-card--violet { --ds-overview-accent:#7156bd; --ds-overview-value:#7156bd; }
+.theme-preview.light .ds-overview-card--amber { --ds-overview-accent:#a96d18; --ds-overview-value:#a96d18; }
+.theme-preview.light .ds-overview-card--teal { --ds-overview-accent:#087b71; --ds-overview-value:#087b71; }
+.theme-preview.probability.light .ds-overview-card--amber { --ds-overview-accent:#8a6414; --ds-overview-value:#8a6414; }
+.theme-preview.codeforces.light .ds-milestone-card__step { background:#e7f1fa; color:#28699c; }
+.theme-preview.codeforces.light .ds-milestone-card__copy strong { color:#1c3d5c; }
+.theme-preview.codeforces.light .ds-milestone-card__copy small { color:#627d96; }
