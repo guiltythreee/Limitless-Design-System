@@ -460,3 +460,10 @@ assert.match(workflow, /value":"dark"/);
 assert.match(workflow, /--load-storage/);
 assert.match(workflow, /for theme in dark light/);
 assert.match(workflow, /\$\{name\}-\$\{theme\}-\$\{size\}\.png/);
+
+
+// Fidelity mode hides gallery-only chrome and renders the page composition at viewport width.
+assert.match(previewStyles, /body:has\(\.theme-preview:target\) \.preview-header/);
+assert.match(previewStyles, /\.theme-preview:target > :not\(\.sample-live-page\)/);
+assert.match(previewStyles, /\.theme-preview:target \.sample-live-page\s*\{\s*width:100%/);
+assert.match(previewStyles, /\.theme-preview:target \.sample-live-page \.ds-launch-grid\s*\{\s*grid-template-columns:repeat\(3,minmax\(0,1fr\)\)/);
