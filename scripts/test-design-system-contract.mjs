@@ -567,3 +567,17 @@ for (const selector of [".ds-semester-header", ".ds-semester-brand", ".ds-semest
   assert.ok(preview.includes(selector.slice(1)), `Missing Metallurgy landing fixture: ${selector}`);
 }
 assert.match(previewStyles, /\.theme-preview\.metallurgy:target \.sample-live-page\s*\{\s*padding:0/);
+
+
+// Route-specific app-shell tokens are available to consumers, including the distinct desktop geometries.
+for (const token of [
+  "--ds-app-topbar-height", "--ds-app-topbar-padding", "--ds-app-topbar-background",
+  "--ds-app-topbar-backdrop", "--ds-app-sidebar-width", "--ds-app-sidebar-padding",
+  "--ds-app-sidebar-background", "--ds-app-sidebar-active-background", "--ds-app-shell-border",
+]) {
+  assert.ok(tokens.includes(token), `Missing app-shell token: ${token}`);
+}
+for (const section of ["home", "competition", "metallurgy", "probability", "codeforces"]) {
+  assert.ok(tokens.includes(`[data-limitless-design="${section}"]`), `Missing ${section} shell token adapter`);
+  assert.ok(tokens.includes(`[data-limitless-design="${section}"]`), `Missing ${section} shell token adapter`);
+}
