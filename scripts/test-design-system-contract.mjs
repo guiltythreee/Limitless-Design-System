@@ -347,3 +347,17 @@ assert.ok(components.includes(".ds-practice-actionbar__primary{flex:1;min-width:
 assert.ok(components.includes(".ds-practice-actionbar__secondary{border:1px solid var(--ds-utility-border,var(--ds-color-border));border-radius:9px"));
 assert.ok(components.includes("@media(max-width:760px){:where([data-limitless-design]) .ds-practice-actionbar{bottom:8px;gap:.45rem;padding:.55rem}"));
 assert.ok(components.includes(".ds-practice-actionbar__secondary{min-height:44px;padding-inline:.8rem}"));
+
+
+// Probability dark/light fixtures must expose the same component inventory.
+const probabilityDarkStart = preview.indexOf('<article class="theme-preview probability dark"');
+const probabilityLightStart = preview.indexOf('<article class="theme-preview probability light"');
+const metallurgyStart = preview.indexOf('<article class="theme-preview metallurgy dark"');
+assert.ok(probabilityDarkStart >= 0 && probabilityLightStart > probabilityDarkStart && metallurgyStart > probabilityLightStart);
+const probabilityDarkEnd = preview.lastIndexOf("</article>", probabilityLightStart);
+const probabilityLightEnd = preview.lastIndexOf("</article>", metallurgyStart);
+const classesIn = (markup) => [...new Set([...markup.matchAll(/class="([^"]+)"/g)].flatMap((match) => match[1].split(/\\s+/)))].sort();
+const darkProbabilityClasses = classesIn(preview.slice(probabilityDarkStart, probabilityDarkEnd + "</article>".length)).filter((name) => name !== "dark");
+const lightProbabilityClasses = classesIn(preview.slice(probabilityLightStart, probabilityLightEnd + "</article>".length)).filter((name) => name !== "light");
+assert.deepEqual(lightProbabilityClasses, darkProbabilityClasses,
+  "Probability dark and light previews must show the same component inventory");
