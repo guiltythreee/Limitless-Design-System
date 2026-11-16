@@ -221,3 +221,8 @@ The static design-system fixture was rendered in Chromium at 1440px desktop and 
 ## Follow-up rendered contrast correction — Home and Competition
 
 The first section-level Chromium render showed that Home and Competition light adapters correctly supplied dark foreground tokens but their preview canvas remained transparent, exposing the dark page background. The fixture now sets a light canvas only on `.theme-preview.home.light` and `.theme-preview.competition.light`. A contract assertion protects this preview-only correction; production tokens and application styles are unchanged.
+
+
+## Follow-up rendered contrast correction — Codeforces stage selector
+
+The Codeforces light screenshot exposed a stage-selector contrast gap: the live light-theme values are scoped under `html[data-theme="light"] [data-limitless-design="codeforces"]`, while the isolated fixture uses a local `.codeforces.light` theme class and intentionally leaves the document theme unchanged. The preview now mirrors the exact live light values for stage text, active background/border and muted metadata. This is fixture-only and does not alter the production adapter. The contract suite asserts all four values.
