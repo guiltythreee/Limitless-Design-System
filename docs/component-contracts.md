@@ -230,7 +230,7 @@ These primitives define a portable API and baseline behavior; they are not claim
 ## Application navigation shell primitives
 
 - `.ds-app-topbar`, `.ds-app-brand`, `.ds-app-search` and `.ds-app-profile` provide the shared topbar slots used by the Home, Competition, Metallurgy, Probability and Codeforces route fixtures.
-- `.ds-app-sidebar` and `.ds-app-sidebar-note` provide navigation-rail structure; width, sticky/fixed positioning, active treatment, backdrop and typography are supplied by the consuming route adapter.
+- `.ds-app-layout` and `.ds-app-main` provide the responsive sidebar/main grid used by Home and Competition; `.ds-app-sidebar` and `.ds-app-sidebar-note` provide the navigation rail. Width, sticky/fixed positioning, active treatment, backdrop and typography are supplied by route tokens.
 - `.ds-app-breadcrumb` provides a route breadcrumb slot.
 - The live route structures differ: Home and Competition use 245px workspace rails, Metallurgy uses a 310px semester rail inside its page layout, and Probability/Codeforces do not use the same sidebar shell. These primitives do not force those layouts into one geometry.
 - Search, profile, navigation destinations, theme toggling and all route state remain application-owned. The preview shells are static visual fixtures only.
