@@ -535,3 +535,27 @@ assert.ok(preview.includes("ds-codeforces-loading"));
 assert.ok(preview.includes("ds-codeforces-milestones"));
 assert.match(previewStyles, /\.theme-preview\.codeforces:target \.sample-live-page\s*\{\s*display:grid;\s*grid-template-columns:minmax\(0,1\.45fr\) minmax\(0,1fr\)/);
 assert.match(previewStyles, /\.theme-preview\.codeforces:target \.sample-live-page \.ds-launch-grid/);
+
+
+// Route fidelity captures reuse production theme artwork and pin the exact source revisions.
+for (const [path, sha] of [
+  ["hub-theme.css", "c2bc5221992545a386a00adc7fb07865683fe290"],
+  ["theme-backgrounds.css", "6188f962da12ef928f70672bff47a370e079a3ae"],
+  ["metallurgy-source/app/globals.css", "a04e345f7e366c3efbdf234f8ed2b1e37d80d5e5"],
+  ["probability-source/app/globals.css", "0aa9402b923679cb62c5139e86f83152716da12f"],
+  ["probability-source/app/backgrounds.ts", "b5ba7b012662a80d9d233a045e82ff69a2e2c7b0"],
+  ["competition/competition-dashboard.css", "20f249b68d4e2f912820e63bb51f926a9a191f5d"],
+  ["codeforces-red/codeforces-red.css", "38269749f98415773759e6dbfa2f5ca298a02beb"],
+]) {
+  assert.ok(sourceMap.includes(path), `Missing background source mapping: ${path}`);
+  assert.ok(sourceMap.includes(sha), `Missing background source revision: ${path}`);
+}
+for (const asset of [
+  "/cathedral-hd.webp", "/themes/light/landscape.webp",
+  "/themes/dark/portrait.webp", "/themes/light/portrait.webp",
+  "/themes/shared/limitless-dark-desktop.webp", "/themes/shared/limitless-light-desktop.webp",
+  "/themes/shared/limitless-dark-mobile.webp", "/themes/shared/limitless-light-mobile.webp",
+  "/probability/backgrounds/sample-space.webp", "/probability/backgrounds/sample-space-phone.webp",
+]) {
+  assert.ok(previewStyles.includes(asset), `Missing live theme artwork asset: ${asset}`);
+}
