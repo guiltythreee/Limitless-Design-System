@@ -492,3 +492,18 @@ assert.ok(preview.includes("sample-home-competition"));
 assert.ok(preview.includes("sample-home-red"));
 assert.match(previewStyles, /\.theme-preview\.home:target \.sample-live-page \.ds-page-hero\s*\{\s*min-height:194px/);
 assert.match(previewStyles, /\.theme-preview\.home:target \.sample-live-page \.ds-launch-grid\s*\{\s*grid-template-columns:repeat\(3,minmax\(0,1fr\)\)/);
+
+
+// Probability archive fixture mirrors the live page hero, five-stat progress panel and lower two-column structure.
+for (const selector of [
+  ".ds-probability-archive-hero", ".ds-probability-emblem", ".ds-probability-tags",
+  ".ds-study-progress-panel", ".ds-study-progress-panel__body", ".ds-overview-grid--five",
+  ".ds-probability-lower-grid", ".ds-probability-pathway-grid",
+]) {
+  assert.ok(components.includes(selector), `Missing Probability archive composition selector: ${selector}`);
+  assert.ok(preview.includes(selector.slice(1)), `Missing Probability archive composition fixture: ${selector}`);
+}
+assert.match(preview, /STUDIES &amp; DISCIPLINES/);
+assert.match(preview, /Chapter completion/);
+assert.match(preview, /Not started/);
+assert.match(previewStyles, /\.theme-preview\.probability:target \.sample-live-page \.ds-probability-archive-hero/);
