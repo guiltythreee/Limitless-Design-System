@@ -429,3 +429,9 @@ for (const [path, sha] of [["index.html", "1d4f9ff1a3921b9775c00db1b45c3ddbc24c9
 assert.ok(previewStyles.includes("html { scroll-behavior:auto !important; }"));
 assert.ok(previewStyles.includes(".theme-preview.competition .ds-page-hero__eyebrow + .ds-page-hero__eyebrow { display:block; margin-top:.55rem; }"));
 assert.ok(previewStyles.includes(".theme-preview.codeforces.light .ds-milestone-card__copy strong { color:#1c3d5c; }"));
+
+
+// All preview navigation anchors must resolve to an actual section group.
+for (const section of previewSections) {
+  assert.ok(preview.includes(`<section class="theme-group" id="${section}"`), `Missing preview navigation target: ${section}`);
+}
