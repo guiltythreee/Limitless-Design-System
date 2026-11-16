@@ -234,3 +234,8 @@ These primitives define a portable API and baseline behavior; they are not claim
 - `.ds-app-breadcrumb` provides a route breadcrumb slot.
 - The live route structures differ: Home and Competition use 245px workspace rails, Metallurgy uses a 310px semester rail inside its page layout, and Probability/Codeforces do not use the same sidebar shell. These primitives do not force those layouts into one geometry.
 - Search, profile, navigation destinations, theme toggling and all route state remain application-owned. The preview shells are static visual fixtures only.
+
+## Dashboard promotion banners
+
+- `.ds-promo-card` is the wide, horizontal destination banner used for the Home Competition and Codeforces Red promotions. It is intentionally separate from compact `.ds-shortcut-card` and large `.ds-launch-card` patterns.
+- The icon, eyebrow, title and description are independent slots. Route adapters provide each promotion's accent, border and surface; the application owns destination and content.
