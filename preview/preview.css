@@ -199,3 +199,10 @@ h1 { margin: 0; font-size: clamp(30px, 5vw, 46px); letter-spacing: -.04em; }
   .sample-utility-extension .ds-study-utility-metrics--goals { grid-template-columns:repeat(2,minmax(0,1fr)); }
   .sample-utility-target { width:100%; }
 }
+
+
+/* Light dashboard adapters need a light fixture canvas behind their foreground text. */
+.theme-preview.home.light,
+.theme-preview.competition.light {
+  --ds-color-canvas: #f0f5fa;
+}
