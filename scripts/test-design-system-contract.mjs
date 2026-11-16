@@ -591,3 +591,7 @@ for (const selector of [".ds-app-layout", ".ds-app-main"]) {
 assert.match(components, /\.ds-app-layout\s*\{\s*display:grid/);
 assert.match(previewStyles, /\.theme-preview\.home:target \.ds-app-layout/);
 assert.match(previewStyles, /\.theme-preview\.competition:target \.ds-app-layout/);
+
+assert.ok(tokens.includes("--ds-app-topbar-shadow"));
+assert.match(previewStyles, /\.theme-preview\.codeforces:target \.sample-live-page \.ds-launch-card\s*\{\s*min-height:245px/);
+assert.match(previewStyles, /\.theme-preview\.codeforces:target \.ds-app-topbar\s*\{\s*height:var\(--ds-app-topbar-height,62px\)/);
