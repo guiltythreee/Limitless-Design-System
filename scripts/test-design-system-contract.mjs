@@ -370,3 +370,7 @@ assert.ok(preview.includes('data-preview-theme="light"'), "Light previews must u
 assert.ok(preview.includes('<p class="preview-label">Light theme</p>'), "Light previews must identify their theme");
 const previewIds = [...preview.matchAll(/\bid="([^"]+)"/g)].map((match) => match[1]);
 assert.equal(new Set(previewIds).size, previewIds.length, "Preview element IDs must be unique across theme fixtures");
+
+
+// Light Home and Competition fixtures must not place dark text on the dark page canvas.
+assert.ok(previewStyles.includes(".theme-preview.home.light,\n.theme-preview.competition.light {\n  --ds-color-canvas: #f0f5fa;"));
