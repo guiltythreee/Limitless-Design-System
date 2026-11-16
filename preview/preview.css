@@ -1034,3 +1034,58 @@ body:has(.theme-preview.probability:target)::after {
     background-image:url("https://limitless.beyondthelimits.workers.dev/probability/backgrounds/sample-space-phone.webp");
   }
 }
+
+
+/* Production background sources differ by route: Home uses the cathedral; the other hubs use the shared Limitless artwork. */
+body:has(.theme-preview.competition:target)::before,
+body:has(.theme-preview.codeforces:target)::before,
+body:has(.theme-preview.metallurgy:target)::before {
+  background-image:url("https://limitless.beyondthelimits.workers.dev/themes/shared/limitless-dark-desktop.webp");
+}
+body:has(.theme-preview.competition.light:target)::before,
+body:has(.theme-preview.codeforces.light:target)::before,
+body:has(.theme-preview.metallurgy.light:target)::before {
+  background-image:url("https://limitless.beyondthelimits.workers.dev/themes/shared/limitless-light-desktop.webp");
+}
+body:has(.theme-preview.competition:target)::after {
+  background:linear-gradient(180deg,rgba(3,9,18,.45),rgba(3,9,18,.38) 55%,rgba(3,9,18,.7));
+}
+body:has(.theme-preview.codeforces:target)::after {
+  background:linear-gradient(180deg,rgba(3,9,18,.78),rgba(3,9,18,.68));
+}
+body:has(.theme-preview.metallurgy:target) {
+  background:
+    radial-gradient(ellipse at 18% 4%,#31547a24,transparent 36%),
+    radial-gradient(ellipse at 85% 18%,#315a7620,transparent 28%),
+    linear-gradient(180deg,#0d1117 0%,#111821 50%,#0b1016 100%);
+}
+body:has(.theme-preview.metallurgy.light:target) {
+  background:
+    radial-gradient(ellipse at 18% 4%,#dce9fa80,transparent 36%),
+    radial-gradient(ellipse at 85% 18%,#dceef780,transparent 28%),
+    linear-gradient(180deg,#f3f6fa 0%,#edf2f8 50%,#e8eef6 100%);
+}
+body:has(.theme-preview.probability:target) {
+  background:
+    radial-gradient(ellipse at 18% 4%,rgba(109,91,119,.22),transparent 36%),
+    radial-gradient(ellipse at 85% 18%,rgba(180,145,100,.16),transparent 28%),
+    linear-gradient(180deg,#08070d 0%,#100d18 50%,#08070d 100%);
+}
+body:has(.theme-preview.probability.light:target) {
+  background:
+    radial-gradient(ellipse at 18% 4%,rgba(200,180,220,.25),transparent 36%),
+    radial-gradient(ellipse at 85% 18%,rgba(224,190,120,.2),transparent 28%),
+    linear-gradient(180deg,#f6efdc 0%,#efe6cf 50%,#f3ead3 100%);
+}
+@media(max-aspect-ratio:4/5) {
+  body:has(.theme-preview.competition:target)::before,
+  body:has(.theme-preview.codeforces:target)::before,
+  body:has(.theme-preview.metallurgy:target)::before {
+    background-image:url("https://limitless.beyondthelimits.workers.dev/themes/shared/limitless-dark-mobile.webp");
+  }
+  body:has(.theme-preview.competition.light:target)::before,
+  body:has(.theme-preview.codeforces.light:target)::before,
+  body:has(.theme-preview.metallurgy.light:target)::before {
+    background-image:url("https://limitless.beyondthelimits.workers.dev/themes/shared/limitless-light-mobile.webp");
+  }
+}
